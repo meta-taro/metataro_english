@@ -97,6 +97,9 @@ var tango = {
 		$(".next").on("click", this.next);
 		$(".prev").on("click", this.prev);
 		$(".random").on("click", this.random);
+		$(".spegen").on("click", this.spegen);
+		$(".spekako").on("click", this.spekako);
+		$(".spekakobun").on("click", this.spekakobun);
 
 		$("dd.gen").on("click", this.turnGen);
 		$("dd.kako").on("click", this.turnKako);
@@ -118,6 +121,7 @@ var tango = {
 			tango.num = 0;
 			return tango.reset();
 		}
+
 		tango.num--;
 		$(".text").html(tango.list[tango.num].text);
 		$(".pager .now").html(parseInt(tango.num + 1));
@@ -140,6 +144,18 @@ var tango = {
 	}
 	,turnKakobun: function() {
 		$("dd.kakobun span").html(tango.list[tango.num].kakobun);
+	}
+	,spegen: function() {
+		$synthes = new SpeechSynthesisUtterance(tango.list[tango.num].gen);
+		speechSynthesis.speak($synthes);
+	}
+	,spekako: function() {
+		$synthes = new SpeechSynthesisUtterance(tango.list[tango.num].kako);
+		speechSynthesis.speak($synthes);
+	}
+	,spekakobun: function() {
+		$synthes = new SpeechSynthesisUtterance(tango.list[tango.num].kakobun);
+		speechSynthesis.speak($synthes);
 	}
 }
 $(function() {
