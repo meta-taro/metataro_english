@@ -148,17 +148,17 @@ var tango = {
 	,lang: 'en-US'
 	,spegen: function() {
 		$synthes = new SpeechSynthesisUtterance(tango.list[tango.num].gen);
-		synthes.lang = tango.lang;
+		$synthes.lang = tango.lang;
 		speechSynthesis.speak($synthes);
 	}
 	,spekako: function() {
 		$synthes = new SpeechSynthesisUtterance(tango.list[tango.num].kako);
-		synthes.lang = tango.lang;
+		$synthes.lang = tango.lang;
 		speechSynthesis.speak($synthes);
 	}
 	,spekakobun: function() {
 		$synthes = new SpeechSynthesisUtterance(tango.list[tango.num].kakobun);
-		synthes.lang = tango.lang;
+		$synthes.lang = tango.lang;
 		speechSynthesis.speak($synthes);
 	}
 }
