@@ -1,7 +1,7 @@
 var tango = {
 	num: 0
 	,list: [
-		{ "text": "～です。である。", "gen": "be (am, is, are)", "kako": "was, were", "kakobun": "been" },
+		{ "text": "～です。である。", "gen": "be, am, is, are", "kako": "was, were", "kakobun": "been" },
 		{ "text": "～になる", "gen": "become", "kako": "became", "kakobun": "become" },
 		{ "text": "始める", "gen": "begin", "kako": "began", "kakobun": "begun" },
 		{ "text": "こわす", "gen": "break", "kako": "broke", "kakobun": "broken" },
@@ -52,7 +52,7 @@ var tango = {
 		{ "text": "会う", "gen": "meet", "kako": "met", "kakobun": "met" },
 		{ "text": "支払う", "gen": "pay", "kako": "paid", "kakobun": "paid" },
 		{ "text": "置く", "gen": "put", "kako": "put", "kakobun": "put" },
-		{ "text": "読む", "gen": "read /ríːd/ リード", "kako": "read/rέd/ レッド", "kakobun": "read/rέd/ レッド" },
+		{ "text": "読む", "gen": "read ríːd", "kako": "read rέd", "kakobun": "read rέd" },
 		{ "text": "乗る", "gen": "ride", "kako": "rode", "kakobun": "ridden" },
 
 		{ "text": "鳴る", "gen": "ring", "kako": "rang", "kakobun": "rung" },

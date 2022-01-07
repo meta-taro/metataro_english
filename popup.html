@@ -11,37 +11,39 @@
 <body>
 	<main class="h-100">
 		<section class="w-auto m-4">
-			<h1 class="fs-3 text-center border-bottom bg-white py-2 mb-5">≪<span class="text"></span>≫</h1>
-			<dl class="row fs-5 bg-white p-3">
-				<dt class="col-4">原形</dt>
-				<dd class="col-8 border-bottom gen"><span class="gen">-</span> <i class="fas fa-volume-up spegen float-end"></i></dd>
-				<dt class="col-4">過去形</dt>
-				<dd class="col-8 border-bottom kako"><span class="kako">-</span> <i class="fas fa-volume-up spekako float-end"></i></dd>
-				<dt class="col-4">過去分詞</dt>
-				<dd class="col-8 border-bottom kakobun"><span class="kakobun">-</span> <i class="fas fa-volume-up spekakobun float-end"></i></dd>
+			<h1 class="fs-3 text-center py-2"><span class="text"></span></h1>
+			<dl class="row fs-4 p-3 align-items-end">
+				<dt class="col-5"><img src="/images/icon1.png"></dt>
+				<dd class="col-7 gen"><span class="gen">-</span> <i class="fas fa-volume-up spegen float-end me-3"></i></dd>
+				<dt class="col-5"><img src="/images/icon2.png"></dt>
+				<dd class="col-7 kako"><span class="kako">-</span> <i class="fas fa-volume-up spekako float-end me-3"></i></dd>
+				<dt class="col-5"><img src="/images/icon3.png"></dt>
+				<dd class="col-7 kakobun"><span class="kakobun">-</span> <i class="fas fa-volume-up spekakobun float-end me-3"></i></dd>
 			</dl>
 		</section>
 
-		<nav class="w-auto mx-4 fixed-bottom">
+		<nav class="w-auto mx-3 fixed-bottom">
 			<div class="pager mb-1 text-center fs-5">
 				<span class="now"></span> / <span class="total"></span> / <i class="fas fa-random random"></i>
 			</div>
 
 			<ul class="list-unstyled row m-0">
-				<li class="col-6 p-3 prev"><span><i class="fas fa-chevron-left"></i> prev</span></li>
-				<li class="col-6 p-3 text-end next"><span>next <i class="fas fa-chevron-right"></i></span></li>
+				<li class="col-6 p-2 prev"><img src="/images/prev.png"></li>
+				<li class="col-6 p-2 text-end next"><img src="/images/next.png"></li>
 			</ul>
 		</nav>
 	</main>
 	<script src="/js/app.js"></script>
 	<style>
-		html { border-top: 8px solid orange; }
-		body { background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAADxJREFUKFNjvPFooxQDEYCRZIXyr0/WPxQ1b0Q2HFkMbiLRCgk5kzQ3YrMWZgNMjjw3gnQjuxU5FIh2IwBpPj092G3SUgAAAABJRU5ErkJggg==) repeat; }
-		main section dl dd { cursor: pointer; }
+		html { border-top: 6px solid orange;background-image: url(/images/back.png); }
+		body { background-color: initial; }
+		main section h1 { margin-bottom: 1.9rem!important; }
+		main section dl { height: 220px; }
+		main section dl dt { position: relative;left: -40px;top: -10px; }
+		main section dl dd { cursor: pointer;height: 58px; }
+		main section dl dd i { position: relative;top: 10px; }
 		main nav .pager i { cursor: pointer; }
 		main nav ul li { cursor: pointer; }
-		main nav ul li.prev { background-color: #b97c70;color: #fefefc; }
-		main nav ul li.next { background-color: #eeddd5; }
 	</style>
 </body>
 </html>
