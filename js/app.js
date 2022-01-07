@@ -52,7 +52,7 @@ var tango = {
 		{ "text": "会う", "gen": "meet", "kako": "met", "kakobun": "met" },
 		{ "text": "支払う", "gen": "pay", "kako": "paid", "kakobun": "paid" },
 		{ "text": "置く", "gen": "put", "kako": "put", "kakobun": "put" },
-		{ "text": "読む", "gen": "read ríːd", "kako": "read rέd", "kakobun": "read rέd" },
+		{ "text": "読む", "gen": "read ríːd", "kako": "read réd", "kakobun": "read réd" },
 		{ "text": "乗る", "gen": "ride", "kako": "rode", "kakobun": "ridden" },
 
 		{ "text": "鳴る", "gen": "ring", "kako": "rang", "kakobun": "rung" },
