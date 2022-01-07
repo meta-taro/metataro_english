@@ -1,8 +1,16 @@
 # めたたろ英語 Google拡張
 
-![caver](https://user-images.githubusercontent.com/3032390/147444486-7ae95a7c-3db7-454c-bfd9-c257852d713b.png)
+![caver](https://user-images.githubusercontent.com/3032390/148529368-369cbe98-498a-4d1f-a7b4-199430866ff9.png)
 
 日本で英語を覚える際に、下地となるのが単語と文法です。今では小学生から英語の授業がありますが、日本人は英語をうまく活用できていないといいます。昨今はオンライン英会話やYoutubeで丁寧に教えてくれる英語学習手段が増えました。Google拡張でも日々ちょっとした合間に不規則動詞をはじめ単語を覚える機会を獲得してください。
+
+# バージョン2
+以下、実装しました。
+- 単語追加
+- chrome発音機能
+- デザイン反映
+- ランダム移動
+
 
 # Google Extensions Manifest V3 (MV3)
 
