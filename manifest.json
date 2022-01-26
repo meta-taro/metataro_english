@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "めたたろ英語 ≪不規則動詞≫",
 	"short_name": "めた英 不規則",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "英語の不規則動詞をペラペラ学習することができます",
 	"action": {
 		"default_popup": "popup.html",
