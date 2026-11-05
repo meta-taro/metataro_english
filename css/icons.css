@@ -1,0 +1,25 @@
+/* アイコン：Font Awesome Free 5.15.4 の solid から、使っているものだけを icons/fa/ に同梱（Icons: CC BY 4.0・NOTICE を参照）。
+ * 外部から読み込まない。<i class="fas fa-名前"> の書き方はそのまま使える。文字色（currentColor）で塗る。 */
+.fas {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	vertical-align: -0.125em;
+	background-color: currentColor;
+	-webkit-mask: var(--fa-icon) no-repeat center / contain;
+	mask: var(--fa-icon) no-repeat center / contain;
+	font-style: normal;
+}
+.fa-book { --fa-icon: url("../icons/fa/book.svg"); width: 0.875em; }
+.fa-bookmark { --fa-icon: url("../icons/fa/bookmark.svg"); width: 0.75em; }
+.fa-cog { --fa-icon: url("../icons/fa/cog.svg"); }
+.fa-file-alt { --fa-icon: url("../icons/fa/file-alt.svg"); width: 0.75em; }
+.fa-file-pdf { --fa-icon: url("../icons/fa/file-pdf.svg"); width: 0.75em; }
+.fa-highlighter { --fa-icon: url("../icons/fa/highlighter.svg"); width: 1.0625em; }
+.fa-info-circle { --fa-icon: url("../icons/fa/info-circle.svg"); }
+.fa-random { --fa-icon: url("../icons/fa/random.svg"); }
+.fa-search { --fa-icon: url("../icons/fa/search.svg"); }
+.fa-star { --fa-icon: url("../icons/fa/star.svg"); width: 1.125em; }
+.fa-table { --fa-icon: url("../icons/fa/table.svg"); }
+.fa-trash-alt { --fa-icon: url("../icons/fa/trash-alt.svg"); width: 0.875em; }
+.fa-volume-up { --fa-icon: url("../icons/fa/volume-up.svg"); width: 1.125em; }

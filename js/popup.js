@@ -617,11 +617,16 @@
 		}
 	});
 
+	// 「ページ」タブ（page.js）から辞典を開くための口
+	window.PopupApi = { lookup: lookup, showPane: showPane, el: el, clear: clear };
+
 	// ---------- 起動 ----------
 	Store.settings().then(applySettings);
 	var params = new URLSearchParams(location.search);
 	var initial = params.get('q');
-	if (params.get('win')) document.body.classList.add('window');
+	// win: 右クリックから開いた小窓・タブ／panel: サイドパネル（panel.html の中）。どちらも窓いっぱいに広げる
+	if (params.get('win') || params.get('panel')) document.body.classList.add('window');
+	if (params.get('panel')) document.body.classList.add('panel');
 	if (initial) lookup(initial.slice(0, 100));
 	else renderHome();
 	q.focus();

@@ -532,5 +532,149 @@
 	},
 	"notesExam": {
 		"message": "O que as provas cobram"
+	},
+	"menuScanPage": {
+		"message": "Procurar palavras do dicionário nesta página"
+	},
+	"tabPage": {
+		"message": "Página"
+	},
+	"pageScan": {
+		"message": "Procurar palavras nesta página"
+	},
+	"pagePdf": {
+		"message": "Abrir um PDF"
+	},
+	"pageIntro": {
+		"message": "Separa do texto em inglês da página aberta (ou de um PDF) as palavras e expressões que estão neste dicionário."
+	},
+	"pagePrivacy": {
+		"message": "O texto da página só é lido quando você aperta o botão e é contado neste aparelho. Nada é enviado."
+	},
+	"pageDrop": {
+		"message": "Você também pode soltar um PDF nesta tela."
+	},
+	"pageFilter": {
+		"message": "Filtrar pelo nível Eiken"
+	},
+	"pageGradeAll": {
+		"message": "Todas as palavras"
+	},
+	"pageGradeP2": {
+		"message": "Pre-2 ou acima"
+	},
+	"pageGrade2": {
+		"message": "Nível 2 ou acima"
+	},
+	"pageGradeP1": {
+		"message": "Pre-1 ou acima"
+	},
+	"pageGrade1": {
+		"message": "Nível 1"
+	},
+	"pageAiOnly": {
+		"message": "Só palavras com notas de IA"
+	},
+	"pageMark": {
+		"message": "Marcar palavras na página"
+	},
+	"pageUnmark": {
+		"message": "Remover marcas"
+	},
+	"pageMarkNote": {
+		"message": "Sublinha as palavras que passam no filtro. Clique numa palavra sublinhada para abrir o verbete aqui."
+	},
+	"pageWords": {
+		"message": "Palavras (mais frequentes primeiro)"
+	},
+	"pageNone": {
+		"message": "Nada encontrado."
+	},
+	"pageMore": {
+		"message": "Ver mais"
+	},
+	"pageIdioms": {
+		"message": "Expressões"
+	},
+	"creditPdfjs": {
+		"message": "Extrai o texto de arquivos PDF"
+	},
+	"pageCounting": {
+		"message": "Contando…"
+	},
+	"pageErrData": {
+		"message": "Não foi possível carregar os dados do dicionário."
+	},
+	"pageSummary": {
+		"message": "$TOTAL$ palavras no texto: $WORDS$ palavras do dicionário e $IDIOMS$ expressões",
+		"placeholders": {
+			"total": {
+				"content": "$1"
+			},
+			"words": {
+				"content": "$2"
+			},
+			"idioms": {
+				"content": "$3"
+			}
+		}
+	},
+	"pageTruncated": {
+		"message": "(Página longa: só o começo foi lido)"
+	},
+	"pageAiBadge": {
+		"message": "Notas de IA"
+	},
+	"pageErrPdfTab": {
+		"message": "PDFs abertos no navegador não podem ser lidos. Escolha o arquivo em \"Abrir um PDF\"."
+	},
+	"pageErrAccess": {
+		"message": "Esta página não pode ser lida. Páginas de configurações do navegador e similares não podem ser lidas e, depois de ir para outra página, é preciso começar de novo pelo botão da barra ou pelo menu do botão direito."
+	},
+	"pageErrRead": {
+		"message": "Não foi possível ler a página."
+	},
+	"pageNoEnglish": {
+		"message": "Nenhum texto em inglês foi encontrado nesta página."
+	},
+	"pageReading": {
+		"message": "Lendo a página…"
+	},
+	"pageMarked": {
+		"message": "$COUNT$ lugares marcados.",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			}
+		}
+	},
+	"pageUnmarked": {
+		"message": "Marcas removidas."
+	},
+	"pageErrNotPdf": {
+		"message": "Escolha um arquivo PDF."
+	},
+	"pagePdfProgress": {
+		"message": "Lendo o PDF (página $PAGE$ de $PAGES$)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pagePdfNoText": {
+		"message": "Não foi possível extrair texto em inglês deste PDF (PDFs só com imagens não podem ser lidos)."
+	},
+	"pagePdfPassword": {
+		"message": "PDFs protegidos por senha não podem ser lidos."
+	},
+	"pagePdfError": {
+		"message": "Não foi possível ler o PDF."
+	},
+	"pagePdfHint": {
+		"message": "Escolha um arquivo PDF ou solte-o nesta tela."
 	}
 }

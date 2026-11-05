@@ -532,5 +532,149 @@
 	},
 	"notesExam": {
 		"message": "Yang diuji dalam ujian"
+	},
+	"menuScanPage": {
+		"message": "Cari kata kamus di halaman ini"
+	},
+	"tabPage": {
+		"message": "Halaman"
+	},
+	"pageScan": {
+		"message": "Cari kata di halaman ini"
+	},
+	"pagePdf": {
+		"message": "Buka PDF"
+	},
+	"pageIntro": {
+		"message": "Mengambil kata dan ungkapan yang ada di kamus ini dari teks bahasa Inggris di halaman yang terbuka (atau PDF)."
+	},
+	"pagePrivacy": {
+		"message": "Teks halaman hanya dibaca saat tombol ditekan dan dihitung di perangkat ini. Tidak ada yang dikirim ke luar."
+	},
+	"pageDrop": {
+		"message": "PDF juga bisa dijatuhkan ke layar ini."
+	},
+	"pageFilter": {
+		"message": "Saring menurut tingkat Eiken"
+	},
+	"pageGradeAll": {
+		"message": "Semua kata"
+	},
+	"pageGradeP2": {
+		"message": "Pre-2 ke atas"
+	},
+	"pageGrade2": {
+		"message": "Tingkat 2 ke atas"
+	},
+	"pageGradeP1": {
+		"message": "Pre-1 ke atas"
+	},
+	"pageGrade1": {
+		"message": "Tingkat 1"
+	},
+	"pageAiOnly": {
+		"message": "Hanya kata dengan catatan AI"
+	},
+	"pageMark": {
+		"message": "Tandai kata di halaman"
+	},
+	"pageUnmark": {
+		"message": "Hapus tanda"
+	},
+	"pageMarkNote": {
+		"message": "Menggarisbawahi kata yang cocok dengan saringan. Klik kata bergaris bawah untuk membuka entrinya di sini."
+	},
+	"pageWords": {
+		"message": "Kata (paling sering lebih dulu)"
+	},
+	"pageNone": {
+		"message": "Tidak ditemukan."
+	},
+	"pageMore": {
+		"message": "Lihat lagi"
+	},
+	"pageIdioms": {
+		"message": "Ungkapan"
+	},
+	"creditPdfjs": {
+		"message": "Mengambil teks dari file PDF"
+	},
+	"pageCounting": {
+		"message": "Menghitung…"
+	},
+	"pageErrData": {
+		"message": "Data kamus tidak dapat dimuat."
+	},
+	"pageSummary": {
+		"message": "$TOTAL$ kata dalam teks: $WORDS$ kata kamus dan $IDIOMS$ ungkapan",
+		"placeholders": {
+			"total": {
+				"content": "$1"
+			},
+			"words": {
+				"content": "$2"
+			},
+			"idioms": {
+				"content": "$3"
+			}
+		}
+	},
+	"pageTruncated": {
+		"message": "(Halaman panjang: hanya bagian awal yang dibaca)"
+	},
+	"pageAiBadge": {
+		"message": "Catatan AI"
+	},
+	"pageErrPdfTab": {
+		"message": "PDF yang terbuka di browser tidak bisa dibaca. Pilih file lewat \"Buka PDF\"."
+	},
+	"pageErrAccess": {
+		"message": "Halaman ini tidak bisa dibaca. Halaman pengaturan browser dan sejenisnya tidak bisa dibaca, dan setelah pindah ke halaman lain Anda perlu memulai lagi dari tombol toolbar atau menu klik kanan."
+	},
+	"pageErrRead": {
+		"message": "Halaman tidak dapat dibaca."
+	},
+	"pageNoEnglish": {
+		"message": "Tidak ada teks bahasa Inggris di halaman ini."
+	},
+	"pageReading": {
+		"message": "Membaca halaman…"
+	},
+	"pageMarked": {
+		"message": "$COUNT$ tempat ditandai.",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			}
+		}
+	},
+	"pageUnmarked": {
+		"message": "Tanda dihapus."
+	},
+	"pageErrNotPdf": {
+		"message": "Pilih file PDF."
+	},
+	"pagePdfProgress": {
+		"message": "Membaca PDF (halaman $PAGE$ dari $PAGES$)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pagePdfNoText": {
+		"message": "Teks bahasa Inggris tidak dapat diambil dari PDF ini (PDF yang hanya berisi gambar tidak bisa dibaca)."
+	},
+	"pagePdfPassword": {
+		"message": "PDF yang dilindungi kata sandi tidak bisa dibaca."
+	},
+	"pagePdfError": {
+		"message": "PDF tidak dapat dibaca."
+	},
+	"pagePdfHint": {
+		"message": "Pilih file PDF atau jatuhkan ke layar ini."
 	}
 }

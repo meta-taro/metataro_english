@@ -1,0 +1,11 @@
+/* 「ページに印を付ける」で注入する。ページの見た目は変えず、下線だけを足す */
+mark.metataro-mark {
+	background: transparent;
+	color: inherit;
+	padding: 0;
+	text-decoration: underline dotted #e08a00;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
+	cursor: help;
+}
+mark.metataro-mark:hover { background: rgba(255, 196, 80, 0.25); }

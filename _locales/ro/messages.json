@@ -532,5 +532,149 @@
 	},
 	"notesExam": {
 		"message": "Ce se cere la examene"
+	},
+	"menuScanPage": {
+		"message": "Caută cuvintele din dicționar pe această pagină"
+	},
+	"tabPage": {
+		"message": "Pagină"
+	},
+	"pageScan": {
+		"message": "Caută cuvintele de pe această pagină"
+	},
+	"pagePdf": {
+		"message": "Deschide un PDF"
+	},
+	"pageIntro": {
+		"message": "Alege din textul în engleză al paginii deschise (sau al unui PDF) cuvintele și expresiile care se află în acest dicționar."
+	},
+	"pagePrivacy": {
+		"message": "Textul paginii este citit doar când apeși butonul și este numărat pe acest dispozitiv. Nu se trimite nimic."
+	},
+	"pageDrop": {
+		"message": "Poți și să tragi un PDF pe acest ecran."
+	},
+	"pageFilter": {
+		"message": "Filtrează după nivelul Eiken"
+	},
+	"pageGradeAll": {
+		"message": "Toate cuvintele"
+	},
+	"pageGradeP2": {
+		"message": "Pre-2 și peste"
+	},
+	"pageGrade2": {
+		"message": "Nivelul 2 și peste"
+	},
+	"pageGradeP1": {
+		"message": "Pre-1 și peste"
+	},
+	"pageGrade1": {
+		"message": "Nivelul 1"
+	},
+	"pageAiOnly": {
+		"message": "Doar cuvintele cu note AI"
+	},
+	"pageMark": {
+		"message": "Marchează cuvintele pe pagină"
+	},
+	"pageUnmark": {
+		"message": "Șterge marcajele"
+	},
+	"pageMarkNote": {
+		"message": "Subliniază cuvintele care trec de filtru. Apasă pe un cuvânt subliniat ca să-i deschizi articolul aici."
+	},
+	"pageWords": {
+		"message": "Cuvinte (cele mai frecvente primele)"
+	},
+	"pageNone": {
+		"message": "Nu s-a găsit nimic."
+	},
+	"pageMore": {
+		"message": "Arată mai multe"
+	},
+	"pageIdioms": {
+		"message": "Expresii"
+	},
+	"creditPdfjs": {
+		"message": "Extrage textul din fișierele PDF"
+	},
+	"pageCounting": {
+		"message": "Se numără…"
+	},
+	"pageErrData": {
+		"message": "Nu s-au putut încărca datele dicționarului."
+	},
+	"pageSummary": {
+		"message": "$TOTAL$ cuvinte în text: $WORDS$ cuvinte din dicționar și $IDIOMS$ expresii",
+		"placeholders": {
+			"total": {
+				"content": "$1"
+			},
+			"words": {
+				"content": "$2"
+			},
+			"idioms": {
+				"content": "$3"
+			}
+		}
+	},
+	"pageTruncated": {
+		"message": "(Pagină lungă: s-a citit doar începutul)"
+	},
+	"pageAiBadge": {
+		"message": "Note AI"
+	},
+	"pageErrPdfTab": {
+		"message": "PDF-urile deschise în browser nu pot fi citite. Alege fișierul din „Deschide un PDF”."
+	},
+	"pageErrAccess": {
+		"message": "Această pagină nu poate fi citită. Paginile de setări ale browserului și altele asemănătoare nu pot fi citite, iar după ce treci la altă pagină trebuie să începi din nou de la butonul din bară sau din meniul clic dreapta."
+	},
+	"pageErrRead": {
+		"message": "Pagina nu a putut fi citită."
+	},
+	"pageNoEnglish": {
+		"message": "Nu s-a găsit text în engleză pe această pagină."
+	},
+	"pageReading": {
+		"message": "Se citește pagina…"
+	},
+	"pageMarked": {
+		"message": "Au fost marcate $COUNT$ locuri.",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			}
+		}
+	},
+	"pageUnmarked": {
+		"message": "Marcajele au fost șterse."
+	},
+	"pageErrNotPdf": {
+		"message": "Alege un fișier PDF."
+	},
+	"pagePdfProgress": {
+		"message": "Se citește PDF-ul (pagina $PAGE$ din $PAGES$)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pagePdfNoText": {
+		"message": "Nu s-a putut extrage text în engleză din acest PDF (PDF-urile doar cu imagini nu pot fi citite)."
+	},
+	"pagePdfPassword": {
+		"message": "PDF-urile protejate cu parolă nu pot fi citite."
+	},
+	"pagePdfError": {
+		"message": "PDF-ul nu a putut fi citit."
+	},
+	"pagePdfHint": {
+		"message": "Alege un fișier PDF sau trage-l pe acest ecran."
 	}
 }

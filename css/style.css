@@ -128,3 +128,19 @@ html.plain #pane-verbs .btn-label { display: block; position: absolute; left: 50
 .about .credits li { margin-bottom: 8px; line-height: 1.45; }
 .about .url { color: #1f6fb2; word-break: break-all; }
 .ai-note { background: #f7ecd5; border-radius: 4px; padding: 4px 8px; }
+
+/* ページ・PDF の単語 */
+.pagebar { display: flex; gap: 6px; padding: 8px 14px 6px; height: 46px; align-items: center; }
+.pagebar .btn { white-space: nowrap; font-size: 12.5px; }
+#pane-page .scroll { height: calc(100% - 46px); padding: 6px 14px 14px; }
+#pane-page.dragging { outline: 3px dashed #f0a040; outline-offset: -6px; }
+.page-src { margin: 4px 0 8px; word-break: break-word; }
+.page-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.page-tools .form-select { width: auto; font-size: 12.5px; }
+.page-marks { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.pagelist { list-style: none; margin: 0; padding: 0; }
+.pagelist li { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 6px; border-bottom: 1px dashed #eadfcb; padding: 4px 0; cursor: pointer; }
+.pagelist li:hover, .pagelist li:focus-visible { background: #fff6e4; outline: none; }
+.pagelist .n { min-width: 2.2em; text-align: right; font-size: 11px; color: #999; }
+.pagelist .w { font-weight: bold; color: #1f6fb2; }
+.pagelist .m { flex: 1 1 100%; padding-left: calc(2.2em + 6px); font-size: 12px; color: #555; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

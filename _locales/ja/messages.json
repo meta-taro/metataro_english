@@ -532,5 +532,149 @@
 	},
 	"notesExam": {
 		"message": "入試・英検で問われること"
+	},
+	"menuScanPage": {
+		"message": "このページの単語を調べる"
+	},
+	"tabPage": {
+		"message": "ページ"
+	},
+	"pageScan": {
+		"message": "このページの単語を調べる"
+	},
+	"pagePdf": {
+		"message": "PDF を読む"
+	},
+	"pageIntro": {
+		"message": "開いているページ（または PDF）の英文から、この辞典に載っている単語と熟語を拾い出します。"
+	},
+	"pagePrivacy": {
+		"message": "ページの文字はボタンを押したときだけ読み、この端末の中で数えるだけです。外へは送りません。"
+	},
+	"pageDrop": {
+		"message": "PDF はこの画面へドロップしても読めます。"
+	},
+	"pageFilter": {
+		"message": "英検の級で絞り込む"
+	},
+	"pageGradeAll": {
+		"message": "すべての語"
+	},
+	"pageGradeP2": {
+		"message": "準2級以上"
+	},
+	"pageGrade2": {
+		"message": "2級以上"
+	},
+	"pageGradeP1": {
+		"message": "準1級以上"
+	},
+	"pageGrade1": {
+		"message": "1級"
+	},
+	"pageAiOnly": {
+		"message": "AI 解説のある語だけ"
+	},
+	"pageMark": {
+		"message": "ページに印を付ける"
+	},
+	"pageUnmark": {
+		"message": "印を外す"
+	},
+	"pageMarkNote": {
+		"message": "絞り込みに合う語に下線を引きます。下線の語を押すと、その語の項目をここに開きます。"
+	},
+	"pageWords": {
+		"message": "単語（多い順）"
+	},
+	"pageNone": {
+		"message": "見つかりませんでした。"
+	},
+	"pageMore": {
+		"message": "もっと見る"
+	},
+	"pageIdioms": {
+		"message": "熟語"
+	},
+	"creditPdfjs": {
+		"message": "PDF から文字を取り出す部品"
+	},
+	"pageCounting": {
+		"message": "数えています…"
+	},
+	"pageErrData": {
+		"message": "辞書データを読み込めませんでした。"
+	},
+	"pageSummary": {
+		"message": "本文 $TOTAL$ 語のうち、収録語 $WORDS$ 種類・熟語 $IDIOMS$ 種類",
+		"placeholders": {
+			"total": {
+				"content": "$1"
+			},
+			"words": {
+				"content": "$2"
+			},
+			"idioms": {
+				"content": "$3"
+			}
+		}
+	},
+	"pageTruncated": {
+		"message": "（長いので先頭だけ読みました）"
+	},
+	"pageAiBadge": {
+		"message": "AI 解説"
+	},
+	"pageErrPdfTab": {
+		"message": "ブラウザで開いている PDF は読めません。「PDF を読む」からファイルを選んでください。"
+	},
+	"pageErrAccess": {
+		"message": "このページは読めません。ブラウザの設定画面などは読めないほか、ページを移動したあとはツールバーのボタンか右クリックから調べ直す必要があります。"
+	},
+	"pageErrRead": {
+		"message": "ページを読めませんでした。"
+	},
+	"pageNoEnglish": {
+		"message": "このページには英文が見つかりませんでした。"
+	},
+	"pageReading": {
+		"message": "ページを読んでいます…"
+	},
+	"pageMarked": {
+		"message": "$COUNT$ か所に印を付けました。",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			}
+		}
+	},
+	"pageUnmarked": {
+		"message": "印を外しました。"
+	},
+	"pageErrNotPdf": {
+		"message": "PDF ファイルを選んでください。"
+	},
+	"pagePdfProgress": {
+		"message": "PDF を読んでいます（$PAGE$ / $PAGES$ ページ）…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pagePdfNoText": {
+		"message": "この PDF から英文を取り出せませんでした（画像だけの PDF は読めません）。"
+	},
+	"pagePdfPassword": {
+		"message": "パスワードの付いた PDF は読めません。"
+	},
+	"pagePdfError": {
+		"message": "PDF を読めませんでした。"
+	},
+	"pagePdfHint": {
+		"message": "PDF ファイルを選ぶか、この画面へドロップしてください。"
 	}
 }
