@@ -11,9 +11,12 @@
 		"48": "/images/get_started48.png",
 		"128": "/images/get_started128.png"
 	},
-	"permissions": ["contextMenus", "storage"],
+	"permissions": ["contextMenus", "storage", "activeTab", "scripting", "sidePanel"],
 	"background": {
 		"service_worker": "background.js"
+	},
+	"side_panel": {
+		"default_path": "panel.html"
 	},
 	"action": {
 		"default_popup": "popup.html",

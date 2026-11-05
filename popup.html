@@ -14,10 +14,12 @@
 	<script src="/js/dict.js"></script>
 	<script src="/js/speech.js"></script>
 	<script src="/js/store.js"></script>
+	<script src="/js/scan.js"></script>
 </head>
 <body>
 	<nav class="tabs" role="tablist">
 		<button type="button" class="tab active" data-pane="dict" role="tab"><i class="fas fa-book"></i> <span data-i18n="tabDict">辞典</span></button>
+		<button type="button" class="tab" data-pane="page" role="tab"><i class="fas fa-file-alt"></i> <span data-i18n="tabPage">ページ</span></button>
 		<button type="button" class="tab" data-pane="book" role="tab"><i class="fas fa-bookmark"></i> <span data-i18n="tabBook">単語帳</span></button>
 		<button type="button" class="tab" data-pane="verbs" role="tab"><i class="fas fa-table"></i> <span data-i18n="tabVerbs">不規則動詞</span></button>
 		<button type="button" class="tab icon" data-pane="settings" role="tab" data-i18n-title="tabSettings" title="設定"><i class="fas fa-cog"></i></button>
@@ -41,6 +43,49 @@
 				<p class="muted tiny" data-i18n="hintKeys">↑↓ で候補を選び Enter で引きます。入力欄の外で Space か P を押すと見出し語を読み上げます。</p>
 			</div>
 			<div id="entry" hidden></div>
+		</div>
+	</div>
+
+	<!-- ページ・PDF の単語 -->
+	<div class="pane" id="pane-page">
+		<div class="pagebar">
+			<button type="button" class="btn btn-sm btn-outline-primary" id="page-scan"><i class="fas fa-search"></i> <span data-i18n="pageScan">このページの単語を調べる</span></button>
+			<button type="button" class="btn btn-sm btn-outline-secondary" id="page-pdf"><i class="fas fa-file-pdf"></i> <span data-i18n="pagePdf">PDF を読む</span></button>
+			<input type="file" id="page-pdf-file" accept="application/pdf,.pdf" hidden>
+		</div>
+		<div class="scroll" id="page-body">
+			<p class="small" id="page-status" hidden></p>
+			<div id="page-intro">
+				<p class="small" data-i18n="pageIntro">開いているページ（または PDF）の英文から、この辞典に載っている単語と熟語を拾い出します。</p>
+				<p class="muted small" data-i18n="pagePrivacy">ページの文字はボタンを押したときだけ読み、この端末の中で数えるだけです。外へは送りません。</p>
+				<p class="muted small" data-i18n="pageDrop">PDF はこの画面へドロップしても読めます。</p>
+			</div>
+			<div id="page-result" hidden>
+				<p class="small page-src"><b id="page-title"></b><br><span class="muted" id="page-summary"></span></p>
+				<div class="page-tools">
+					<select class="form-select form-select-sm" id="page-grade" data-i18n-title="pageFilter" title="英検の級で絞り込む">
+						<option value="" data-i18n="pageGradeAll">すべての語</option>
+						<option value="p2" data-i18n="pageGradeP2">準2級以上</option>
+						<option value="2" data-i18n="pageGrade2">2級以上</option>
+						<option value="p1" data-i18n="pageGradeP1">準1級以上</option>
+						<option value="1" data-i18n="pageGrade1">1級</option>
+					</select>
+					<div class="form-check form-check-inline m-0"><input class="form-check-input" type="checkbox" id="page-ai"><label class="form-check-label small" for="page-ai" data-i18n="pageAiOnly">AI 解説のある語だけ</label></div>
+				</div>
+				<div class="page-marks" id="page-marks">
+					<button type="button" class="btn btn-sm btn-outline-secondary" id="page-mark"><i class="fas fa-highlighter"></i> <span data-i18n="pageMark">ページに印を付ける</span></button>
+					<button type="button" class="btn btn-sm btn-outline-secondary" id="page-unmark" data-i18n="pageUnmark">印を外す</button>
+					<span class="small muted" id="page-mark-status"></span>
+					<p class="muted tiny m-0" data-i18n="pageMarkNote">絞り込みに合う語に下線を引きます。下線の語を押すと、その語の項目をここに開きます。</p>
+				</div>
+				<h2 class="sec"><span data-i18n="pageWords">単語（多い順）</span> <span class="muted small" id="page-wcount"></span></h2>
+				<ul class="pagelist" id="page-words"></ul>
+				<p class="muted small" id="page-words-empty" data-i18n="pageNone">見つかりませんでした。</p>
+				<button type="button" class="link small" id="page-more" data-i18n="pageMore">もっと見る</button>
+				<h2 class="sec"><span data-i18n="pageIdioms">熟語</span> <span class="muted small" id="page-icount"></span></h2>
+				<ul class="pagelist" id="page-idioms"></ul>
+				<p class="muted small" id="page-idioms-empty" data-i18n="pageNone">見つかりませんでした。</p>
+			</div>
 		</div>
 	</div>
 
@@ -111,6 +156,7 @@
 				<li><b>WordNet 3.1</b> — <span data-i18n="creditWordnet">品詞・類義語・反意語・派生語・不規則変化</span><br>WordNet 3.1 Copyright 2011 by Princeton University. All rights reserved. <span data-i18n="creditSeeNotice">ライセンス全文は NOTICE にあります。</span><br><span class="url">https://wordnet.princeton.edu/</span></li>
 				<li><b>Tatoeba</b> — <span data-i18n="creditTatoeba">英日の例文</span><br>CC BY 2.0 FR. <span data-i18n="creditTatoebaMod">短い文を選んで収録しています。</span><br><span class="url">https://tatoeba.org/</span></li>
 				<li><b>CEFR-J Wordlist 1.5 / Octanove Vocabulary Profile C1/C2 1.0</b> — <span data-i18n="creditEiken">英検の級の目安はこの語彙表をもとに割り当てています。</span><br>CC BY-SA 4.0<br><span class="url">https://github.com/openlanguageprofiles/olp-en-cefrj</span></li>
+				<li><b>pdf.js</b> — <span data-i18n="creditPdfjs">PDF から文字を取り出す部品</span><br>Copyright Mozilla Foundation. Apache License 2.0<br><span class="url">https://github.com/mozilla/pdf.js</span></li>
 				<li><b>AI</b> — <span data-i18n="creditAi">一部の重要語の解説・例文（AI が作成）</span></li>
 			</ul>
 			<p class="muted small" data-i18n="aboutReverse">日本語からの検索は、英和辞書の訳語から引いた簡易的なもので、和英辞典ではありません。</p>
@@ -119,5 +165,6 @@
 
 	<script src="/js/app.js"></script>
 	<script src="/js/popup.js"></script>
+	<script src="/js/page.js"></script>
 </body>
 </html>
