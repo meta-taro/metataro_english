@@ -521,6 +521,9 @@
 	"notesSyn": {
 		"message": "似た語との違い"
 	},
+	"notesPara": {
+		"message": "言い換え"
+	},
 	"notesErr": {
 		"message": "間違えやすい点"
 	},

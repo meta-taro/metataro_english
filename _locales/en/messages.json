@@ -521,6 +521,9 @@
 	"notesSyn": {
 		"message": "How it differs from similar words"
 	},
+	"notesPara": {
+		"message": "Paraphrases"
+	},
 	"notesErr": {
 		"message": "Common mistakes"
 	},

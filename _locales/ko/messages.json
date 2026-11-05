@@ -521,6 +521,9 @@
 	"notesSyn": {
 		"message": "비슷한 말과의 차이"
 	},
+	"notesPara": {
+		"message": "바꿔 쓰기"
+	},
 	"notesErr": {
 		"message": "틀리기 쉬운 점"
 	},

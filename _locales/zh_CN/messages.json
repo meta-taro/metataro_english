@@ -521,6 +521,9 @@
 	"notesSyn": {
 		"message": "与近义词的区别"
 	},
+	"notesPara": {
+		"message": "同义改写"
+	},
 	"notesErr": {
 		"message": "易错点"
 	},

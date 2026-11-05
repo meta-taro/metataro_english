@@ -521,6 +521,9 @@
 	"notesSyn": {
 		"message": "Отличия от похожих слов"
 	},
+	"notesPara": {
+		"message": "Перефразирование"
+	},
 	"notesErr": {
 		"message": "Частые ошибки"
 	},

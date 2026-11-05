@@ -521,6 +521,9 @@
 	"notesSyn": {
 		"message": "मिलते-जुलते शब्दों से अंतर"
 	},
+	"notesPara": {
+		"message": "दूसरे शब्दों में"
+	},
 	"notesErr": {
 		"message": "आम गलतियाँ"
 	},

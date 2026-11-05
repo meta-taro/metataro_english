@@ -461,6 +461,14 @@
 			li.appendChild(document.createTextNode(x[1]));
 			return li;
 		});
+		list('notesPara', '言い換え', n.para, function (x) {
+			var li = el('li');
+			li.appendChild(el('b', null, x[0]));
+			li.appendChild(document.createTextNode(' ＝ '));
+			li.appendChild(el('b', null, x[1]));
+			if (x[2]) li.appendChild(document.createTextNode('（' + x[2] + '）'));
+			return li;
+		});
 		list('notesErr', '間違えやすい点', n.err, function (x) { return el('li', null, x); });
 		if (n.ety) { box.appendChild(el('h4', null, T('notesEty', '語源・覚え方'))); box.appendChild(el('div', null, n.ety)); }
 		if (n.exam) { box.appendChild(el('h4', null, T('notesExam', '入試・英検で問われること'))); box.appendChild(el('div', null, n.exam)); }

@@ -521,6 +521,9 @@
 	"notesSyn": {
 		"message": "Bedanya dengan kata serupa"
 	},
+	"notesPara": {
+		"message": "Parafrase"
+	},
 	"notesErr": {
 		"message": "Kesalahan umum"
 	},

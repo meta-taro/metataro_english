@@ -521,6 +521,9 @@
 	"notesSyn": {
 		"message": "Diferențe față de cuvinte apropiate"
 	},
+	"notesPara": {
+		"message": "Parafraze"
+	},
 	"notesErr": {
 		"message": "Greșeli frecvente"
 	},
