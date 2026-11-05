@@ -1,0 +1,248 @@
+{
+	"extName": {
+		"message": "Metataro English ≪Irregular Verbs≫"
+	},
+	"extShortName": {
+		"message": "Metataro Verbs"
+	},
+	"extDescription": {
+		"message": "Learn English irregular verbs one card at a time, with spoken pronunciation."
+	},
+	"howto": {
+		"message": "Tap a row to reveal it. 🔊 reads it aloud."
+	},
+	"formGen": {
+		"message": "Base form"
+	},
+	"formKako": {
+		"message": "Past"
+	},
+	"formKakobun": {
+		"message": "Past participle"
+	},
+	"prev": {
+		"message": "Prev"
+	},
+	"next": {
+		"message": "Next"
+	},
+	"v01": {
+		"message": "to exist; to be (something)"
+	},
+	"v02": {
+		"message": "to start to be; to turn into"
+	},
+	"v03": {
+		"message": "to start"
+	},
+	"v04": {
+		"message": "to smash into pieces"
+	},
+	"v05": {
+		"message": "to carry here"
+	},
+	"v06": {
+		"message": "to construct"
+	},
+	"v07": {
+		"message": "to purchase"
+	},
+	"v08": {
+		"message": "to capture; to grab something moving"
+	},
+	"v09": {
+		"message": "to pick; to select"
+	},
+	"v10": {
+		"message": "to move toward here"
+	},
+	"v11": {
+		"message": "to slice"
+	},
+	"v12": {
+		"message": "to perform; to carry out"
+	},
+	"v13": {
+		"message": "to sketch; to make a picture"
+	},
+	"v14": {
+		"message": "to take in a liquid"
+	},
+	"v15": {
+		"message": "to operate a car"
+	},
+	"v16": {
+		"message": "to take in food"
+	},
+	"v17": {
+		"message": "to drop down"
+	},
+	"v18": {
+		"message": "to sense"
+	},
+	"v19": {
+		"message": "to battle"
+	},
+	"v20": {
+		"message": "to discover"
+	},
+	"v21": {
+		"message": "to move through the air"
+	},
+	"v22": {
+		"message": "to fail to remember"
+	},
+	"v23": {
+		"message": "to obtain; to receive"
+	},
+	"v24": {
+		"message": "to hand over"
+	},
+	"v25": {
+		"message": "to move away; to travel"
+	},
+	"v26": {
+		"message": "to get bigger"
+	},
+	"v27": {
+		"message": "to own; to possess"
+	},
+	"v28": {
+		"message": "to perceive sound"
+	},
+	"v29": {
+		"message": "to strike"
+	},
+	"v30": {
+		"message": "to keep in your hand"
+	},
+	"v31": {
+		"message": "to retain; to continue to have"
+	},
+	"v32": {
+		"message": "to have knowledge of"
+	},
+	"v33": {
+		"message": "to put down flat"
+	},
+	"v34": {
+		"message": "to go away from"
+	},
+	"v35": {
+		"message": "to let someone borrow"
+	},
+	"v36": {
+		"message": "to allow"
+	},
+	"v37": {
+		"message": "to rest in a flat position"
+	},
+	"v38": {
+		"message": "to no longer have"
+	},
+	"v39": {
+		"message": "to create"
+	},
+	"v40": {
+		"message": "to signify"
+	},
+	"v41": {
+		"message": "to come together with"
+	},
+	"v42": {
+		"message": "to give money for"
+	},
+	"v43": {
+		"message": "to place"
+	},
+	"v44": {
+		"message": "to look at words and understand them"
+	},
+	"v45": {
+		"message": "to travel on (a bike, horse…)"
+	},
+	"v46": {
+		"message": "to make a bell sound"
+	},
+	"v47": {
+		"message": "to go up"
+	},
+	"v48": {
+		"message": "to move fast on foot"
+	},
+	"v49": {
+		"message": "to speak words"
+	},
+	"v50": {
+		"message": "to look with your eyes"
+	},
+	"v51": {
+		"message": "to exchange for money"
+	},
+	"v52": {
+		"message": "to make something go somewhere"
+	},
+	"v53": {
+		"message": "to give off light"
+	},
+	"v54": {
+		"message": "to let someone see"
+	},
+	"v55": {
+		"message": "to make music with your voice"
+	},
+	"v56": {
+		"message": "to go down under water"
+	},
+	"v57": {
+		"message": "to be seated"
+	},
+	"v58": {
+		"message": "to be asleep"
+	},
+	"v59": {
+		"message": "to talk"
+	},
+	"v60": {
+		"message": "to use (money or time)"
+	},
+	"v61": {
+		"message": "to be on your feet"
+	},
+	"v62": {
+		"message": "to take without permission"
+	},
+	"v63": {
+		"message": "to move through water"
+	},
+	"v64": {
+		"message": "to carry or lead away"
+	},
+	"v65": {
+		"message": "to instruct"
+	},
+	"v66": {
+		"message": "to say to someone"
+	},
+	"v67": {
+		"message": "to use your mind"
+	},
+	"v68": {
+		"message": "to send through the air with your hand"
+	},
+	"v69": {
+		"message": "to know the meaning of"
+	},
+	"v70": {
+		"message": "to stop sleeping"
+	},
+	"v71": {
+		"message": "to have on your body"
+	},
+	"v72": {
+		"message": "to be the best in a game"
+	},
+	"v73": {
+		"message": "to put words on paper"
+	}
+}

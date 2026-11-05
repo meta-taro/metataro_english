@@ -89,8 +89,14 @@ var tango = {
 		{ "text": "勝つ", "gen": "win", "kako": "won", "kakobun": "won" },
 		{ "text": "書く", "gen": "write", "kako": "wrote", "kakobun": "written" },
 	]
+	// 意味は画面の言語で出す（拡張の外では日本語のまま）
+	,text: function() {
+		var k = "v" + String(tango.num + 1).padStart(2, "0");
+		var s = t(k);
+		return s !== k ? s : tango.list[tango.num].text;
+	}
 	,init: function() {
-		$(".text").html(tango.list[tango.num].text);
+		$(".text").html(tango.text());
 		$(".pager .now").html("1");
 		$(".pager .total").html(this.list.length);
 
@@ -112,7 +118,7 @@ var tango = {
 		}
 
 		tango.num++;
-		$(".text").html(tango.list[tango.num].text);
+		$(".text").html(tango.text());
 		$(".pager .now").html(parseInt(tango.num + 1));
 		tango.reset();
 	}
@@ -123,13 +129,13 @@ var tango = {
 		}
 
 		tango.num--;
-		$(".text").html(tango.list[tango.num].text);
+		$(".text").html(tango.text());
 		$(".pager .now").html(parseInt(tango.num + 1));
 		tango.reset();
 	}
 	,random: function() {
 		tango.num = Math.floor(Math.random() * tango.list.length);
-		$(".text").html(tango.list[tango.num].text);
+		$(".text").html(tango.text());
 		$(".pager .now").html(parseInt(tango.num + 1));
 		tango.reset();
 	}

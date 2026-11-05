@@ -1,0 +1,248 @@
+{
+	"extName": {
+		"message": "메타타로 영어 ≪불규칙 동사≫"
+	},
+	"extShortName": {
+		"message": "메타타로 동사"
+	},
+	"extDescription": {
+		"message": "영어 불규칙 동사를 카드 한 장씩, 발음과 함께 익힙니다."
+	},
+	"howto": {
+		"message": "줄을 탭하면 답이 보입니다. 🔊로 읽어 줍니다."
+	},
+	"formGen": {
+		"message": "원형"
+	},
+	"formKako": {
+		"message": "과거형"
+	},
+	"formKakobun": {
+		"message": "과거분사"
+	},
+	"prev": {
+		"message": "이전"
+	},
+	"next": {
+		"message": "다음"
+	},
+	"v01": {
+		"message": "~이다; 있다"
+	},
+	"v02": {
+		"message": "~이 되다"
+	},
+	"v03": {
+		"message": "시작하다"
+	},
+	"v04": {
+		"message": "부수다; 깨다"
+	},
+	"v05": {
+		"message": "가져오다"
+	},
+	"v06": {
+		"message": "짓다; 세우다"
+	},
+	"v07": {
+		"message": "사다"
+	},
+	"v08": {
+		"message": "잡다"
+	},
+	"v09": {
+		"message": "고르다"
+	},
+	"v10": {
+		"message": "오다"
+	},
+	"v11": {
+		"message": "자르다"
+	},
+	"v12": {
+		"message": "하다"
+	},
+	"v13": {
+		"message": "그리다"
+	},
+	"v14": {
+		"message": "마시다"
+	},
+	"v15": {
+		"message": "운전하다"
+	},
+	"v16": {
+		"message": "먹다"
+	},
+	"v17": {
+		"message": "떨어지다"
+	},
+	"v18": {
+		"message": "느끼다"
+	},
+	"v19": {
+		"message": "싸우다"
+	},
+	"v20": {
+		"message": "찾다; 발견하다"
+	},
+	"v21": {
+		"message": "날다"
+	},
+	"v22": {
+		"message": "잊다"
+	},
+	"v23": {
+		"message": "얻다"
+	},
+	"v24": {
+		"message": "주다"
+	},
+	"v25": {
+		"message": "가다"
+	},
+	"v26": {
+		"message": "자라다"
+	},
+	"v27": {
+		"message": "가지고 있다"
+	},
+	"v28": {
+		"message": "듣다"
+	},
+	"v29": {
+		"message": "치다"
+	},
+	"v30": {
+		"message": "쥐다; 잡다"
+	},
+	"v31": {
+		"message": "유지하다; 지니다"
+	},
+	"v32": {
+		"message": "알다"
+	},
+	"v33": {
+		"message": "(눕혀) 놓다"
+	},
+	"v34": {
+		"message": "떠나다"
+	},
+	"v35": {
+		"message": "빌려주다"
+	},
+	"v36": {
+		"message": "~하게 하다"
+	},
+	"v37": {
+		"message": "눕다"
+	},
+	"v38": {
+		"message": "잃다"
+	},
+	"v39": {
+		"message": "만들다"
+	},
+	"v40": {
+		"message": "의미하다"
+	},
+	"v41": {
+		"message": "만나다"
+	},
+	"v42": {
+		"message": "지불하다"
+	},
+	"v43": {
+		"message": "놓다; 두다"
+	},
+	"v44": {
+		"message": "읽다"
+	},
+	"v45": {
+		"message": "타다"
+	},
+	"v46": {
+		"message": "울리다"
+	},
+	"v47": {
+		"message": "오르다"
+	},
+	"v48": {
+		"message": "달리다"
+	},
+	"v49": {
+		"message": "말하다"
+	},
+	"v50": {
+		"message": "보다"
+	},
+	"v51": {
+		"message": "팔다"
+	},
+	"v52": {
+		"message": "보내다"
+	},
+	"v53": {
+		"message": "빛나다"
+	},
+	"v54": {
+		"message": "보여주다"
+	},
+	"v55": {
+		"message": "노래하다"
+	},
+	"v56": {
+		"message": "가라앉다"
+	},
+	"v57": {
+		"message": "앉다"
+	},
+	"v58": {
+		"message": "자다"
+	},
+	"v59": {
+		"message": "말하다"
+	},
+	"v60": {
+		"message": "쓰다; 보내다"
+	},
+	"v61": {
+		"message": "서 있다"
+	},
+	"v62": {
+		"message": "훔치다"
+	},
+	"v63": {
+		"message": "헤엄치다"
+	},
+	"v64": {
+		"message": "가져가다; 데려가다"
+	},
+	"v65": {
+		"message": "가르치다"
+	},
+	"v66": {
+		"message": "말하다; 알리다"
+	},
+	"v67": {
+		"message": "생각하다"
+	},
+	"v68": {
+		"message": "던지다"
+	},
+	"v69": {
+		"message": "이해하다"
+	},
+	"v70": {
+		"message": "깨다; 일어나다"
+	},
+	"v71": {
+		"message": "입다; 몸에 걸치다"
+	},
+	"v72": {
+		"message": "이기다"
+	},
+	"v73": {
+		"message": "쓰다"
+	}
+}

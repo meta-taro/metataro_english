@@ -1,0 +1,248 @@
+{
+	"extName": {
+		"message": "Metataro English ≪Kata Kerja Tak Beraturan≫"
+	},
+	"extShortName": {
+		"message": "Metataro Verbs"
+	},
+	"extDescription": {
+		"message": "Belajar kata kerja tak beraturan bahasa Inggris kartu demi kartu, lengkap dengan pelafalan."
+	},
+	"howto": {
+		"message": "Ketuk baris untuk membukanya. 🔊 membacakannya."
+	},
+	"formGen": {
+		"message": "Bentuk dasar"
+	},
+	"formKako": {
+		"message": "Lampau"
+	},
+	"formKakobun": {
+		"message": "Partisipel lampau"
+	},
+	"prev": {
+		"message": "Sebelumnya"
+	},
+	"next": {
+		"message": "Berikutnya"
+	},
+	"v01": {
+		"message": "adalah; ada"
+	},
+	"v02": {
+		"message": "menjadi"
+	},
+	"v03": {
+		"message": "memulai"
+	},
+	"v04": {
+		"message": "merusak; memecahkan"
+	},
+	"v05": {
+		"message": "membawa"
+	},
+	"v06": {
+		"message": "membangun"
+	},
+	"v07": {
+		"message": "membeli"
+	},
+	"v08": {
+		"message": "menangkap"
+	},
+	"v09": {
+		"message": "memilih"
+	},
+	"v10": {
+		"message": "datang"
+	},
+	"v11": {
+		"message": "memotong"
+	},
+	"v12": {
+		"message": "melakukan"
+	},
+	"v13": {
+		"message": "menggambar"
+	},
+	"v14": {
+		"message": "minum"
+	},
+	"v15": {
+		"message": "mengemudi"
+	},
+	"v16": {
+		"message": "makan"
+	},
+	"v17": {
+		"message": "jatuh"
+	},
+	"v18": {
+		"message": "merasa"
+	},
+	"v19": {
+		"message": "bertarung"
+	},
+	"v20": {
+		"message": "menemukan"
+	},
+	"v21": {
+		"message": "terbang"
+	},
+	"v22": {
+		"message": "lupa"
+	},
+	"v23": {
+		"message": "mendapat"
+	},
+	"v24": {
+		"message": "memberi"
+	},
+	"v25": {
+		"message": "pergi"
+	},
+	"v26": {
+		"message": "tumbuh"
+	},
+	"v27": {
+		"message": "punya; memiliki"
+	},
+	"v28": {
+		"message": "mendengar"
+	},
+	"v29": {
+		"message": "memukul"
+	},
+	"v30": {
+		"message": "memegang"
+	},
+	"v31": {
+		"message": "menyimpan; menjaga"
+	},
+	"v32": {
+		"message": "tahu"
+	},
+	"v33": {
+		"message": "meletakkan"
+	},
+	"v34": {
+		"message": "pergi; meninggalkan"
+	},
+	"v35": {
+		"message": "meminjamkan"
+	},
+	"v36": {
+		"message": "membiarkan"
+	},
+	"v37": {
+		"message": "berbaring"
+	},
+	"v38": {
+		"message": "kehilangan"
+	},
+	"v39": {
+		"message": "membuat"
+	},
+	"v40": {
+		"message": "berarti"
+	},
+	"v41": {
+		"message": "bertemu"
+	},
+	"v42": {
+		"message": "membayar"
+	},
+	"v43": {
+		"message": "menaruh"
+	},
+	"v44": {
+		"message": "membaca"
+	},
+	"v45": {
+		"message": "naik; mengendarai"
+	},
+	"v46": {
+		"message": "berbunyi"
+	},
+	"v47": {
+		"message": "naik; terbit"
+	},
+	"v48": {
+		"message": "berlari"
+	},
+	"v49": {
+		"message": "berkata"
+	},
+	"v50": {
+		"message": "melihat"
+	},
+	"v51": {
+		"message": "menjual"
+	},
+	"v52": {
+		"message": "mengirim"
+	},
+	"v53": {
+		"message": "bersinar"
+	},
+	"v54": {
+		"message": "menunjukkan"
+	},
+	"v55": {
+		"message": "bernyanyi"
+	},
+	"v56": {
+		"message": "tenggelam"
+	},
+	"v57": {
+		"message": "duduk"
+	},
+	"v58": {
+		"message": "tidur"
+	},
+	"v59": {
+		"message": "berbicara"
+	},
+	"v60": {
+		"message": "menghabiskan"
+	},
+	"v61": {
+		"message": "berdiri"
+	},
+	"v62": {
+		"message": "mencuri"
+	},
+	"v63": {
+		"message": "berenang"
+	},
+	"v64": {
+		"message": "mengambil; membawa"
+	},
+	"v65": {
+		"message": "mengajar"
+	},
+	"v66": {
+		"message": "memberi tahu"
+	},
+	"v67": {
+		"message": "berpikir"
+	},
+	"v68": {
+		"message": "melempar"
+	},
+	"v69": {
+		"message": "memahami"
+	},
+	"v70": {
+		"message": "bangun"
+	},
+	"v71": {
+		"message": "memakai"
+	},
+	"v72": {
+		"message": "menang"
+	},
+	"v73": {
+		"message": "menulis"
+	}
+}

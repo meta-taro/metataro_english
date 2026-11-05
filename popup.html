@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+	<title data-i18n="extName">めたたろ英語 ≪不規則動詞≫</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="/css/style.css">
 	<link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 	<script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 	<script src="/js/15b50dcc89.js" crossorigin="anonymous"></script>
 	<script src="/js/jquery-3.6.0.min.js"></script>
+	<script src="/js/i18n.js"></script>
 </head>
 <body>
 	<main class="h-100">
 		<section class="w-auto m-4">
 			<h1 class="fs-3 text-center py-2"><span class="text"></span></h1>
+			<p class="text-center small text-muted m-0" data-i18n="howto">めくりたい行をタップ。🔊 で読み上げます。</p>
 			<dl class="row fs-4 p-3 align-items-end">
-				<dt class="col-5"><img src="/images/icon1.png"></dt>
+				<dt class="col-5"><img src="/images/icon1.png" alt="原形" title="原形" data-i18n-alt="formGen"><span class="form-label" data-i18n="formGen">原形</span></dt>
 				<dd class="col-7 gen"><span class="gen">-</span> <i class="fas fa-volume-up spegen float-end me-3"></i></dd>
-				<dt class="col-5"><img src="/images/icon2.png"></dt>
+				<dt class="col-5"><img src="/images/icon2.png" alt="過去形" title="過去形" data-i18n-alt="formKako"><span class="form-label" data-i18n="formKako">過去形</span></dt>
 				<dd class="col-7 kako"><span class="kako">-</span> <i class="fas fa-volume-up spekako float-end me-3"></i></dd>
-				<dt class="col-5"><img src="/images/icon3.png"></dt>
+				<dt class="col-5"><img src="/images/icon3.png" alt="過去分詞" title="過去分詞" data-i18n-alt="formKakobun"><span class="form-label" data-i18n="formKakobun">過去分詞</span></dt>
 				<dd class="col-7 kakobun"><span class="kakobun">-</span> <i class="fas fa-volume-up spekakobun float-end me-3"></i></dd>
 			</dl>
 		</section>
@@ -28,8 +31,8 @@
 			</div>
 
 			<ul class="list-unstyled row m-0">
-				<li class="col-6 p-2 prev"><img src="/images/prev.png"></li>
-				<li class="col-6 p-2 text-end next"><img src="/images/next.png"></li>
+				<li class="col-6 p-2 prev"><img src="/images/prev.png"><span class="btn-label" data-i18n="prev">前へ</span></li>
+				<li class="col-6 p-2 text-end next"><img src="/images/next.png"><span class="btn-label" data-i18n="next">次へ</span></li>
 			</ul>
 		</nav>
 	</main>
@@ -44,6 +47,15 @@
 		main section dl dd i { position: relative;top: 10px; }
 		main nav .pager i { cursor: pointer; }
 		main nav ul li { cursor: pointer; }
+		/* 日本語以外は文字を消した絵に差し替え、見出しとボタンの文字を HTML で重ねる */
+		main section p[data-i18n=howto] { padding: 0 1.2rem; font-size: .72rem; line-height: 1.15; }
+		.form-label, .btn-label { display: none; }
+		html.plain { background-image: url(/images/back_plain.png); }
+		html.plain .form-label { display: flex; align-items: center; justify-content: center; position: absolute; left: 80px; top: 0; bottom: 0; width: 96px; transform: translateY(-18px); font-size: .9rem; line-height: 1.1; text-align: center; font-weight: bold; color: #444; }
+		html.plain main nav ul li { position: relative; }
+		html.plain main nav .prev img { content: url(/images/prev_plain.png); }
+		html.plain main nav .next img { content: url(/images/next_plain.png); }
+		html.plain .btn-label { display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #cfe9f5; font-size: 1rem; pointer-events: none; }
 	</style>
 </body>
 </html>

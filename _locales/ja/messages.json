@@ -1,0 +1,248 @@
+{
+	"extName": {
+		"message": "めたたろ英語 ≪不規則動詞≫"
+	},
+	"extShortName": {
+		"message": "めた英 不規則"
+	},
+	"extDescription": {
+		"message": "英語の不規則動詞をペラペラ学習することができます"
+	},
+	"howto": {
+		"message": "めくりたい行をタップ。🔊 で読み上げます。"
+	},
+	"formGen": {
+		"message": "原形"
+	},
+	"formKako": {
+		"message": "過去形"
+	},
+	"formKakobun": {
+		"message": "過去分詞"
+	},
+	"prev": {
+		"message": "前へ"
+	},
+	"next": {
+		"message": "次へ"
+	},
+	"v01": {
+		"message": "～です。である。"
+	},
+	"v02": {
+		"message": "～になる"
+	},
+	"v03": {
+		"message": "始める"
+	},
+	"v04": {
+		"message": "こわす"
+	},
+	"v05": {
+		"message": "持ってくる"
+	},
+	"v06": {
+		"message": "建てる"
+	},
+	"v07": {
+		"message": "買う"
+	},
+	"v08": {
+		"message": "つかまえる"
+	},
+	"v09": {
+		"message": "選ぶ"
+	},
+	"v10": {
+		"message": "来る"
+	},
+	"v11": {
+		"message": "切る"
+	},
+	"v12": {
+		"message": "する"
+	},
+	"v13": {
+		"message": "描く"
+	},
+	"v14": {
+		"message": "飲む"
+	},
+	"v15": {
+		"message": "運転する"
+	},
+	"v16": {
+		"message": "食べる"
+	},
+	"v17": {
+		"message": "落ちる"
+	},
+	"v18": {
+		"message": "感じる"
+	},
+	"v19": {
+		"message": "戦う"
+	},
+	"v20": {
+		"message": "見つける"
+	},
+	"v21": {
+		"message": "飛ぶ"
+	},
+	"v22": {
+		"message": "忘れる"
+	},
+	"v23": {
+		"message": "得る"
+	},
+	"v24": {
+		"message": "与える"
+	},
+	"v25": {
+		"message": "行く"
+	},
+	"v26": {
+		"message": "成長する"
+	},
+	"v27": {
+		"message": "持っている"
+	},
+	"v28": {
+		"message": "聞く"
+	},
+	"v29": {
+		"message": "打つ"
+	},
+	"v30": {
+		"message": "つかむ"
+	},
+	"v31": {
+		"message": "保つ"
+	},
+	"v32": {
+		"message": "知っている"
+	},
+	"v33": {
+		"message": "横たえる"
+	},
+	"v34": {
+		"message": "去る"
+	},
+	"v35": {
+		"message": "貸す"
+	},
+	"v36": {
+		"message": "～させる"
+	},
+	"v37": {
+		"message": "横になる"
+	},
+	"v38": {
+		"message": "失う"
+	},
+	"v39": {
+		"message": "作る"
+	},
+	"v40": {
+		"message": "意味する"
+	},
+	"v41": {
+		"message": "会う"
+	},
+	"v42": {
+		"message": "支払う"
+	},
+	"v43": {
+		"message": "置く"
+	},
+	"v44": {
+		"message": "読む"
+	},
+	"v45": {
+		"message": "乗る"
+	},
+	"v46": {
+		"message": "鳴る"
+	},
+	"v47": {
+		"message": "上がる"
+	},
+	"v48": {
+		"message": "走る"
+	},
+	"v49": {
+		"message": "言う"
+	},
+	"v50": {
+		"message": "見る"
+	},
+	"v51": {
+		"message": "売る"
+	},
+	"v52": {
+		"message": "送る"
+	},
+	"v53": {
+		"message": "輝く"
+	},
+	"v54": {
+		"message": "見せる"
+	},
+	"v55": {
+		"message": "歌う"
+	},
+	"v56": {
+		"message": "沈む"
+	},
+	"v57": {
+		"message": "すわる"
+	},
+	"v58": {
+		"message": "眠る"
+	},
+	"v59": {
+		"message": "話す"
+	},
+	"v60": {
+		"message": "費やす"
+	},
+	"v61": {
+		"message": "立っている"
+	},
+	"v62": {
+		"message": "盗む"
+	},
+	"v63": {
+		"message": "泳ぐ"
+	},
+	"v64": {
+		"message": "持っていく/連れていく"
+	},
+	"v65": {
+		"message": "教える"
+	},
+	"v66": {
+		"message": "話す"
+	},
+	"v67": {
+		"message": "思う/考える"
+	},
+	"v68": {
+		"message": "投げる"
+	},
+	"v69": {
+		"message": "理解する"
+	},
+	"v70": {
+		"message": "目を覚ます"
+	},
+	"v71": {
+		"message": "身につける"
+	},
+	"v72": {
+		"message": "勝つ"
+	},
+	"v73": {
+		"message": "書く"
+	}
+}

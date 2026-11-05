@@ -1,0 +1,248 @@
+{
+	"extName": {
+		"message": "Metataro 英语 ≪不规则动词≫"
+	},
+	"extShortName": {
+		"message": "Metataro 动词"
+	},
+	"extDescription": {
+		"message": "一张一张卡片学习英语不规则动词，并可朗读发音。"
+	},
+	"howto": {
+		"message": "点一行即可翻开。🔊 会朗读。"
+	},
+	"formGen": {
+		"message": "原形"
+	},
+	"formKako": {
+		"message": "过去式"
+	},
+	"formKakobun": {
+		"message": "过去分词"
+	},
+	"prev": {
+		"message": "上一个"
+	},
+	"next": {
+		"message": "下一个"
+	},
+	"v01": {
+		"message": "是；在"
+	},
+	"v02": {
+		"message": "成为；变得"
+	},
+	"v03": {
+		"message": "开始"
+	},
+	"v04": {
+		"message": "打破；弄坏"
+	},
+	"v05": {
+		"message": "带来"
+	},
+	"v06": {
+		"message": "建造"
+	},
+	"v07": {
+		"message": "买"
+	},
+	"v08": {
+		"message": "抓住"
+	},
+	"v09": {
+		"message": "选择"
+	},
+	"v10": {
+		"message": "来"
+	},
+	"v11": {
+		"message": "切"
+	},
+	"v12": {
+		"message": "做"
+	},
+	"v13": {
+		"message": "画"
+	},
+	"v14": {
+		"message": "喝"
+	},
+	"v15": {
+		"message": "驾驶"
+	},
+	"v16": {
+		"message": "吃"
+	},
+	"v17": {
+		"message": "落下；跌倒"
+	},
+	"v18": {
+		"message": "感觉"
+	},
+	"v19": {
+		"message": "战斗"
+	},
+	"v20": {
+		"message": "找到；发现"
+	},
+	"v21": {
+		"message": "飞"
+	},
+	"v22": {
+		"message": "忘记"
+	},
+	"v23": {
+		"message": "得到"
+	},
+	"v24": {
+		"message": "给"
+	},
+	"v25": {
+		"message": "去"
+	},
+	"v26": {
+		"message": "成长；生长"
+	},
+	"v27": {
+		"message": "有"
+	},
+	"v28": {
+		"message": "听见"
+	},
+	"v29": {
+		"message": "打；击"
+	},
+	"v30": {
+		"message": "拿着；握住"
+	},
+	"v31": {
+		"message": "保持；保存"
+	},
+	"v32": {
+		"message": "知道"
+	},
+	"v33": {
+		"message": "放下；铺"
+	},
+	"v34": {
+		"message": "离开"
+	},
+	"v35": {
+		"message": "借给"
+	},
+	"v36": {
+		"message": "让；允许"
+	},
+	"v37": {
+		"message": "躺"
+	},
+	"v38": {
+		"message": "失去"
+	},
+	"v39": {
+		"message": "做；制作"
+	},
+	"v40": {
+		"message": "意味着"
+	},
+	"v41": {
+		"message": "见面"
+	},
+	"v42": {
+		"message": "支付"
+	},
+	"v43": {
+		"message": "放"
+	},
+	"v44": {
+		"message": "读"
+	},
+	"v45": {
+		"message": "骑；乘"
+	},
+	"v46": {
+		"message": "响"
+	},
+	"v47": {
+		"message": "上升；升起"
+	},
+	"v48": {
+		"message": "跑"
+	},
+	"v49": {
+		"message": "说"
+	},
+	"v50": {
+		"message": "看见"
+	},
+	"v51": {
+		"message": "卖"
+	},
+	"v52": {
+		"message": "送；寄"
+	},
+	"v53": {
+		"message": "照耀；发光"
+	},
+	"v54": {
+		"message": "给…看；展示"
+	},
+	"v55": {
+		"message": "唱"
+	},
+	"v56": {
+		"message": "沉没"
+	},
+	"v57": {
+		"message": "坐"
+	},
+	"v58": {
+		"message": "睡觉"
+	},
+	"v59": {
+		"message": "说（话）"
+	},
+	"v60": {
+		"message": "花费"
+	},
+	"v61": {
+		"message": "站着"
+	},
+	"v62": {
+		"message": "偷"
+	},
+	"v63": {
+		"message": "游泳"
+	},
+	"v64": {
+		"message": "拿走；带去"
+	},
+	"v65": {
+		"message": "教"
+	},
+	"v66": {
+		"message": "告诉"
+	},
+	"v67": {
+		"message": "想；认为"
+	},
+	"v68": {
+		"message": "扔；投"
+	},
+	"v69": {
+		"message": "理解"
+	},
+	"v70": {
+		"message": "醒来"
+	},
+	"v71": {
+		"message": "穿；戴"
+	},
+	"v72": {
+		"message": "赢"
+	},
+	"v73": {
+		"message": "写"
+	}
+}

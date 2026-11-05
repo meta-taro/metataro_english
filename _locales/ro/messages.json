@@ -1,0 +1,248 @@
+{
+	"extName": {
+		"message": "Metataro English ≪Verbe neregulate≫"
+	},
+	"extShortName": {
+		"message": "Metataro Verbs"
+	},
+	"extDescription": {
+		"message": "Învață verbele neregulate din engleză carte cu carte, cu pronunție."
+	},
+	"howto": {
+		"message": "Atinge un rând ca să-l vezi. 🔊 îl citește cu voce tare."
+	},
+	"formGen": {
+		"message": "Forma de bază"
+	},
+	"formKako": {
+		"message": "Trecut"
+	},
+	"formKakobun": {
+		"message": "Participiu trecut"
+	},
+	"prev": {
+		"message": "Înapoi"
+	},
+	"next": {
+		"message": "Înainte"
+	},
+	"v01": {
+		"message": "a fi"
+	},
+	"v02": {
+		"message": "a deveni"
+	},
+	"v03": {
+		"message": "a începe"
+	},
+	"v04": {
+		"message": "a sparge"
+	},
+	"v05": {
+		"message": "a aduce"
+	},
+	"v06": {
+		"message": "a construi"
+	},
+	"v07": {
+		"message": "a cumpăra"
+	},
+	"v08": {
+		"message": "a prinde"
+	},
+	"v09": {
+		"message": "a alege"
+	},
+	"v10": {
+		"message": "a veni"
+	},
+	"v11": {
+		"message": "a tăia"
+	},
+	"v12": {
+		"message": "a face"
+	},
+	"v13": {
+		"message": "a desena"
+	},
+	"v14": {
+		"message": "a bea"
+	},
+	"v15": {
+		"message": "a conduce"
+	},
+	"v16": {
+		"message": "a mânca"
+	},
+	"v17": {
+		"message": "a cădea"
+	},
+	"v18": {
+		"message": "a simți"
+	},
+	"v19": {
+		"message": "a lupta"
+	},
+	"v20": {
+		"message": "a găsi"
+	},
+	"v21": {
+		"message": "a zbura"
+	},
+	"v22": {
+		"message": "a uita"
+	},
+	"v23": {
+		"message": "a obține"
+	},
+	"v24": {
+		"message": "a da"
+	},
+	"v25": {
+		"message": "a merge"
+	},
+	"v26": {
+		"message": "a crește"
+	},
+	"v27": {
+		"message": "a avea"
+	},
+	"v28": {
+		"message": "a auzi"
+	},
+	"v29": {
+		"message": "a lovi"
+	},
+	"v30": {
+		"message": "a ține"
+	},
+	"v31": {
+		"message": "a păstra"
+	},
+	"v32": {
+		"message": "a ști"
+	},
+	"v33": {
+		"message": "a așeza; a pune"
+	},
+	"v34": {
+		"message": "a pleca"
+	},
+	"v35": {
+		"message": "a împrumuta (cuiva)"
+	},
+	"v36": {
+		"message": "a lăsa"
+	},
+	"v37": {
+		"message": "a sta întins"
+	},
+	"v38": {
+		"message": "a pierde"
+	},
+	"v39": {
+		"message": "a face; a crea"
+	},
+	"v40": {
+		"message": "a însemna"
+	},
+	"v41": {
+		"message": "a întâlni"
+	},
+	"v42": {
+		"message": "a plăti"
+	},
+	"v43": {
+		"message": "a pune"
+	},
+	"v44": {
+		"message": "a citi"
+	},
+	"v45": {
+		"message": "a călări; a merge cu"
+	},
+	"v46": {
+		"message": "a suna"
+	},
+	"v47": {
+		"message": "a se ridica"
+	},
+	"v48": {
+		"message": "a alerga"
+	},
+	"v49": {
+		"message": "a spune"
+	},
+	"v50": {
+		"message": "a vedea"
+	},
+	"v51": {
+		"message": "a vinde"
+	},
+	"v52": {
+		"message": "a trimite"
+	},
+	"v53": {
+		"message": "a străluci"
+	},
+	"v54": {
+		"message": "a arăta"
+	},
+	"v55": {
+		"message": "a cânta"
+	},
+	"v56": {
+		"message": "a se scufunda"
+	},
+	"v57": {
+		"message": "a sta jos"
+	},
+	"v58": {
+		"message": "a dormi"
+	},
+	"v59": {
+		"message": "a vorbi"
+	},
+	"v60": {
+		"message": "a cheltui; a petrece"
+	},
+	"v61": {
+		"message": "a sta în picioare"
+	},
+	"v62": {
+		"message": "a fura"
+	},
+	"v63": {
+		"message": "a înota"
+	},
+	"v64": {
+		"message": "a lua; a duce"
+	},
+	"v65": {
+		"message": "a preda; a învăța (pe cineva)"
+	},
+	"v66": {
+		"message": "a spune; a povesti"
+	},
+	"v67": {
+		"message": "a gândi"
+	},
+	"v68": {
+		"message": "a arunca"
+	},
+	"v69": {
+		"message": "a înțelege"
+	},
+	"v70": {
+		"message": "a se trezi"
+	},
+	"v71": {
+		"message": "a purta"
+	},
+	"v72": {
+		"message": "a câștiga"
+	},
+	"v73": {
+		"message": "a scrie"
+	}
+}

@@ -1,0 +1,248 @@
+{
+	"extName": {
+		"message": "Metataro English ≪Verbos irregulares≫"
+	},
+	"extShortName": {
+		"message": "Metataro Verbs"
+	},
+	"extDescription": {
+		"message": "Aprende los verbos irregulares del inglés tarjeta a tarjeta, con pronunciación."
+	},
+	"howto": {
+		"message": "Toca una fila para verla. 🔊 la lee en voz alta."
+	},
+	"formGen": {
+		"message": "Forma base"
+	},
+	"formKako": {
+		"message": "Pasado"
+	},
+	"formKakobun": {
+		"message": "Participio pasado"
+	},
+	"prev": {
+		"message": "Anterior"
+	},
+	"next": {
+		"message": "Siguiente"
+	},
+	"v01": {
+		"message": "ser; estar"
+	},
+	"v02": {
+		"message": "llegar a ser; volverse"
+	},
+	"v03": {
+		"message": "empezar"
+	},
+	"v04": {
+		"message": "romper"
+	},
+	"v05": {
+		"message": "traer"
+	},
+	"v06": {
+		"message": "construir"
+	},
+	"v07": {
+		"message": "comprar"
+	},
+	"v08": {
+		"message": "atrapar"
+	},
+	"v09": {
+		"message": "elegir"
+	},
+	"v10": {
+		"message": "venir"
+	},
+	"v11": {
+		"message": "cortar"
+	},
+	"v12": {
+		"message": "hacer"
+	},
+	"v13": {
+		"message": "dibujar"
+	},
+	"v14": {
+		"message": "beber"
+	},
+	"v15": {
+		"message": "conducir"
+	},
+	"v16": {
+		"message": "comer"
+	},
+	"v17": {
+		"message": "caer"
+	},
+	"v18": {
+		"message": "sentir"
+	},
+	"v19": {
+		"message": "luchar"
+	},
+	"v20": {
+		"message": "encontrar"
+	},
+	"v21": {
+		"message": "volar"
+	},
+	"v22": {
+		"message": "olvidar"
+	},
+	"v23": {
+		"message": "conseguir; obtener"
+	},
+	"v24": {
+		"message": "dar"
+	},
+	"v25": {
+		"message": "ir"
+	},
+	"v26": {
+		"message": "crecer"
+	},
+	"v27": {
+		"message": "tener"
+	},
+	"v28": {
+		"message": "oír"
+	},
+	"v29": {
+		"message": "golpear"
+	},
+	"v30": {
+		"message": "sostener"
+	},
+	"v31": {
+		"message": "mantener; guardar"
+	},
+	"v32": {
+		"message": "saber; conocer"
+	},
+	"v33": {
+		"message": "colocar; poner (tumbado)"
+	},
+	"v34": {
+		"message": "irse; dejar"
+	},
+	"v35": {
+		"message": "prestar"
+	},
+	"v36": {
+		"message": "dejar; permitir"
+	},
+	"v37": {
+		"message": "acostarse; estar tumbado"
+	},
+	"v38": {
+		"message": "perder"
+	},
+	"v39": {
+		"message": "hacer; fabricar"
+	},
+	"v40": {
+		"message": "significar"
+	},
+	"v41": {
+		"message": "encontrarse con"
+	},
+	"v42": {
+		"message": "pagar"
+	},
+	"v43": {
+		"message": "poner"
+	},
+	"v44": {
+		"message": "leer"
+	},
+	"v45": {
+		"message": "montar"
+	},
+	"v46": {
+		"message": "sonar"
+	},
+	"v47": {
+		"message": "subir; elevarse"
+	},
+	"v48": {
+		"message": "correr"
+	},
+	"v49": {
+		"message": "decir"
+	},
+	"v50": {
+		"message": "ver"
+	},
+	"v51": {
+		"message": "vender"
+	},
+	"v52": {
+		"message": "enviar"
+	},
+	"v53": {
+		"message": "brillar"
+	},
+	"v54": {
+		"message": "mostrar"
+	},
+	"v55": {
+		"message": "cantar"
+	},
+	"v56": {
+		"message": "hundirse"
+	},
+	"v57": {
+		"message": "sentarse"
+	},
+	"v58": {
+		"message": "dormir"
+	},
+	"v59": {
+		"message": "hablar"
+	},
+	"v60": {
+		"message": "gastar; pasar (tiempo)"
+	},
+	"v61": {
+		"message": "estar de pie"
+	},
+	"v62": {
+		"message": "robar"
+	},
+	"v63": {
+		"message": "nadar"
+	},
+	"v64": {
+		"message": "llevar"
+	},
+	"v65": {
+		"message": "enseñar"
+	},
+	"v66": {
+		"message": "contar; decir"
+	},
+	"v67": {
+		"message": "pensar"
+	},
+	"v68": {
+		"message": "lanzar"
+	},
+	"v69": {
+		"message": "entender"
+	},
+	"v70": {
+		"message": "despertarse"
+	},
+	"v71": {
+		"message": "llevar puesto"
+	},
+	"v72": {
+		"message": "ganar"
+	},
+	"v73": {
+		"message": "escribir"
+	}
+}
