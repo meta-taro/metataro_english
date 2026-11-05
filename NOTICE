@@ -1,0 +1,106 @@
+This extension bundles data from the following third-party sources.
+The extension's own code is under the MIT License (see LICENSE).
+
+================================================================
+WordNet 3.1
+https://wordnet.princeton.edu/
+Used for: parts of speech, synonyms, antonyms, derived forms and
+irregular inflections (data/wn/, data/morph.json).
+----------------------------------------------------------------
+WordNet 3.1 Copyright 2011 by Princeton University. All rights reserved.
+
+This software and database is being provided to you, the LICENSEE, by
+Princeton University under the following license.  By obtaining, using
+and/or copying this software and database, you agree that you have
+read, understood, and will comply with these terms and conditions.:
+
+Permission to use, copy, modify and distribute this software and
+database and its documentation for any purpose and without fee or
+royalty is hereby granted, provided that you agree to comply with
+the following copyright notice and statements, including the disclaimer,
+and that the same appear on ALL copies of the software, database and
+documentation, including modifications that you make for internal
+use or for distribution.
+
+WordNet 3.1 Copyright 2011 by Princeton University.  All rights reserved.
+
+THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON
+UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
+IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PRINCETON
+UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES OF MERCHANT-
+ABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE
+OF THE LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT
+INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR
+OTHER RIGHTS.
+
+The name of Princeton University or Princeton may not be used in
+advertising or publicity pertaining to distribution of the software
+and/or database.  Title to copyright in this software, database and
+any associated documentation shall at all times remain with
+Princeton University and LICENSEE agrees to preserve same.
+
+================================================================
+CMU Pronouncing Dictionary
+https://github.com/cmusphinx/cmudict
+Used for: pronunciations (converted from ARPAbet to IPA).
+----------------------------------------------------------------
+Copyright (C) 1993-2015 Carnegie Mellon University. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+   The contents of this file are deemed to be source code.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in
+   the documentation and/or other materials provided with the
+   distribution.
+
+This work was supported in part by funding from the Defense Advanced
+Research Projects Agency, the Office of Naval Research and the National
+Science Foundation of the United States of America, and by member
+companies of the Carnegie Mellon Sphinx Speech Consortium. We acknowledge
+the contributions of many volunteers to the expansion and improvement of
+this dictionary.
+
+THIS SOFTWARE IS PROVIDED BY CARNEGIE MELLON UNIVERSITY ``AS IS'' AND
+ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL CARNEGIE MELLON UNIVERSITY
+NOR ITS EMPLOYEES BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+================================================================
+EJDict-hand
+https://github.com/kujirahand/EJDict
+Used for: English-Japanese definitions (data/dict/).
+License: Public Domain (CC0 1.0).
+
+================================================================
+Tatoeba
+https://tatoeba.org/
+Used for: English-Japanese example sentences (data/ex/).
+License: CC BY 2.0 FR (https://creativecommons.org/licenses/by/2.0/fr/).
+Changes: short sentence pairs were selected and grouped by word.
+
+================================================================
+CEFR-J Wordlist 1.5 / Octanove Vocabulary Profile C1/C2 1.0
+https://github.com/openlanguageprofiles/olp-en-cefrj
+Used for: the approximate Eiken grade shown for each word (4th field of rows in data/dict/).
+License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).
+Changes: CEFR levels were mapped to approximate Eiken grades.
+The derived grade data (that field) is shared under CC BY-SA 4.0.
+
+================================================================
+AI-written notes
+The commentary and part of the example sentences in data/notes/ were
+written by AI. They are part of this extension and are under
+the MIT License.
