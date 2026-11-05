@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		var s = t(el.getAttribute("data-i18n"));
 		if (s !== el.getAttribute("data-i18n")) el.textContent = s;
 	});
+	document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+		var k = el.getAttribute("data-i18n-placeholder");
+		var s = t(k);
+		if (s !== k) el.placeholder = s;
+	});
+	document.querySelectorAll('[data-i18n-title]').forEach(function (el) {
+		var k = el.getAttribute("data-i18n-title");
+		var s = t(k);
+		if (s !== k) { el.title = s; el.setAttribute('aria-label', s); }
+	});
 	// 絵だけの見出しは、読み上げとマウスを乗せた時の名前を言語に合わせる
 	document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
 		var k = el.getAttribute("data-i18n-alt");

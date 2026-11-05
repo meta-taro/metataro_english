@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "Metataro English ≪Irregular Verbs≫"
+		"message": "Metataro English Dictionary"
 	},
 	"extShortName": {
-		"message": "Metataro Verbs"
+		"message": "Metataro Dict"
 	},
 	"extDescription": {
-		"message": "Learn English irregular verbs one card at a time, with spoken pronunciation."
+		"message": "An English-Japanese dictionary: right-click a word to look it up, hear it read aloud, see examples, and review it with quizzes."
 	},
 	"howto": {
 		"message": "Tap a row to reveal it. 🔊 reads it aloud."
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "to put words on paper"
+	},
+	"menuLookup": {
+		"message": "Look up \"%s\""
+	},
+	"tabDict": {
+		"message": "Dictionary"
+	},
+	"tabBook": {
+		"message": "Word list"
+	},
+	"tabVerbs": {
+		"message": "Irregular verbs"
+	},
+	"tabSettings": {
+		"message": "Settings"
+	},
+	"tabAbout": {
+		"message": "About this app"
+	},
+	"searchPlaceholder": {
+		"message": "Search English words, phrases or Japanese"
+	},
+	"history": {
+		"message": "History"
+	},
+	"historyClear": {
+		"message": "Clear all"
+	},
+	"historyEmpty": {
+		"message": "No history yet."
+	},
+	"bookEmpty": {
+		"message": "Your word list is empty. Add words with ☆."
+	},
+	"hintKeys": {
+		"message": "Use ↑↓ to pick a suggestion and Enter to look it up. Outside the search box, press Space or P to hear the headword."
+	},
+	"quizChoice": {
+		"message": "4-choice quiz"
+	},
+	"quizHide": {
+		"message": "Hide meanings"
+	},
+	"quizNeed4": {
+		"message": "Needs at least 4 words"
+	},
+	"quizDone": {
+		"message": "Done: $ARG$ correct",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "Next"
+	},
+	"bookCount": {
+		"message": "$ARG$ words",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "Add to word list"
+	},
+	"bookRemove": {
+		"message": "Remove from word list"
+	},
+	"verbLookup": {
+		"message": "See phrases and examples in the dictionary"
+	},
+	"setVoice": {
+		"message": "Voice"
+	},
+	"setUS": {
+		"message": "American English"
+	},
+	"setUK": {
+		"message": "British English"
+	},
+	"setSlow": {
+		"message": "Read slowly"
+	},
+	"setTest": {
+		"message": "Try it"
+	},
+	"setVoiceNote": {
+		"message": "Uses the speech voices installed on this device. Nothing is sent over the network."
+	},
+	"voiceNone": {
+		"message": "No English voice is installed on this device. Add an English voice in your OS settings to enable read-aloud."
+	},
+	"voiceOther": {
+		"message": "No voice for the chosen accent, so another English voice is used."
+	},
+	"aboutMeaningJa": {
+		"message": "Meanings are shown in Japanese, whatever your display language."
+	},
+	"aiNote": {
+		"message": "Some notes and example sentences were written by AI."
+	},
+	"aboutData": {
+		"message": "Data and sources"
+	},
+	"creditEjdict": {
+		"message": "English-Japanese dictionary text"
+	},
+	"creditCmu": {
+		"message": "Pronunciations (converted from ARPAbet to IPA)"
+	},
+	"creditWordnet": {
+		"message": "Parts of speech, synonyms, antonyms, derived words and irregular forms"
+	},
+	"creditSeeNotice": {
+		"message": "The full license is in NOTICE."
+	},
+	"creditTatoeba": {
+		"message": "English-Japanese example sentences"
+	},
+	"creditTatoebaMod": {
+		"message": "Short sentences were selected."
+	},
+	"creditEiken": {
+		"message": "The approximate Eiken grades are assigned from these word lists."
+	},
+	"creditAi": {
+		"message": "Notes and examples for some key words (written by AI)"
+	},
+	"aboutReverse": {
+		"message": "Searching in Japanese is a simple reverse lookup of the Japanese meanings; it is not a full Japanese-English dictionary."
+	},
+	"speak": {
+		"message": "Read aloud"
+	},
+	"remove": {
+		"message": "Remove"
+	},
+	"notFound": {
+		"message": "\"$ARG$\" was not found.",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "Did you mean:"
+	},
+	"reverseTitle": {
+		"message": "English for \"$ARG$\"",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "Showing the base form of \"$ARG$\".",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "Base form:"
+	},
+	"ipaUS": {
+		"message": "US"
+	},
+	"gradeNote": {
+		"message": "Approximate Eiken grade"
+	},
+	"grade_5": {
+		"message": "Eiken 5"
+	},
+	"grade_4": {
+		"message": "Eiken 4"
+	},
+	"grade_3": {
+		"message": "Eiken 3"
+	},
+	"grade_p2": {
+		"message": "Eiken Pre-2"
+	},
+	"grade_2": {
+		"message": "Eiken 2"
+	},
+	"grade_p1": {
+		"message": "Eiken Pre-1"
+	},
+	"grade_1": {
+		"message": "Eiken 1"
+	},
+	"posN": {
+		"message": "noun"
+	},
+	"posV": {
+		"message": "verb"
+	},
+	"posA": {
+		"message": "adjective"
+	},
+	"posR": {
+		"message": "adverb"
+	},
+	"infl3sg": {
+		"message": "3rd sg."
+	},
+	"inflPast": {
+		"message": "past"
+	},
+	"inflPP": {
+		"message": "past participle"
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "past / p.p."
+	},
+	"inflPastPP": {
+		"message": "past / p.p."
+	},
+	"inflPlural": {
+		"message": "plural"
+	},
+	"inflComp": {
+		"message": "comparative"
+	},
+	"inflSup": {
+		"message": "superlative"
+	},
+	"examples": {
+		"message": "Examples"
+	},
+	"related": {
+		"message": "Synonyms, antonyms and related words"
+	},
+	"synonyms": {
+		"message": "Synonyms"
+	},
+	"antonyms": {
+		"message": "Antonyms"
+	},
+	"derived": {
+		"message": "Derived words"
+	},
+	"idioms": {
+		"message": "Phrases"
+	},
+	"more": {
+		"message": "Show more ($ARG$)",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "by AI"
+	},
+	"notesTitle": {
+		"message": "Notes"
+	},
+	"notesEx": {
+		"message": "Examples by situation"
+	},
+	"notesCol": {
+		"message": "Common combinations"
+	},
+	"notesSyn": {
+		"message": "How it differs from similar words"
+	},
+	"notesErr": {
+		"message": "Common mistakes"
+	},
+	"notesEty": {
+		"message": "Origin and memory tips"
+	},
+	"notesExam": {
+		"message": "What exams test"
 	}
 }

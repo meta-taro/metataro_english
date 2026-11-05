@@ -1,61 +1,123 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	<title data-i18n="extName">めたたろ英語 ≪不規則動詞≫</title>
+	<title data-i18n="extName">めたたろ英語辞典</title>
 	<meta charset="utf-8">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/style.css">
-	<link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-	<script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
 	<script src="/js/15b50dcc89.js" crossorigin="anonymous"></script>
 	<script src="/js/jquery-3.6.0.min.js"></script>
 	<script src="/js/i18n.js"></script>
+	<script src="/js/verbs.js"></script>
+	<script src="/js/lemma.js"></script>
+	<script src="/js/dict.js"></script>
+	<script src="/js/speech.js"></script>
+	<script src="/js/store.js"></script>
 </head>
 <body>
-	<main class="h-100">
-		<section class="w-auto m-4">
-			<h1 class="fs-3 text-center py-2"><span class="text"></span></h1>
-			<p class="text-center small text-muted m-0" data-i18n="howto">めくりたい行をタップ。🔊 で読み上げます。</p>
-			<dl class="row fs-4 p-3 align-items-end">
-				<dt class="col-5"><img src="/images/icon1.png" alt="原形" title="原形" data-i18n-alt="formGen"><span class="form-label" data-i18n="formGen">原形</span></dt>
-				<dd class="col-7 gen"><span class="gen">-</span> <i class="fas fa-volume-up spegen float-end me-3"></i></dd>
-				<dt class="col-5"><img src="/images/icon2.png" alt="過去形" title="過去形" data-i18n-alt="formKako"><span class="form-label" data-i18n="formKako">過去形</span></dt>
-				<dd class="col-7 kako"><span class="kako">-</span> <i class="fas fa-volume-up spekako float-end me-3"></i></dd>
-				<dt class="col-5"><img src="/images/icon3.png" alt="過去分詞" title="過去分詞" data-i18n-alt="formKakobun"><span class="form-label" data-i18n="formKakobun">過去分詞</span></dt>
-				<dd class="col-7 kakobun"><span class="kakobun">-</span> <i class="fas fa-volume-up spekakobun float-end me-3"></i></dd>
-			</dl>
-		</section>
+	<nav class="tabs" role="tablist">
+		<button type="button" class="tab active" data-pane="dict" role="tab"><i class="fas fa-book"></i> <span data-i18n="tabDict">辞典</span></button>
+		<button type="button" class="tab" data-pane="book" role="tab"><i class="fas fa-bookmark"></i> <span data-i18n="tabBook">単語帳</span></button>
+		<button type="button" class="tab" data-pane="verbs" role="tab"><i class="fas fa-table"></i> <span data-i18n="tabVerbs">不規則動詞</span></button>
+		<button type="button" class="tab icon" data-pane="settings" role="tab" data-i18n-title="tabSettings" title="設定"><i class="fas fa-cog"></i></button>
+		<button type="button" class="tab icon" data-pane="about" role="tab" data-i18n-title="tabAbout" title="このアプリについて"><i class="fas fa-info-circle"></i></button>
+	</nav>
 
-		<nav class="w-auto mx-3 fixed-bottom">
-			<div class="pager mb-1 text-center fs-5">
-				<span class="now"></span> / <span class="total"></span> / <i class="fas fa-random random"></i>
+	<!-- 辞典 -->
+	<div class="pane active" id="pane-dict">
+		<div class="searchbar">
+			<input type="search" id="q" class="form-control form-control-sm" autocomplete="off" spellcheck="false" data-i18n-placeholder="searchPlaceholder" placeholder="英単語・熟語・日本語で検索">
+			<ul id="suggest" class="suggest" role="listbox" hidden></ul>
+		</div>
+		<div class="scroll" id="dict-body">
+			<div id="home">
+				<h2 class="sec"><span data-i18n="history">検索履歴</span> <button type="button" class="link small" id="history-clear" data-i18n="historyClear">すべて消す</button></h2>
+				<ul id="history" class="chips"></ul>
+				<p class="muted small" id="history-empty" data-i18n="historyEmpty">まだ履歴はありません。</p>
+				<h2 class="sec" data-i18n="tabBook">単語帳</h2>
+				<ul id="home-book" class="chips"></ul>
+				<p class="muted small" id="home-book-empty" data-i18n="bookEmpty">単語帳はまだ空です。☆ で追加できます。</p>
+				<p class="muted tiny" data-i18n="hintKeys">↑↓ で候補を選び Enter で引きます。入力欄の外で Space か P を押すと見出し語を読み上げます。</p>
 			</div>
+			<div id="entry" hidden></div>
+		</div>
+	</div>
 
-			<ul class="list-unstyled row m-0">
-				<li class="col-6 p-2 prev"><img src="/images/prev.png"><span class="btn-label" data-i18n="prev">前へ</span></li>
-				<li class="col-6 p-2 text-end next"><img src="/images/next.png"><span class="btn-label" data-i18n="next">次へ</span></li>
+	<!-- 単語帳 -->
+	<div class="pane" id="pane-book">
+		<div class="bookbar">
+			<button type="button" class="btn btn-sm btn-outline-secondary" id="quiz-choice" data-i18n="quizChoice">4択クイズ</button>
+			<button type="button" class="btn btn-sm btn-outline-secondary" id="quiz-hide" data-i18n="quizHide">意味を隠す</button>
+			<span class="muted small ms-auto" id="book-count"></span>
+		</div>
+		<div class="scroll">
+			<div id="quiz" hidden></div>
+			<ul id="book" class="booklist"></ul>
+			<p class="muted small" id="book-empty" data-i18n="bookEmpty">単語帳はまだ空です。☆ で追加できます。</p>
+		</div>
+	</div>
+
+	<!-- 不規則動詞（元の表） -->
+	<div class="pane" id="pane-verbs">
+		<main>
+			<section class="w-auto m-4">
+				<h1 class="fs-3 text-center py-2"><span class="text"></span></h1>
+				<p class="text-center small text-muted m-0" data-i18n="howto">めくりたい行をタップ。🔊 で読み上げます。</p>
+				<dl class="row fs-4 p-3 align-items-end">
+					<dt class="col-5"><img src="/images/icon1.png" alt="原形" title="原形" data-i18n-alt="formGen"><span class="form-label" data-i18n="formGen">原形</span></dt>
+					<dd class="col-7 gen"><span class="gen">-</span> <i class="fas fa-volume-up spegen float-end me-3"></i><i class="fas fa-search verb-look float-end me-2" data-col="gen" data-i18n-title="verbLookup" title="辞典で熟語・例文を見る"></i></dd>
+					<dt class="col-5"><img src="/images/icon2.png" alt="過去形" title="過去形" data-i18n-alt="formKako"><span class="form-label" data-i18n="formKako">過去形</span></dt>
+					<dd class="col-7 kako"><span class="kako">-</span> <i class="fas fa-volume-up spekako float-end me-3"></i><i class="fas fa-search verb-look float-end me-2" data-col="kako" data-i18n-title="verbLookup" title="辞典で熟語・例文を見る"></i></dd>
+					<dt class="col-5"><img src="/images/icon3.png" alt="過去分詞" title="過去分詞" data-i18n-alt="formKakobun"><span class="form-label" data-i18n="formKakobun">過去分詞</span></dt>
+					<dd class="col-7 kakobun"><span class="kakobun">-</span> <i class="fas fa-volume-up spekakobun float-end me-3"></i><i class="fas fa-search verb-look float-end me-2" data-col="kakobun" data-i18n-title="verbLookup" title="辞典で熟語・例文を見る"></i></dd>
+				</dl>
+			</section>
+			<nav class="verbnav">
+				<div class="pager mb-1 text-center fs-5">
+					<span class="now"></span> / <span class="total"></span> / <i class="fas fa-random random"></i>
+				</div>
+				<ul class="list-unstyled row m-0">
+					<li class="col-6 p-2 prev"><img src="/images/prev.png" alt=""><span class="btn-label" data-i18n="prev">前へ</span></li>
+					<li class="col-6 p-2 text-end next"><img src="/images/next.png" alt=""><span class="btn-label" data-i18n="next">次へ</span></li>
+				</ul>
+			</nav>
+		</main>
+	</div>
+
+	<!-- 設定 -->
+	<div class="pane" id="pane-settings">
+		<div class="scroll pad">
+			<h2 class="sec" data-i18n="setVoice">読み上げの声</h2>
+			<div class="form-check"><input class="form-check-input" type="radio" name="accent" id="accent-us" value="us"><label class="form-check-label" for="accent-us" data-i18n="setUS">アメリカ英語</label></div>
+			<div class="form-check"><input class="form-check-input" type="radio" name="accent" id="accent-uk" value="uk"><label class="form-check-label" for="accent-uk" data-i18n="setUK">イギリス英語</label></div>
+			<div class="form-check mt-2"><input class="form-check-input" type="checkbox" id="slow"><label class="form-check-label" for="slow" data-i18n="setSlow">ゆっくり読む</label></div>
+			<button type="button" class="btn btn-sm btn-outline-secondary mt-2" id="voice-test"><i class="fas fa-volume-up"></i> <span data-i18n="setTest">試しに聞く</span></button>
+			<p class="small mt-2" id="voice-status"></p>
+			<p class="muted small" data-i18n="setVoiceNote">声はこの端末に入っている読み上げ機能を使います。通信はしません。</p>
+		</div>
+	</div>
+
+	<!-- このアプリについて -->
+	<div class="pane" id="pane-about">
+		<div class="scroll pad about">
+			<h2 class="sec" data-i18n="extName">めたたろ英語辞典</h2>
+			<p class="small" data-i18n="aboutMeaningJa">意味は日本語で表示します（画面の言語にかかわらず日本語です）。</p>
+			<p class="small ai-note" data-i18n="aiNote">解説・例文の一部は AI が作成しています。</p>
+			<h2 class="sec" data-i18n="aboutData">収録データと出典</h2>
+			<ul class="small credits">
+				<li><b>EJDict-hand</b> — <span data-i18n="creditEjdict">英和辞書の本文</span><br>Public Domain (CC0)<br><span class="url">https://github.com/kujirahand/EJDict</span></li>
+				<li><b>CMU Pronouncing Dictionary</b> — <span data-i18n="creditCmu">発音記号（ARPAbet から IPA へ変換）</span><br>Copyright (C) 1993-2015 Carnegie Mellon University. BSD-style license.<br><span class="url">https://github.com/cmusphinx/cmudict</span></li>
+				<li><b>WordNet 3.1</b> — <span data-i18n="creditWordnet">品詞・類義語・反意語・派生語・不規則変化</span><br>WordNet 3.1 Copyright 2011 by Princeton University. All rights reserved. <span data-i18n="creditSeeNotice">ライセンス全文は NOTICE にあります。</span><br><span class="url">https://wordnet.princeton.edu/</span></li>
+				<li><b>Tatoeba</b> — <span data-i18n="creditTatoeba">英日の例文</span><br>CC BY 2.0 FR. <span data-i18n="creditTatoebaMod">短い文を選んで収録しています。</span><br><span class="url">https://tatoeba.org/</span></li>
+				<li><b>CEFR-J Wordlist 1.5 / Octanove Vocabulary Profile C1/C2 1.0</b> — <span data-i18n="creditEiken">英検の級の目安はこの語彙表をもとに割り当てています。</span><br>CC BY-SA 4.0<br><span class="url">https://github.com/openlanguageprofiles/olp-en-cefrj</span></li>
+				<li><b>AI</b> — <span data-i18n="creditAi">一部の重要語の解説・例文（AI が作成）</span></li>
 			</ul>
-		</nav>
-	</main>
+			<p class="muted small" data-i18n="aboutReverse">日本語からの検索は、英和辞書の訳語から引いた簡易的なもので、和英辞典ではありません。</p>
+		</div>
+	</div>
+
 	<script src="/js/app.js"></script>
-	<style>
-		html { border-top: 6px solid orange;background-image: url(/images/back.png); }
-		body { background-color: initial; }
-		main section h1 { margin-bottom: 1.9rem!important; }
-		main section dl { height: 220px; }
-		main section dl dt { position: relative;left: -40px;top: -10px; }
-		main section dl dd { cursor: pointer;height: 58px; }
-		main section dl dd i { position: relative;top: 10px; }
-		main nav .pager i { cursor: pointer; }
-		main nav ul li { cursor: pointer; }
-		/* 日本語以外は文字を消した絵に差し替え、見出しとボタンの文字を HTML で重ねる */
-		main section p[data-i18n=howto] { padding: 0 1.2rem; font-size: .72rem; line-height: 1.15; }
-		.form-label, .btn-label { display: none; }
-		html.plain { background-image: url(/images/back_plain.png); }
-		html.plain .form-label { display: flex; align-items: center; justify-content: center; position: absolute; left: 80px; top: 0; bottom: 0; width: 96px; transform: translateY(-18px); font-size: .9rem; line-height: 1.1; text-align: center; font-weight: bold; color: #444; }
-		html.plain main nav ul li { position: relative; }
-		html.plain main nav .prev img { content: url(/images/prev_plain.png); }
-		html.plain main nav .next img { content: url(/images/next_plain.png); }
-		html.plain .btn-label { display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #cfe9f5; font-size: 1rem; pointer-events: none; }
-	</style>
+	<script src="/js/popup.js"></script>
 </body>
 </html>

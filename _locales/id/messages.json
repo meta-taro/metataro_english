@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "Metataro English ≪Kata Kerja Tak Beraturan≫"
+		"message": "Kamus Bahasa Inggris Metataro"
 	},
 	"extShortName": {
-		"message": "Metataro Verbs"
+		"message": "Kamus Metataro"
 	},
 	"extDescription": {
-		"message": "Belajar kata kerja tak beraturan bahasa Inggris kartu demi kartu, lengkap dengan pelafalan."
+		"message": "Kamus Inggris-Jepang: klik kanan sebuah kata untuk mencarinya, mendengar pelafalannya, melihat contoh, dan mengulang lewat kuis."
 	},
 	"howto": {
 		"message": "Ketuk baris untuk membukanya. 🔊 membacakannya."
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "menulis"
+	},
+	"menuLookup": {
+		"message": "Cari \"%s\""
+	},
+	"tabDict": {
+		"message": "Kamus"
+	},
+	"tabBook": {
+		"message": "Daftar kata"
+	},
+	"tabVerbs": {
+		"message": "Kata kerja tak beraturan"
+	},
+	"tabSettings": {
+		"message": "Pengaturan"
+	},
+	"tabAbout": {
+		"message": "Tentang aplikasi ini"
+	},
+	"searchPlaceholder": {
+		"message": "Cari kata atau frasa Inggris, atau Jepang"
+	},
+	"history": {
+		"message": "Riwayat"
+	},
+	"historyClear": {
+		"message": "Hapus semua"
+	},
+	"historyEmpty": {
+		"message": "Belum ada riwayat."
+	},
+	"bookEmpty": {
+		"message": "Daftar kata masih kosong. Tambahkan dengan ☆."
+	},
+	"hintKeys": {
+		"message": "Pilih saran dengan ↑↓ dan tekan Enter untuk mencari. Di luar kotak pencarian, tekan Spasi atau P untuk mendengar kata."
+	},
+	"quizChoice": {
+		"message": "Kuis 4 pilihan"
+	},
+	"quizHide": {
+		"message": "Sembunyikan arti"
+	},
+	"quizNeed4": {
+		"message": "Perlu minimal 4 kata"
+	},
+	"quizDone": {
+		"message": "Selesai: $ARG$ benar",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "Berikutnya"
+	},
+	"bookCount": {
+		"message": "$ARG$ kata",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "Tambah ke daftar kata"
+	},
+	"bookRemove": {
+		"message": "Hapus dari daftar kata"
+	},
+	"verbLookup": {
+		"message": "Lihat frasa dan contoh di kamus"
+	},
+	"setVoice": {
+		"message": "Suara"
+	},
+	"setUS": {
+		"message": "Bahasa Inggris Amerika"
+	},
+	"setUK": {
+		"message": "Bahasa Inggris Britania"
+	},
+	"setSlow": {
+		"message": "Baca pelan"
+	},
+	"setTest": {
+		"message": "Coba dengar"
+	},
+	"setVoiceNote": {
+		"message": "Memakai suara yang terpasang di perangkat ini. Tidak ada yang dikirim lewat jaringan."
+	},
+	"voiceNone": {
+		"message": "Perangkat ini tidak punya suara bahasa Inggris. Tambahkan di pengaturan OS agar bisa dibacakan."
+	},
+	"voiceOther": {
+		"message": "Tidak ada suara untuk aksen itu, jadi dipakai suara Inggris lain."
+	},
+	"aboutMeaningJa": {
+		"message": "Arti kata ditampilkan dalam bahasa Jepang, apa pun bahasa tampilan Anda."
+	},
+	"aiNote": {
+		"message": "Sebagian penjelasan dan contoh kalimat ditulis oleh AI."
+	},
+	"aboutData": {
+		"message": "Data dan sumber"
+	},
+	"creditEjdict": {
+		"message": "Isi kamus Inggris-Jepang"
+	},
+	"creditCmu": {
+		"message": "Pelafalan (diubah dari ARPAbet ke IPA)"
+	},
+	"creditWordnet": {
+		"message": "Kelas kata, sinonim, antonim, kata turunan, dan bentuk tak beraturan"
+	},
+	"creditSeeNotice": {
+		"message": "Lisensi lengkap ada di NOTICE."
+	},
+	"creditTatoeba": {
+		"message": "Contoh kalimat Inggris-Jepang"
+	},
+	"creditTatoebaMod": {
+		"message": "Kalimat pendek dipilih."
+	},
+	"creditEiken": {
+		"message": "Perkiraan tingkat Eiken ditentukan dari daftar kata ini."
+	},
+	"creditAi": {
+		"message": "Penjelasan dan contoh untuk sebagian kata penting (ditulis AI)"
+	},
+	"aboutReverse": {
+		"message": "Pencarian dalam bahasa Jepang hanya pencarian balik dari arti kata; ini bukan kamus Jepang-Inggris lengkap."
+	},
+	"speak": {
+		"message": "Dengarkan"
+	},
+	"remove": {
+		"message": "Hapus"
+	},
+	"notFound": {
+		"message": "\"$ARG$\" tidak ditemukan.",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "Mungkin maksud Anda:"
+	},
+	"reverseTitle": {
+		"message": "Bahasa Inggris untuk \"$ARG$\"",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "Menampilkan bentuk dasar dari \"$ARG$\".",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "Bentuk dasar:"
+	},
+	"ipaUS": {
+		"message": "AS"
+	},
+	"gradeNote": {
+		"message": "Perkiraan tingkat Eiken"
+	},
+	"grade_5": {
+		"message": "Eiken 5"
+	},
+	"grade_4": {
+		"message": "Eiken 4"
+	},
+	"grade_3": {
+		"message": "Eiken 3"
+	},
+	"grade_p2": {
+		"message": "Eiken Pre-2"
+	},
+	"grade_2": {
+		"message": "Eiken 2"
+	},
+	"grade_p1": {
+		"message": "Eiken Pre-1"
+	},
+	"grade_1": {
+		"message": "Eiken 1"
+	},
+	"posN": {
+		"message": "nomina"
+	},
+	"posV": {
+		"message": "verba"
+	},
+	"posA": {
+		"message": "adjektiva"
+	},
+	"posR": {
+		"message": "adverbia"
+	},
+	"infl3sg": {
+		"message": "org. ke-3 tunggal"
+	},
+	"inflPast": {
+		"message": "lampau"
+	},
+	"inflPP": {
+		"message": "partisip lampau"
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "lampau / partisip"
+	},
+	"inflPastPP": {
+		"message": "lampau / partisip"
+	},
+	"inflPlural": {
+		"message": "jamak"
+	},
+	"inflComp": {
+		"message": "komparatif"
+	},
+	"inflSup": {
+		"message": "superlatif"
+	},
+	"examples": {
+		"message": "Contoh"
+	},
+	"related": {
+		"message": "Sinonim, antonim, dan kata terkait"
+	},
+	"synonyms": {
+		"message": "Sinonim"
+	},
+	"antonyms": {
+		"message": "Antonim"
+	},
+	"derived": {
+		"message": "Kata turunan"
+	},
+	"idioms": {
+		"message": "Frasa"
+	},
+	"more": {
+		"message": "Lihat lagi ($ARG$)",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "oleh AI"
+	},
+	"notesTitle": {
+		"message": "Penjelasan"
+	},
+	"notesEx": {
+		"message": "Contoh per situasi"
+	},
+	"notesCol": {
+		"message": "Kombinasi umum"
+	},
+	"notesSyn": {
+		"message": "Bedanya dengan kata serupa"
+	},
+	"notesErr": {
+		"message": "Kesalahan umum"
+	},
+	"notesEty": {
+		"message": "Asal kata dan cara mengingat"
+	},
+	"notesExam": {
+		"message": "Yang diuji dalam ujian"
 	}
 }

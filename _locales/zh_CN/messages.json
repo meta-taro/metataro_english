@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "Metataro 英语 ≪不规则动词≫"
+		"message": "梅塔塔罗英语词典"
 	},
 	"extShortName": {
-		"message": "Metataro 动词"
+		"message": "梅塔英语词典"
 	},
 	"extDescription": {
-		"message": "一张一张卡片学习英语不规则动词，并可朗读发音。"
+		"message": "英日词典：右键选中单词即可查询，可以听发音、看例句，并用测验复习。"
 	},
 	"howto": {
 		"message": "点一行即可翻开。🔊 会朗读。"
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "写"
+	},
+	"menuLookup": {
+		"message": "查询“%s”"
+	},
+	"tabDict": {
+		"message": "词典"
+	},
+	"tabBook": {
+		"message": "单词本"
+	},
+	"tabVerbs": {
+		"message": "不规则动词"
+	},
+	"tabSettings": {
+		"message": "设置"
+	},
+	"tabAbout": {
+		"message": "关于本应用"
+	},
+	"searchPlaceholder": {
+		"message": "搜索英语单词、短语或日语"
+	},
+	"history": {
+		"message": "搜索记录"
+	},
+	"historyClear": {
+		"message": "全部清除"
+	},
+	"historyEmpty": {
+		"message": "还没有搜索记录。"
+	},
+	"bookEmpty": {
+		"message": "单词本还是空的。点 ☆ 即可添加。"
+	},
+	"hintKeys": {
+		"message": "用 ↑↓ 选择候选词，按 Enter 查询。在输入框以外按空格键或 P 可朗读词条。"
+	},
+	"quizChoice": {
+		"message": "四选一测验"
+	},
+	"quizHide": {
+		"message": "隐藏释义"
+	},
+	"quizNeed4": {
+		"message": "至少需要 4 个单词"
+	},
+	"quizDone": {
+		"message": "结束：答对 $ARG$",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "下一题"
+	},
+	"bookCount": {
+		"message": "$ARG$ 个词",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "加入单词本"
+	},
+	"bookRemove": {
+		"message": "从单词本移除"
+	},
+	"verbLookup": {
+		"message": "在词典中查看短语和例句"
+	},
+	"setVoice": {
+		"message": "朗读声音"
+	},
+	"setUS": {
+		"message": "美式英语"
+	},
+	"setUK": {
+		"message": "英式英语"
+	},
+	"setSlow": {
+		"message": "慢速朗读"
+	},
+	"setTest": {
+		"message": "试听"
+	},
+	"setVoiceNote": {
+		"message": "使用本设备内置的朗读声音，不进行网络通信。"
+	},
+	"voiceNone": {
+		"message": "本设备没有英语朗读声音。在系统设置中添加英语语音后即可朗读。"
+	},
+	"voiceOther": {
+		"message": "没有所选口音的声音，将使用其他英语声音。"
+	},
+	"aboutMeaningJa": {
+		"message": "释义一律以日语显示，与界面语言无关。"
+	},
+	"aiNote": {
+		"message": "部分解说和例句由 AI 编写。"
+	},
+	"aboutData": {
+		"message": "收录数据与出处"
+	},
+	"creditEjdict": {
+		"message": "英日词典正文"
+	},
+	"creditCmu": {
+		"message": "音标（由 ARPAbet 转换为 IPA）"
+	},
+	"creditWordnet": {
+		"message": "词性、近义词、反义词、派生词和不规则变化"
+	},
+	"creditSeeNotice": {
+		"message": "许可证全文见 NOTICE。"
+	},
+	"creditTatoeba": {
+		"message": "英日例句"
+	},
+	"creditTatoebaMod": {
+		"message": "精选了较短的句子。"
+	},
+	"creditEiken": {
+		"message": "英检级别参考依据这些词汇表划分。"
+	},
+	"creditAi": {
+		"message": "部分重要词的解说与例句（由 AI 编写）"
+	},
+	"aboutReverse": {
+		"message": "日语搜索只是从释义反查的简易功能，并非完整的日英词典。"
+	},
+	"speak": {
+		"message": "朗读"
+	},
+	"remove": {
+		"message": "删除"
+	},
+	"notFound": {
+		"message": "未找到“$ARG$”。",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "您是不是要找："
+	},
+	"reverseTitle": {
+		"message": "“$ARG$”的英语",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "显示“$ARG$”的原形。",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "原形："
+	},
+	"ipaUS": {
+		"message": "美音"
+	},
+	"gradeNote": {
+		"message": "英检级别参考"
+	},
+	"grade_5": {
+		"message": "英检5级"
+	},
+	"grade_4": {
+		"message": "英检4级"
+	},
+	"grade_3": {
+		"message": "英检3级"
+	},
+	"grade_p2": {
+		"message": "英检准2级"
+	},
+	"grade_2": {
+		"message": "英检2级"
+	},
+	"grade_p1": {
+		"message": "英检准1级"
+	},
+	"grade_1": {
+		"message": "英检1级"
+	},
+	"posN": {
+		"message": "名词"
+	},
+	"posV": {
+		"message": "动词"
+	},
+	"posA": {
+		"message": "形容词"
+	},
+	"posR": {
+		"message": "副词"
+	},
+	"infl3sg": {
+		"message": "第三人称单数"
+	},
+	"inflPast": {
+		"message": "过去式"
+	},
+	"inflPP": {
+		"message": "过去分词"
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "过去式/过去分词"
+	},
+	"inflPastPP": {
+		"message": "过去式/过去分词"
+	},
+	"inflPlural": {
+		"message": "复数"
+	},
+	"inflComp": {
+		"message": "比较级"
+	},
+	"inflSup": {
+		"message": "最高级"
+	},
+	"examples": {
+		"message": "例句"
+	},
+	"related": {
+		"message": "近义词、反义词与派生词"
+	},
+	"synonyms": {
+		"message": "近义词"
+	},
+	"antonyms": {
+		"message": "反义词"
+	},
+	"derived": {
+		"message": "派生词"
+	},
+	"idioms": {
+		"message": "短语"
+	},
+	"more": {
+		"message": "查看更多（$ARG$）",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "AI 编写"
+	},
+	"notesTitle": {
+		"message": "解说"
+	},
+	"notesEx": {
+		"message": "分场景例句"
+	},
+	"notesCol": {
+		"message": "常用搭配"
+	},
+	"notesSyn": {
+		"message": "与近义词的区别"
+	},
+	"notesErr": {
+		"message": "易错点"
+	},
+	"notesEty": {
+		"message": "词源与记忆方法"
+	},
+	"notesExam": {
+		"message": "考试中常考的内容"
 	}
 }

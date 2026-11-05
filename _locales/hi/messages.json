@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "Metataro English ≪अनियमित क्रियाएँ≫"
+		"message": "मेटाटारो अंग्रेज़ी शब्दकोश"
 	},
 	"extShortName": {
-		"message": "Metataro Verbs"
+		"message": "मेटाटारो कोश"
 	},
 	"extDescription": {
-		"message": "अंग्रेज़ी की अनियमित क्रियाएँ एक-एक कार्ड से, उच्चारण के साथ सीखें।"
+		"message": "अंग्रेज़ी-जापानी शब्दकोश: किसी शब्द पर राइट-क्लिक करके उसका अर्थ देखें, उच्चारण सुनें, उदाहरण पढ़ें और क्विज़ से दोहराएँ।"
 	},
 	"howto": {
 		"message": "देखने के लिए पंक्ति पर टैप करें। 🔊 उसे पढ़कर सुनाता है।"
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "लिखना"
+	},
+	"menuLookup": {
+		"message": "\"%s\" खोजें"
+	},
+	"tabDict": {
+		"message": "शब्दकोश"
+	},
+	"tabBook": {
+		"message": "शब्द सूची"
+	},
+	"tabVerbs": {
+		"message": "अनियमित क्रियाएँ"
+	},
+	"tabSettings": {
+		"message": "सेटिंग्स"
+	},
+	"tabAbout": {
+		"message": "इस ऐप के बारे में"
+	},
+	"searchPlaceholder": {
+		"message": "अंग्रेज़ी शब्द, मुहावरे या जापानी खोजें"
+	},
+	"history": {
+		"message": "इतिहास"
+	},
+	"historyClear": {
+		"message": "सब हटाएँ"
+	},
+	"historyEmpty": {
+		"message": "अभी कोई इतिहास नहीं है।"
+	},
+	"bookEmpty": {
+		"message": "आपकी शब्द सूची खाली है। ☆ से शब्द जोड़ें।"
+	},
+	"hintKeys": {
+		"message": "↑↓ से सुझाव चुनें और Enter से खोजें। खोज बॉक्स के बाहर Space या P दबाकर शब्द सुनें।"
+	},
+	"quizChoice": {
+		"message": "4 विकल्प क्विज़"
+	},
+	"quizHide": {
+		"message": "अर्थ छिपाएँ"
+	},
+	"quizNeed4": {
+		"message": "कम से कम 4 शब्द चाहिए"
+	},
+	"quizDone": {
+		"message": "समाप्त: $ARG$ सही",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "अगला"
+	},
+	"bookCount": {
+		"message": "$ARG$ शब्द",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "शब्द सूची में जोड़ें"
+	},
+	"bookRemove": {
+		"message": "शब्द सूची से हटाएँ"
+	},
+	"verbLookup": {
+		"message": "शब्दकोश में मुहावरे और उदाहरण देखें"
+	},
+	"setVoice": {
+		"message": "आवाज़"
+	},
+	"setUS": {
+		"message": "अमेरिकी अंग्रेज़ी"
+	},
+	"setUK": {
+		"message": "ब्रिटिश अंग्रेज़ी"
+	},
+	"setSlow": {
+		"message": "धीरे पढ़ें"
+	},
+	"setTest": {
+		"message": "सुनकर देखें"
+	},
+	"setVoiceNote": {
+		"message": "इस डिवाइस में मौजूद आवाज़ों का उपयोग होता है। नेटवर्क पर कुछ नहीं भेजा जाता।"
+	},
+	"voiceNone": {
+		"message": "इस डिवाइस में अंग्रेज़ी आवाज़ नहीं है। सुनने के लिए OS सेटिंग्स में अंग्रेज़ी आवाज़ जोड़ें।"
+	},
+	"voiceOther": {
+		"message": "चुने गए लहजे की आवाज़ नहीं है, इसलिए दूसरी अंग्रेज़ी आवाज़ उपयोग होगी।"
+	},
+	"aboutMeaningJa": {
+		"message": "अर्थ हमेशा जापानी में दिखाए जाते हैं, चाहे स्क्रीन की भाषा कोई भी हो।"
+	},
+	"aiNote": {
+		"message": "कुछ व्याख्याएँ और उदाहरण वाक्य AI ने लिखे हैं।"
+	},
+	"aboutData": {
+		"message": "डेटा और स्रोत"
+	},
+	"creditEjdict": {
+		"message": "अंग्रेज़ी-जापानी शब्दकोश का पाठ"
+	},
+	"creditCmu": {
+		"message": "उच्चारण (ARPAbet से IPA में बदला गया)"
+	},
+	"creditWordnet": {
+		"message": "शब्द-भेद, समानार्थी, विलोम, व्युत्पन्न शब्द और अनियमित रूप"
+	},
+	"creditSeeNotice": {
+		"message": "पूरा लाइसेंस NOTICE में है।"
+	},
+	"creditTatoeba": {
+		"message": "अंग्रेज़ी-जापानी उदाहरण वाक्य"
+	},
+	"creditTatoebaMod": {
+		"message": "छोटे वाक्य चुनकर रखे गए हैं।"
+	},
+	"creditEiken": {
+		"message": "अनुमानित Eiken स्तर इन शब्द सूचियों के आधार पर दिए गए हैं।"
+	},
+	"creditAi": {
+		"message": "कुछ मुख्य शब्दों की व्याख्या और उदाहरण (AI द्वारा लिखित)"
+	},
+	"aboutReverse": {
+		"message": "जापानी में खोज केवल अर्थों से उलटी खोज है; यह पूरा जापानी-अंग्रेज़ी शब्दकोश नहीं है।"
+	},
+	"speak": {
+		"message": "सुनें"
+	},
+	"remove": {
+		"message": "हटाएँ"
+	},
+	"notFound": {
+		"message": "\"$ARG$\" नहीं मिला।",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "क्या आपका मतलब था:"
+	},
+	"reverseTitle": {
+		"message": "\"$ARG$\" के लिए अंग्रेज़ी",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "\"$ARG$\" का मूल रूप दिखाया जा रहा है।",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "मूल रूप:"
+	},
+	"ipaUS": {
+		"message": "अमेरिकी"
+	},
+	"gradeNote": {
+		"message": "अनुमानित Eiken स्तर"
+	},
+	"grade_5": {
+		"message": "Eiken 5"
+	},
+	"grade_4": {
+		"message": "Eiken 4"
+	},
+	"grade_3": {
+		"message": "Eiken 3"
+	},
+	"grade_p2": {
+		"message": "Eiken Pre-2"
+	},
+	"grade_2": {
+		"message": "Eiken 2"
+	},
+	"grade_p1": {
+		"message": "Eiken Pre-1"
+	},
+	"grade_1": {
+		"message": "Eiken 1"
+	},
+	"posN": {
+		"message": "संज्ञा"
+	},
+	"posV": {
+		"message": "क्रिया"
+	},
+	"posA": {
+		"message": "विशेषण"
+	},
+	"posR": {
+		"message": "क्रियाविशेषण"
+	},
+	"infl3sg": {
+		"message": "तृ. पु. एक."
+	},
+	"inflPast": {
+		"message": "भूतकाल"
+	},
+	"inflPP": {
+		"message": "भूत कृदंत"
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "भूत / कृदंत"
+	},
+	"inflPastPP": {
+		"message": "भूत / कृदंत"
+	},
+	"inflPlural": {
+		"message": "बहुवचन"
+	},
+	"inflComp": {
+		"message": "तुलनात्मक"
+	},
+	"inflSup": {
+		"message": "अतिशयवाचक"
+	},
+	"examples": {
+		"message": "उदाहरण"
+	},
+	"related": {
+		"message": "समानार्थी, विलोम और संबंधित शब्द"
+	},
+	"synonyms": {
+		"message": "समानार्थी"
+	},
+	"antonyms": {
+		"message": "विलोम"
+	},
+	"derived": {
+		"message": "व्युत्पन्न शब्द"
+	},
+	"idioms": {
+		"message": "मुहावरे"
+	},
+	"more": {
+		"message": "और देखें ($ARG$)",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "AI द्वारा"
+	},
+	"notesTitle": {
+		"message": "व्याख्या"
+	},
+	"notesEx": {
+		"message": "स्थिति के अनुसार उदाहरण"
+	},
+	"notesCol": {
+		"message": "आम शब्द-संयोजन"
+	},
+	"notesSyn": {
+		"message": "मिलते-जुलते शब्दों से अंतर"
+	},
+	"notesErr": {
+		"message": "आम गलतियाँ"
+	},
+	"notesEty": {
+		"message": "उत्पत्ति और याद रखने के तरीके"
+	},
+	"notesExam": {
+		"message": "परीक्षाओं में क्या पूछा जाता है"
 	}
 }

@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "__MSG_extName__",
 	"short_name": "__MSG_extShortName__",
-	"version": "2.1.0",
+	"version": "3.0.0",
 	"default_locale": "ja",
 	"description": "__MSG_extDescription__",
 	"icons": {
@@ -10,6 +10,10 @@
 		"32": "/images/get_started32.png",
 		"48": "/images/get_started48.png",
 		"128": "/images/get_started128.png"
+	},
+	"permissions": ["contextMenus", "storage"],
+	"background": {
+		"service_worker": "background.js"
 	},
 	"action": {
 		"default_popup": "popup.html",

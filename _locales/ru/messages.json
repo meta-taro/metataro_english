@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "Metataro English ≪Неправильные глаголы≫"
+		"message": "Англо-японский словарь Метатаро"
 	},
 	"extShortName": {
-		"message": "Metataro Verbs"
+		"message": "Метатаро"
 	},
 	"extDescription": {
-		"message": "Учите неправильные глаголы английского по одной карточке, с произношением."
+		"message": "Англо-японский словарь: найдите слово правой кнопкой мыши, послушайте произношение, посмотрите примеры и повторите в тестах."
 	},
 	"howto": {
 		"message": "Нажмите на строку, чтобы открыть. 🔊 читает вслух."
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "писать"
+	},
+	"menuLookup": {
+		"message": "Найти «%s»"
+	},
+	"tabDict": {
+		"message": "Словарь"
+	},
+	"tabBook": {
+		"message": "Мои слова"
+	},
+	"tabVerbs": {
+		"message": "Неправильные глаголы"
+	},
+	"tabSettings": {
+		"message": "Настройки"
+	},
+	"tabAbout": {
+		"message": "О приложении"
+	},
+	"searchPlaceholder": {
+		"message": "Поиск английских слов, выражений или по-японски"
+	},
+	"history": {
+		"message": "История"
+	},
+	"historyClear": {
+		"message": "Очистить"
+	},
+	"historyEmpty": {
+		"message": "История пока пуста."
+	},
+	"bookEmpty": {
+		"message": "Список пуст. Добавляйте слова кнопкой ☆."
+	},
+	"hintKeys": {
+		"message": "Выберите подсказку стрелками ↑↓ и нажмите Enter. Вне поля поиска нажмите Пробел или P, чтобы услышать слово."
+	},
+	"quizChoice": {
+		"message": "Тест из 4 вариантов"
+	},
+	"quizHide": {
+		"message": "Скрыть значения"
+	},
+	"quizNeed4": {
+		"message": "Нужно не меньше 4 слов"
+	},
+	"quizDone": {
+		"message": "Готово: верно $ARG$",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "Далее"
+	},
+	"bookCount": {
+		"message": "Слов: $ARG$",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "Добавить в список"
+	},
+	"bookRemove": {
+		"message": "Убрать из списка"
+	},
+	"verbLookup": {
+		"message": "Выражения и примеры в словаре"
+	},
+	"setVoice": {
+		"message": "Голос"
+	},
+	"setUS": {
+		"message": "Американский английский"
+	},
+	"setUK": {
+		"message": "Британский английский"
+	},
+	"setSlow": {
+		"message": "Читать медленно"
+	},
+	"setTest": {
+		"message": "Прослушать"
+	},
+	"setVoiceNote": {
+		"message": "Используются голоса, установленные на устройстве. Ничего не отправляется в сеть."
+	},
+	"voiceNone": {
+		"message": "На устройстве нет английского голоса. Добавьте его в настройках ОС, чтобы слушать слова."
+	},
+	"voiceOther": {
+		"message": "Нет голоса с этим акцентом, используется другой английский голос."
+	},
+	"aboutMeaningJa": {
+		"message": "Значения слов показываются на японском независимо от языка интерфейса."
+	},
+	"aiNote": {
+		"message": "Часть пояснений и примеров написана ИИ."
+	},
+	"aboutData": {
+		"message": "Данные и источники"
+	},
+	"creditEjdict": {
+		"message": "Текст англо-японского словаря"
+	},
+	"creditCmu": {
+		"message": "Произношение (из ARPAbet в МФА)"
+	},
+	"creditWordnet": {
+		"message": "Части речи, синонимы, антонимы, производные и неправильные формы"
+	},
+	"creditSeeNotice": {
+		"message": "Полный текст лицензии — в файле NOTICE."
+	},
+	"creditTatoeba": {
+		"message": "Англо-японские примеры"
+	},
+	"creditTatoebaMod": {
+		"message": "Отобраны короткие предложения."
+	},
+	"creditEiken": {
+		"message": "Примерные уровни Eiken определены по этим спискам слов."
+	},
+	"creditAi": {
+		"message": "Пояснения и примеры к некоторым важным словам (написаны ИИ)"
+	},
+	"aboutReverse": {
+		"message": "Поиск по-японски — это простой обратный поиск по значениям, а не полноценный японско-английский словарь."
+	},
+	"speak": {
+		"message": "Прослушать"
+	},
+	"remove": {
+		"message": "Удалить"
+	},
+	"notFound": {
+		"message": "«$ARG$» не найдено.",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "Возможно, вы имели в виду:"
+	},
+	"reverseTitle": {
+		"message": "Английские слова для «$ARG$»",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "Показана начальная форма для «$ARG$».",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "Начальная форма:"
+	},
+	"ipaUS": {
+		"message": "амер."
+	},
+	"gradeNote": {
+		"message": "Примерный уровень Eiken"
+	},
+	"grade_5": {
+		"message": "Eiken 5"
+	},
+	"grade_4": {
+		"message": "Eiken 4"
+	},
+	"grade_3": {
+		"message": "Eiken 3"
+	},
+	"grade_p2": {
+		"message": "Eiken Pre-2"
+	},
+	"grade_2": {
+		"message": "Eiken 2"
+	},
+	"grade_p1": {
+		"message": "Eiken Pre-1"
+	},
+	"grade_1": {
+		"message": "Eiken 1"
+	},
+	"posN": {
+		"message": "сущ."
+	},
+	"posV": {
+		"message": "глаг."
+	},
+	"posA": {
+		"message": "прил."
+	},
+	"posR": {
+		"message": "нареч."
+	},
+	"infl3sg": {
+		"message": "3 л. ед."
+	},
+	"inflPast": {
+		"message": "прош."
+	},
+	"inflPP": {
+		"message": "прич. прош."
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "прош. / прич."
+	},
+	"inflPastPP": {
+		"message": "прош. / прич."
+	},
+	"inflPlural": {
+		"message": "мн. ч."
+	},
+	"inflComp": {
+		"message": "сравн."
+	},
+	"inflSup": {
+		"message": "превосх."
+	},
+	"examples": {
+		"message": "Примеры"
+	},
+	"related": {
+		"message": "Синонимы, антонимы и производные"
+	},
+	"synonyms": {
+		"message": "Синонимы"
+	},
+	"antonyms": {
+		"message": "Антонимы"
+	},
+	"derived": {
+		"message": "Производные"
+	},
+	"idioms": {
+		"message": "Выражения"
+	},
+	"more": {
+		"message": "Ещё ($ARG$)",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "ИИ"
+	},
+	"notesTitle": {
+		"message": "Пояснения"
+	},
+	"notesEx": {
+		"message": "Примеры по ситуациям"
+	},
+	"notesCol": {
+		"message": "Частые сочетания"
+	},
+	"notesSyn": {
+		"message": "Отличия от похожих слов"
+	},
+	"notesErr": {
+		"message": "Частые ошибки"
+	},
+	"notesEty": {
+		"message": "Происхождение и как запомнить"
+	},
+	"notesExam": {
+		"message": "Что проверяют на экзаменах"
 	}
 }

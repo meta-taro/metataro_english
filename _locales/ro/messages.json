@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "Metataro English ≪Verbe neregulate≫"
+		"message": "Dicționarul de engleză Metataro"
 	},
 	"extShortName": {
-		"message": "Metataro Verbs"
+		"message": "Metataro Dicț"
 	},
 	"extDescription": {
-		"message": "Învață verbele neregulate din engleză carte cu carte, cu pronunție."
+		"message": "Dicționar englez-japonez: dați clic dreapta pe un cuvânt ca să-l căutați, să-l ascultați, să vedeți exemple și să-l repetați."
 	},
 	"howto": {
 		"message": "Atinge un rând ca să-l vezi. 🔊 îl citește cu voce tare."
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "a scrie"
+	},
+	"menuLookup": {
+		"message": "Caută „%s”"
+	},
+	"tabDict": {
+		"message": "Dicționar"
+	},
+	"tabBook": {
+		"message": "Lista mea"
+	},
+	"tabVerbs": {
+		"message": "Verbe neregulate"
+	},
+	"tabSettings": {
+		"message": "Setări"
+	},
+	"tabAbout": {
+		"message": "Despre aplicație"
+	},
+	"searchPlaceholder": {
+		"message": "Căutați cuvinte sau expresii în engleză, ori japoneză"
+	},
+	"history": {
+		"message": "Istoric"
+	},
+	"historyClear": {
+		"message": "Șterge tot"
+	},
+	"historyEmpty": {
+		"message": "Încă nu există istoric."
+	},
+	"bookEmpty": {
+		"message": "Lista este goală. Adăugați cuvinte cu ☆."
+	},
+	"hintKeys": {
+		"message": "Folosiți ↑↓ pentru a alege o sugestie și Enter pentru căutare. În afara casetei, apăsați Spațiu sau P pentru a asculta cuvântul."
+	},
+	"quizChoice": {
+		"message": "Test cu 4 variante"
+	},
+	"quizHide": {
+		"message": "Ascunde sensurile"
+	},
+	"quizNeed4": {
+		"message": "Necesită cel puțin 4 cuvinte"
+	},
+	"quizDone": {
+		"message": "Gata: $ARG$ corecte",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "Următorul"
+	},
+	"bookCount": {
+		"message": "$ARG$ cuvinte",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "Adaugă în listă"
+	},
+	"bookRemove": {
+		"message": "Scoate din listă"
+	},
+	"verbLookup": {
+		"message": "Vezi expresii și exemple în dicționar"
+	},
+	"setVoice": {
+		"message": "Voce"
+	},
+	"setUS": {
+		"message": "Engleză americană"
+	},
+	"setUK": {
+		"message": "Engleză britanică"
+	},
+	"setSlow": {
+		"message": "Citește rar"
+	},
+	"setTest": {
+		"message": "Încearcă"
+	},
+	"setVoiceNote": {
+		"message": "Folosește vocile instalate pe acest dispozitiv. Nu se trimite nimic prin rețea."
+	},
+	"voiceNone": {
+		"message": "Pe acest dispozitiv nu există o voce engleză. Adăugați una din setările sistemului."
+	},
+	"voiceOther": {
+		"message": "Nu există voce pentru accentul ales; se folosește altă voce engleză."
+	},
+	"aboutMeaningJa": {
+		"message": "Sensurile sunt afișate în japoneză, indiferent de limba interfeței."
+	},
+	"aiNote": {
+		"message": "Unele explicații și exemple au fost scrise de AI."
+	},
+	"aboutData": {
+		"message": "Date și surse"
+	},
+	"creditEjdict": {
+		"message": "Textul dicționarului englez-japonez"
+	},
+	"creditCmu": {
+		"message": "Pronunții (convertite din ARPAbet în IPA)"
+	},
+	"creditWordnet": {
+		"message": "Părți de vorbire, sinonime, antonime, derivate și forme neregulate"
+	},
+	"creditSeeNotice": {
+		"message": "Licența completă se află în NOTICE."
+	},
+	"creditTatoeba": {
+		"message": "Exemple de propoziții englez-japonez"
+	},
+	"creditTatoebaMod": {
+		"message": "Au fost alese propoziții scurte."
+	},
+	"creditEiken": {
+		"message": "Nivelurile Eiken aproximative sunt atribuite pe baza acestor liste."
+	},
+	"creditAi": {
+		"message": "Explicații și exemple pentru unele cuvinte importante (scrise de AI)"
+	},
+	"aboutReverse": {
+		"message": "Căutarea în japoneză este o căutare inversă simplă în sensuri; nu este un dicționar japonez-englez complet."
+	},
+	"speak": {
+		"message": "Ascultă"
+	},
+	"remove": {
+		"message": "Șterge"
+	},
+	"notFound": {
+		"message": "„$ARG$” nu a fost găsit.",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "Ați vrut să scrieți:"
+	},
+	"reverseTitle": {
+		"message": "Engleza pentru „$ARG$”",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "Se afișează forma de bază pentru „$ARG$”.",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "Forma de bază:"
+	},
+	"ipaUS": {
+		"message": "SUA"
+	},
+	"gradeNote": {
+		"message": "Nivel Eiken aproximativ"
+	},
+	"grade_5": {
+		"message": "Eiken 5"
+	},
+	"grade_4": {
+		"message": "Eiken 4"
+	},
+	"grade_3": {
+		"message": "Eiken 3"
+	},
+	"grade_p2": {
+		"message": "Eiken Pre-2"
+	},
+	"grade_2": {
+		"message": "Eiken 2"
+	},
+	"grade_p1": {
+		"message": "Eiken Pre-1"
+	},
+	"grade_1": {
+		"message": "Eiken 1"
+	},
+	"posN": {
+		"message": "substantiv"
+	},
+	"posV": {
+		"message": "verb"
+	},
+	"posA": {
+		"message": "adjectiv"
+	},
+	"posR": {
+		"message": "adverb"
+	},
+	"infl3sg": {
+		"message": "pers. 3 sg."
+	},
+	"inflPast": {
+		"message": "trecut"
+	},
+	"inflPP": {
+		"message": "participiu"
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "trecut / part."
+	},
+	"inflPastPP": {
+		"message": "trecut / part."
+	},
+	"inflPlural": {
+		"message": "plural"
+	},
+	"inflComp": {
+		"message": "comparativ"
+	},
+	"inflSup": {
+		"message": "superlativ"
+	},
+	"examples": {
+		"message": "Exemple"
+	},
+	"related": {
+		"message": "Sinonime, antonime și derivate"
+	},
+	"synonyms": {
+		"message": "Sinonime"
+	},
+	"antonyms": {
+		"message": "Antonime"
+	},
+	"derived": {
+		"message": "Derivate"
+	},
+	"idioms": {
+		"message": "Expresii"
+	},
+	"more": {
+		"message": "Mai multe ($ARG$)",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "de AI"
+	},
+	"notesTitle": {
+		"message": "Explicații"
+	},
+	"notesEx": {
+		"message": "Exemple pe situații"
+	},
+	"notesCol": {
+		"message": "Combinații frecvente"
+	},
+	"notesSyn": {
+		"message": "Diferențe față de cuvinte apropiate"
+	},
+	"notesErr": {
+		"message": "Greșeli frecvente"
+	},
+	"notesEty": {
+		"message": "Origine și trucuri de memorare"
+	},
+	"notesExam": {
+		"message": "Ce se cere la examene"
 	}
 }

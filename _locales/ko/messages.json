@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "메타타로 영어 ≪불규칙 동사≫"
+		"message": "메타타로 영어 사전"
 	},
 	"extShortName": {
-		"message": "메타타로 동사"
+		"message": "메타 영어사전"
 	},
 	"extDescription": {
-		"message": "영어 불규칙 동사를 카드 한 장씩, 발음과 함께 익힙니다."
+		"message": "영일 사전입니다. 단어를 우클릭해 바로 찾고, 발음을 듣고, 예문을 보고, 퀴즈로 복습할 수 있습니다."
 	},
 	"howto": {
 		"message": "줄을 탭하면 답이 보입니다. 🔊로 읽어 줍니다."
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "쓰다"
+	},
+	"menuLookup": {
+		"message": "\"%s\" 사전에서 찾기"
+	},
+	"tabDict": {
+		"message": "사전"
+	},
+	"tabBook": {
+		"message": "단어장"
+	},
+	"tabVerbs": {
+		"message": "불규칙 동사"
+	},
+	"tabSettings": {
+		"message": "설정"
+	},
+	"tabAbout": {
+		"message": "이 앱에 대하여"
+	},
+	"searchPlaceholder": {
+		"message": "영어 단어·숙어·일본어로 검색"
+	},
+	"history": {
+		"message": "검색 기록"
+	},
+	"historyClear": {
+		"message": "모두 지우기"
+	},
+	"historyEmpty": {
+		"message": "아직 기록이 없습니다."
+	},
+	"bookEmpty": {
+		"message": "단어장이 비어 있습니다. ☆로 추가하세요."
+	},
+	"hintKeys": {
+		"message": "↑↓로 후보를 고르고 Enter로 찾습니다. 입력창 밖에서 Space나 P를 누르면 표제어를 읽어 줍니다."
+	},
+	"quizChoice": {
+		"message": "4지선다 퀴즈"
+	},
+	"quizHide": {
+		"message": "뜻 가리기"
+	},
+	"quizNeed4": {
+		"message": "4단어 이상 필요합니다"
+	},
+	"quizDone": {
+		"message": "끝: $ARG$ 정답",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "다음"
+	},
+	"bookCount": {
+		"message": "$ARG$단어",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "단어장에 추가"
+	},
+	"bookRemove": {
+		"message": "단어장에서 빼기"
+	},
+	"verbLookup": {
+		"message": "사전에서 숙어·예문 보기"
+	},
+	"setVoice": {
+		"message": "읽기 음성"
+	},
+	"setUS": {
+		"message": "미국 영어"
+	},
+	"setUK": {
+		"message": "영국 영어"
+	},
+	"setSlow": {
+		"message": "천천히 읽기"
+	},
+	"setTest": {
+		"message": "들어 보기"
+	},
+	"setVoiceNote": {
+		"message": "이 기기에 설치된 음성을 사용합니다. 통신은 하지 않습니다."
+	},
+	"voiceNone": {
+		"message": "이 기기에는 영어 음성이 없습니다. OS 설정에서 영어 음성을 추가하면 읽어 줄 수 있습니다."
+	},
+	"voiceOther": {
+		"message": "선택한 억양의 음성이 없어 다른 영어 음성으로 읽습니다."
+	},
+	"aboutMeaningJa": {
+		"message": "뜻은 화면 언어와 관계없이 일본어로 표시됩니다."
+	},
+	"aiNote": {
+		"message": "해설과 예문의 일부는 AI가 작성했습니다."
+	},
+	"aboutData": {
+		"message": "수록 데이터와 출처"
+	},
+	"creditEjdict": {
+		"message": "영일 사전 본문"
+	},
+	"creditCmu": {
+		"message": "발음 기호 (ARPAbet에서 IPA로 변환)"
+	},
+	"creditWordnet": {
+		"message": "품사·유의어·반의어·파생어·불규칙 변화"
+	},
+	"creditSeeNotice": {
+		"message": "라이선스 전문은 NOTICE에 있습니다."
+	},
+	"creditTatoeba": {
+		"message": "영일 예문"
+	},
+	"creditTatoebaMod": {
+		"message": "짧은 문장을 골라 수록했습니다."
+	},
+	"creditEiken": {
+		"message": "영검 급 기준은 이 어휘표를 바탕으로 정했습니다."
+	},
+	"creditAi": {
+		"message": "일부 중요 단어의 해설·예문 (AI 작성)"
+	},
+	"aboutReverse": {
+		"message": "일본어 검색은 뜻풀이에서 거꾸로 찾는 간이 기능이며, 일영 사전이 아닙니다."
+	},
+	"speak": {
+		"message": "읽어 주기"
+	},
+	"remove": {
+		"message": "삭제"
+	},
+	"notFound": {
+		"message": "\"$ARG$\"을(를) 찾지 못했습니다.",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "이 단어인가요?"
+	},
+	"reverseTitle": {
+		"message": "\"$ARG$\"의 영어",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "\"$ARG$\"의 원형을 표시합니다.",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "원형:"
+	},
+	"ipaUS": {
+		"message": "미국식"
+	},
+	"gradeNote": {
+		"message": "영검(Eiken) 급 기준"
+	},
+	"grade_5": {
+		"message": "영검 5급"
+	},
+	"grade_4": {
+		"message": "영검 4급"
+	},
+	"grade_3": {
+		"message": "영검 3급"
+	},
+	"grade_p2": {
+		"message": "영검 준2급"
+	},
+	"grade_2": {
+		"message": "영검 2급"
+	},
+	"grade_p1": {
+		"message": "영검 준1급"
+	},
+	"grade_1": {
+		"message": "영검 1급"
+	},
+	"posN": {
+		"message": "명사"
+	},
+	"posV": {
+		"message": "동사"
+	},
+	"posA": {
+		"message": "형용사"
+	},
+	"posR": {
+		"message": "부사"
+	},
+	"infl3sg": {
+		"message": "3인칭 단수"
+	},
+	"inflPast": {
+		"message": "과거"
+	},
+	"inflPP": {
+		"message": "과거분사"
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "과거·과거분사"
+	},
+	"inflPastPP": {
+		"message": "과거·과거분사"
+	},
+	"inflPlural": {
+		"message": "복수"
+	},
+	"inflComp": {
+		"message": "비교급"
+	},
+	"inflSup": {
+		"message": "최상급"
+	},
+	"examples": {
+		"message": "예문"
+	},
+	"related": {
+		"message": "유의어·반의어·파생어"
+	},
+	"synonyms": {
+		"message": "유의어"
+	},
+	"antonyms": {
+		"message": "반의어"
+	},
+	"derived": {
+		"message": "파생어"
+	},
+	"idioms": {
+		"message": "숙어"
+	},
+	"more": {
+		"message": "더 보기 ($ARG$)",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "AI 작성"
+	},
+	"notesTitle": {
+		"message": "해설"
+	},
+	"notesEx": {
+		"message": "상황별 예문"
+	},
+	"notesCol": {
+		"message": "자주 쓰는 조합"
+	},
+	"notesSyn": {
+		"message": "비슷한 말과의 차이"
+	},
+	"notesErr": {
+		"message": "틀리기 쉬운 점"
+	},
+	"notesEty": {
+		"message": "어원·외우는 법"
+	},
+	"notesExam": {
+		"message": "입시·영검에서 묻는 것"
 	}
 }

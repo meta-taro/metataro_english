@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "めたたろ英語 ≪不規則動詞≫"
+		"message": "めたたろ英語辞典"
 	},
 	"extShortName": {
-		"message": "めた英 不規則"
+		"message": "めた英辞典"
 	},
 	"extDescription": {
-		"message": "英語の不規則動詞をペラペラ学習することができます"
+		"message": "右クリックで選んだ英単語をその場で引ける英和辞典です。発音を聞き、例文で使い方を確かめ、単語帳とクイズで覚えられます。"
 	},
 	"howto": {
 		"message": "めくりたい行をタップ。🔊 で読み上げます。"
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "書く"
+	},
+	"menuLookup": {
+		"message": "「%s」を辞典で引く"
+	},
+	"tabDict": {
+		"message": "辞典"
+	},
+	"tabBook": {
+		"message": "単語帳"
+	},
+	"tabVerbs": {
+		"message": "不規則動詞"
+	},
+	"tabSettings": {
+		"message": "設定"
+	},
+	"tabAbout": {
+		"message": "このアプリについて"
+	},
+	"searchPlaceholder": {
+		"message": "英単語・熟語・日本語で検索"
+	},
+	"history": {
+		"message": "検索履歴"
+	},
+	"historyClear": {
+		"message": "すべて消す"
+	},
+	"historyEmpty": {
+		"message": "まだ履歴はありません。"
+	},
+	"bookEmpty": {
+		"message": "単語帳はまだ空です。☆ で追加できます。"
+	},
+	"hintKeys": {
+		"message": "↑↓ で候補を選び Enter で引きます。入力欄の外で Space か P を押すと見出し語を読み上げます。"
+	},
+	"quizChoice": {
+		"message": "4択クイズ"
+	},
+	"quizHide": {
+		"message": "意味を隠す"
+	},
+	"quizNeed4": {
+		"message": "4 語以上で使えます"
+	},
+	"quizDone": {
+		"message": "終了：$ARG$ 問正解",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "次へ"
+	},
+	"bookCount": {
+		"message": "$ARG$ 語",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "単語帳に追加"
+	},
+	"bookRemove": {
+		"message": "単語帳から外す"
+	},
+	"verbLookup": {
+		"message": "辞典で熟語・例文を見る"
+	},
+	"setVoice": {
+		"message": "読み上げの声"
+	},
+	"setUS": {
+		"message": "アメリカ英語"
+	},
+	"setUK": {
+		"message": "イギリス英語"
+	},
+	"setSlow": {
+		"message": "ゆっくり読む"
+	},
+	"setTest": {
+		"message": "試しに聞く"
+	},
+	"setVoiceNote": {
+		"message": "声はこの端末に入っている読み上げ機能を使います。通信はしません。"
+	},
+	"voiceNone": {
+		"message": "この端末には英語の読み上げの声が入っていません。OS の設定で英語の音声を追加すると読み上げできます。"
+	},
+	"voiceOther": {
+		"message": "選んだ地域の声が無いため、ほかの英語の声で読み上げます。"
+	},
+	"aboutMeaningJa": {
+		"message": "意味は日本語で表示します（画面の言語にかかわらず日本語です）。"
+	},
+	"aiNote": {
+		"message": "解説・例文の一部は AI が作成しています。"
+	},
+	"aboutData": {
+		"message": "収録データと出典"
+	},
+	"creditEjdict": {
+		"message": "英和辞書の本文"
+	},
+	"creditCmu": {
+		"message": "発音記号（ARPAbet から IPA へ変換）"
+	},
+	"creditWordnet": {
+		"message": "品詞・類義語・反意語・派生語・不規則変化"
+	},
+	"creditSeeNotice": {
+		"message": "ライセンス全文は NOTICE にあります。"
+	},
+	"creditTatoeba": {
+		"message": "英日の例文"
+	},
+	"creditTatoebaMod": {
+		"message": "短い文を選んで収録しています。"
+	},
+	"creditEiken": {
+		"message": "英検の級の目安はこの語彙表をもとに割り当てています。"
+	},
+	"creditAi": {
+		"message": "一部の重要語の解説・例文（AI が作成）"
+	},
+	"aboutReverse": {
+		"message": "日本語からの検索は、英和辞書の訳語から引いた簡易的なもので、和英辞典ではありません。"
+	},
+	"speak": {
+		"message": "読み上げ"
+	},
+	"remove": {
+		"message": "削除"
+	},
+	"notFound": {
+		"message": "「$ARG$」は見つかりませんでした。",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "もしかして："
+	},
+	"reverseTitle": {
+		"message": "「$ARG$」の英語",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "「$ARG$」の原形として表示しています。",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "原形："
+	},
+	"ipaUS": {
+		"message": "米音"
+	},
+	"gradeNote": {
+		"message": "英検の級の目安"
+	},
+	"grade_5": {
+		"message": "英検5級"
+	},
+	"grade_4": {
+		"message": "英検4級"
+	},
+	"grade_3": {
+		"message": "英検3級"
+	},
+	"grade_p2": {
+		"message": "英検準2級"
+	},
+	"grade_2": {
+		"message": "英検2級"
+	},
+	"grade_p1": {
+		"message": "英検準1級"
+	},
+	"grade_1": {
+		"message": "英検1級"
+	},
+	"posN": {
+		"message": "名詞"
+	},
+	"posV": {
+		"message": "動詞"
+	},
+	"posA": {
+		"message": "形容詞"
+	},
+	"posR": {
+		"message": "副詞"
+	},
+	"infl3sg": {
+		"message": "三単現"
+	},
+	"inflPast": {
+		"message": "過去"
+	},
+	"inflPP": {
+		"message": "過去分詞"
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "過去・過去分詞"
+	},
+	"inflPastPP": {
+		"message": "過去・過去分詞"
+	},
+	"inflPlural": {
+		"message": "複数"
+	},
+	"inflComp": {
+		"message": "比較級"
+	},
+	"inflSup": {
+		"message": "最上級"
+	},
+	"examples": {
+		"message": "例文"
+	},
+	"related": {
+		"message": "類義語・反意語・派生語"
+	},
+	"synonyms": {
+		"message": "類義語"
+	},
+	"antonyms": {
+		"message": "反意語"
+	},
+	"derived": {
+		"message": "派生語"
+	},
+	"idioms": {
+		"message": "熟語"
+	},
+	"more": {
+		"message": "もっと見る（$ARG$）",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "AI 作成"
+	},
+	"notesTitle": {
+		"message": "解説"
+	},
+	"notesEx": {
+		"message": "場面別の例文"
+	},
+	"notesCol": {
+		"message": "よく使う組み合わせ"
+	},
+	"notesSyn": {
+		"message": "似た語との違い"
+	},
+	"notesErr": {
+		"message": "間違えやすい点"
+	},
+	"notesEty": {
+		"message": "語源・覚え方"
+	},
+	"notesExam": {
+		"message": "入試・英検で問われること"
 	}
 }

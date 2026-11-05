@@ -1,12 +1,12 @@
 {
 	"extName": {
-		"message": "Metataro English ≪Verbos irregulares≫"
+		"message": "Dicionário de Inglês Metataro"
 	},
 	"extShortName": {
-		"message": "Metataro Verbs"
+		"message": "Metataro Dic"
 	},
 	"extDescription": {
-		"message": "Aprenda os verbos irregulares do inglês cartão a cartão, com pronúncia."
+		"message": "Dicionário inglês-japonês: clique com o botão direito numa palavra para buscá-la, ouvi-la, ver exemplos e revisar com testes."
 	},
 	"howto": {
 		"message": "Toque numa linha para ver. 🔊 lê em voz alta."
@@ -244,5 +244,290 @@
 	},
 	"v73": {
 		"message": "escrever"
+	},
+	"menuLookup": {
+		"message": "Buscar \"%s\""
+	},
+	"tabDict": {
+		"message": "Dicionário"
+	},
+	"tabBook": {
+		"message": "Minhas palavras"
+	},
+	"tabVerbs": {
+		"message": "Verbos irregulares"
+	},
+	"tabSettings": {
+		"message": "Configurações"
+	},
+	"tabAbout": {
+		"message": "Sobre este app"
+	},
+	"searchPlaceholder": {
+		"message": "Busque palavras ou frases em inglês, ou japonês"
+	},
+	"history": {
+		"message": "Histórico"
+	},
+	"historyClear": {
+		"message": "Limpar tudo"
+	},
+	"historyEmpty": {
+		"message": "Ainda não há histórico."
+	},
+	"bookEmpty": {
+		"message": "Sua lista está vazia. Adicione palavras com ☆."
+	},
+	"hintKeys": {
+		"message": "Use ↑↓ para escolher uma sugestão e Enter para buscar. Fora da caixa de busca, pressione Espaço ou P para ouvir a palavra."
+	},
+	"quizChoice": {
+		"message": "Teste de 4 opções"
+	},
+	"quizHide": {
+		"message": "Ocultar significados"
+	},
+	"quizNeed4": {
+		"message": "Precisa de pelo menos 4 palavras"
+	},
+	"quizDone": {
+		"message": "Fim: $ARG$ corretas",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"quizNext": {
+		"message": "Próxima"
+	},
+	"bookCount": {
+		"message": "$ARG$ palavras",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"bookAdd": {
+		"message": "Adicionar à lista"
+	},
+	"bookRemove": {
+		"message": "Remover da lista"
+	},
+	"verbLookup": {
+		"message": "Ver expressões e exemplos no dicionário"
+	},
+	"setVoice": {
+		"message": "Voz"
+	},
+	"setUS": {
+		"message": "Inglês americano"
+	},
+	"setUK": {
+		"message": "Inglês britânico"
+	},
+	"setSlow": {
+		"message": "Ler devagar"
+	},
+	"setTest": {
+		"message": "Testar"
+	},
+	"setVoiceNote": {
+		"message": "Usa as vozes instaladas neste dispositivo. Nada é enviado pela rede."
+	},
+	"voiceNone": {
+		"message": "Este dispositivo não tem voz em inglês. Adicione uma nas configurações do sistema para ouvir."
+	},
+	"voiceOther": {
+		"message": "Não há voz para esse sotaque; outra voz em inglês será usada."
+	},
+	"aboutMeaningJa": {
+		"message": "Os significados aparecem em japonês, qualquer que seja o idioma da interface."
+	},
+	"aiNote": {
+		"message": "Algumas notas e frases de exemplo foram escritas por IA."
+	},
+	"aboutData": {
+		"message": "Dados e fontes"
+	},
+	"creditEjdict": {
+		"message": "Texto do dicionário inglês-japonês"
+	},
+	"creditCmu": {
+		"message": "Pronúncias (convertidas de ARPAbet para AFI)"
+	},
+	"creditWordnet": {
+		"message": "Classes gramaticais, sinônimos, antônimos, derivados e formas irregulares"
+	},
+	"creditSeeNotice": {
+		"message": "A licença completa está em NOTICE."
+	},
+	"creditTatoeba": {
+		"message": "Frases de exemplo inglês-japonês"
+	},
+	"creditTatoebaMod": {
+		"message": "Foram selecionadas frases curtas."
+	},
+	"creditEiken": {
+		"message": "Os níveis Eiken aproximados são atribuídos a partir destas listas."
+	},
+	"creditAi": {
+		"message": "Notas e exemplos de algumas palavras-chave (escritos por IA)"
+	},
+	"aboutReverse": {
+		"message": "A busca em japonês é uma consulta reversa simples dos significados; não é um dicionário japonês-inglês completo."
+	},
+	"speak": {
+		"message": "Ouvir"
+	},
+	"remove": {
+		"message": "Remover"
+	},
+	"notFound": {
+		"message": "\"$ARG$\" não foi encontrado.",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"didYouMean": {
+		"message": "Você quis dizer:"
+	},
+	"reverseTitle": {
+		"message": "Inglês para \"$ARG$\"",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"viaForm": {
+		"message": "Mostrando a forma base de \"$ARG$\".",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"alsoBase": {
+		"message": "Forma base:"
+	},
+	"ipaUS": {
+		"message": "EUA"
+	},
+	"gradeNote": {
+		"message": "Nível Eiken aproximado"
+	},
+	"grade_5": {
+		"message": "Eiken 5"
+	},
+	"grade_4": {
+		"message": "Eiken 4"
+	},
+	"grade_3": {
+		"message": "Eiken 3"
+	},
+	"grade_p2": {
+		"message": "Eiken Pre-2"
+	},
+	"grade_2": {
+		"message": "Eiken 2"
+	},
+	"grade_p1": {
+		"message": "Eiken Pre-1"
+	},
+	"grade_1": {
+		"message": "Eiken 1"
+	},
+	"posN": {
+		"message": "substantivo"
+	},
+	"posV": {
+		"message": "verbo"
+	},
+	"posA": {
+		"message": "adjetivo"
+	},
+	"posR": {
+		"message": "advérbio"
+	},
+	"infl3sg": {
+		"message": "3.ª sg."
+	},
+	"inflPast": {
+		"message": "passado"
+	},
+	"inflPP": {
+		"message": "particípio"
+	},
+	"inflIng": {
+		"message": "-ing"
+	},
+	"inflIrregular": {
+		"message": "passado / part."
+	},
+	"inflPastPP": {
+		"message": "passado / part."
+	},
+	"inflPlural": {
+		"message": "plural"
+	},
+	"inflComp": {
+		"message": "comparativo"
+	},
+	"inflSup": {
+		"message": "superlativo"
+	},
+	"examples": {
+		"message": "Exemplos"
+	},
+	"related": {
+		"message": "Sinônimos, antônimos e derivados"
+	},
+	"synonyms": {
+		"message": "Sinônimos"
+	},
+	"antonyms": {
+		"message": "Antônimos"
+	},
+	"derived": {
+		"message": "Derivados"
+	},
+	"idioms": {
+		"message": "Expressões"
+	},
+	"more": {
+		"message": "Ver mais ($ARG$)",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"aiBadge": {
+		"message": "por IA"
+	},
+	"notesTitle": {
+		"message": "Notas"
+	},
+	"notesEx": {
+		"message": "Exemplos por situação"
+	},
+	"notesCol": {
+		"message": "Combinações comuns"
+	},
+	"notesSyn": {
+		"message": "Diferenças de palavras parecidas"
+	},
+	"notesErr": {
+		"message": "Erros comuns"
+	},
+	"notesEty": {
+		"message": "Origem e dicas para lembrar"
+	},
+	"notesExam": {
+		"message": "O que as provas cobram"
 	}
 }
