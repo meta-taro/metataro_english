@@ -532,5 +532,149 @@
 	},
 	"notesExam": {
 		"message": "考试中常考的内容"
+	},
+	"menuScanPage": {
+		"message": "查找本页中的词典单词"
+	},
+	"tabPage": {
+		"message": "页面"
+	},
+	"pageScan": {
+		"message": "查找本页的单词"
+	},
+	"pagePdf": {
+		"message": "打开 PDF"
+	},
+	"pageIntro": {
+		"message": "从当前页面（或 PDF）的英文中找出本词典收录的单词和短语。"
+	},
+	"pagePrivacy": {
+		"message": "页面文字只在按下按钮时读取，并只在本设备上统计，不会发送到任何地方。"
+	},
+	"pageDrop": {
+		"message": "也可以把 PDF 拖放到这个界面。"
+	},
+	"pageFilter": {
+		"message": "按英检级别筛选"
+	},
+	"pageGradeAll": {
+		"message": "全部单词"
+	},
+	"pageGradeP2": {
+		"message": "准2级以上"
+	},
+	"pageGrade2": {
+		"message": "2级以上"
+	},
+	"pageGradeP1": {
+		"message": "准1级以上"
+	},
+	"pageGrade1": {
+		"message": "1级"
+	},
+	"pageAiOnly": {
+		"message": "只看有 AI 解说的词"
+	},
+	"pageMark": {
+		"message": "在页面上标记"
+	},
+	"pageUnmark": {
+		"message": "清除标记"
+	},
+	"pageMarkNote": {
+		"message": "给符合筛选的单词加下划线。点击带下划线的单词，会在这里打开该词条。"
+	},
+	"pageWords": {
+		"message": "单词（按出现次数）"
+	},
+	"pageNone": {
+		"message": "未找到。"
+	},
+	"pageMore": {
+		"message": "显示更多"
+	},
+	"pageIdioms": {
+		"message": "短语"
+	},
+	"creditPdfjs": {
+		"message": "从 PDF 文件中提取文字"
+	},
+	"pageCounting": {
+		"message": "正在统计…"
+	},
+	"pageErrData": {
+		"message": "无法加载词典数据。"
+	},
+	"pageSummary": {
+		"message": "正文共 $TOTAL$ 词，其中收录词 $WORDS$ 种、短语 $IDIOMS$ 种",
+		"placeholders": {
+			"total": {
+				"content": "$1"
+			},
+			"words": {
+				"content": "$2"
+			},
+			"idioms": {
+				"content": "$3"
+			}
+		}
+	},
+	"pageTruncated": {
+		"message": "（页面过长，只读取了开头部分）"
+	},
+	"pageAiBadge": {
+		"message": "AI 解说"
+	},
+	"pageErrPdfTab": {
+		"message": "无法读取在浏览器中打开的 PDF。请通过“打开 PDF”选择文件。"
+	},
+	"pageErrAccess": {
+		"message": "无法读取此页面。浏览器设置等页面无法读取；跳转到其他页面后，需要从工具栏按钮或右键菜单重新开始。"
+	},
+	"pageErrRead": {
+		"message": "无法读取页面。"
+	},
+	"pageNoEnglish": {
+		"message": "此页面中没有找到英文。"
+	},
+	"pageReading": {
+		"message": "正在读取页面…"
+	},
+	"pageMarked": {
+		"message": "已标记 $COUNT$ 处。",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			}
+		}
+	},
+	"pageUnmarked": {
+		"message": "已清除标记。"
+	},
+	"pageErrNotPdf": {
+		"message": "请选择 PDF 文件。"
+	},
+	"pagePdfProgress": {
+		"message": "正在读取 PDF（第 $PAGE$ / $PAGES$ 页）…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pagePdfNoText": {
+		"message": "无法从此 PDF 中提取英文（仅含图片的 PDF 无法读取）。"
+	},
+	"pagePdfPassword": {
+		"message": "无法读取有密码保护的 PDF。"
+	},
+	"pagePdfError": {
+		"message": "无法读取 PDF。"
+	},
+	"pagePdfHint": {
+		"message": "请选择 PDF 文件，或将其拖放到这个界面。"
 	}
 }

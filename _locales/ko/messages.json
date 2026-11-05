@@ -532,5 +532,149 @@
 	},
 	"notesExam": {
 		"message": "입시·영검에서 묻는 것"
+	},
+	"menuScanPage": {
+		"message": "이 페이지의 단어 찾기"
+	},
+	"tabPage": {
+		"message": "페이지"
+	},
+	"pageScan": {
+		"message": "이 페이지의 단어 찾기"
+	},
+	"pagePdf": {
+		"message": "PDF 열기"
+	},
+	"pageIntro": {
+		"message": "열려 있는 페이지(또는 PDF)의 영문에서 이 사전에 실린 단어와 숙어를 골라냅니다."
+	},
+	"pagePrivacy": {
+		"message": "페이지의 글자는 버튼을 눌렀을 때만 읽고, 이 기기 안에서 세기만 합니다. 밖으로 보내지 않습니다."
+	},
+	"pageDrop": {
+		"message": "PDF는 이 화면에 끌어다 놓아도 읽을 수 있습니다."
+	},
+	"pageFilter": {
+		"message": "에이켄 급수로 거르기"
+	},
+	"pageGradeAll": {
+		"message": "모든 단어"
+	},
+	"pageGradeP2": {
+		"message": "준2급 이상"
+	},
+	"pageGrade2": {
+		"message": "2급 이상"
+	},
+	"pageGradeP1": {
+		"message": "준1급 이상"
+	},
+	"pageGrade1": {
+		"message": "1급"
+	},
+	"pageAiOnly": {
+		"message": "AI 해설이 있는 단어만"
+	},
+	"pageMark": {
+		"message": "페이지에 표시하기"
+	},
+	"pageUnmark": {
+		"message": "표시 지우기"
+	},
+	"pageMarkNote": {
+		"message": "거르기에 맞는 단어에 밑줄을 긋습니다. 밑줄 친 단어를 누르면 그 단어의 항목을 여기에 엽니다."
+	},
+	"pageWords": {
+		"message": "단어(많은 순)"
+	},
+	"pageNone": {
+		"message": "찾지 못했습니다."
+	},
+	"pageMore": {
+		"message": "더 보기"
+	},
+	"pageIdioms": {
+		"message": "숙어"
+	},
+	"creditPdfjs": {
+		"message": "PDF에서 글자를 꺼내는 부품"
+	},
+	"pageCounting": {
+		"message": "세는 중…"
+	},
+	"pageErrData": {
+		"message": "사전 데이터를 불러오지 못했습니다."
+	},
+	"pageSummary": {
+		"message": "본문 $TOTAL$단어 중 수록어 $WORDS$종·숙어 $IDIOMS$종",
+		"placeholders": {
+			"total": {
+				"content": "$1"
+			},
+			"words": {
+				"content": "$2"
+			},
+			"idioms": {
+				"content": "$3"
+			}
+		}
+	},
+	"pageTruncated": {
+		"message": "(길어서 앞부분만 읽었습니다)"
+	},
+	"pageAiBadge": {
+		"message": "AI 해설"
+	},
+	"pageErrPdfTab": {
+		"message": "브라우저에서 열린 PDF는 읽을 수 없습니다. \"PDF 열기\"에서 파일을 고르세요."
+	},
+	"pageErrAccess": {
+		"message": "이 페이지는 읽을 수 없습니다. 브라우저 설정 화면 등은 읽을 수 없으며, 다른 페이지로 이동한 뒤에는 도구 모음 버튼이나 오른쪽 클릭 메뉴에서 다시 찾아야 합니다."
+	},
+	"pageErrRead": {
+		"message": "페이지를 읽지 못했습니다."
+	},
+	"pageNoEnglish": {
+		"message": "이 페이지에서 영문을 찾지 못했습니다."
+	},
+	"pageReading": {
+		"message": "페이지를 읽는 중…"
+	},
+	"pageMarked": {
+		"message": "$COUNT$곳에 표시했습니다.",
+		"placeholders": {
+			"count": {
+				"content": "$1"
+			}
+		}
+	},
+	"pageUnmarked": {
+		"message": "표시를 지웠습니다."
+	},
+	"pageErrNotPdf": {
+		"message": "PDF 파일을 고르세요."
+	},
+	"pagePdfProgress": {
+		"message": "PDF를 읽는 중($PAGE$ / $PAGES$페이지)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pagePdfNoText": {
+		"message": "이 PDF에서 영문을 꺼내지 못했습니다(이미지뿐인 PDF는 읽을 수 없습니다)."
+	},
+	"pagePdfPassword": {
+		"message": "비밀번호가 걸린 PDF는 읽을 수 없습니다."
+	},
+	"pagePdfError": {
+		"message": "PDF를 읽지 못했습니다."
+	},
+	"pagePdfHint": {
+		"message": "PDF 파일을 고르거나 이 화면에 끌어다 놓으세요."
 	}
 }
