@@ -36,7 +36,7 @@
 | [WordNet 3.1](https://wordnet.princeton.edu/) | 品詞・類義語・反意語・派生語・不規則変化 | 40,098 語 | WordNet 3.1 License |
 | [Tatoeba](https://tatoeba.org/) | 英日の例文（短い文を選んで収録） | 46,418 文 / 13,593 語 | CC BY 2.0 FR |
 | [CEFR-J Wordlist 1.5 / Octanove Vocabulary Profile C1/C2 1.0](https://github.com/openlanguageprofiles/olp-en-cefrj) | 英検の級の目安（CEFR の段階から割り当て） | 7,436 語 | CC BY-SA 4.0 |
-| AI による解説 | 重要語の解説と例文の一部 | 242 語（順次追加） | MIT（この拡張の一部） |
+| AI による解説 | 重要語の解説と例文の一部 | 542 語（順次追加） | MIT（この拡張の一部） |
 
 - ライセンスの全文と変更点は [NOTICE](NOTICE) にあります
 - 英検の級は**目安**です。英検が公式に示した語彙表ではありません
