@@ -70,6 +70,7 @@ js/store.js          履歴・単語帳・設定の保存
 js/verbs.js, app.js  不規則動詞の表
 data/                辞書データ（上の表を参照）
 lib/pdfjs/           pdf.js（PDF の文字の取り出し・Apache-2.0）
+icons/fa/            アイコン（Font Awesome Free の SVG・CC BY 4.0。css/icons.css で表示）
 _locales/            画面の 10 言語
 ```
 

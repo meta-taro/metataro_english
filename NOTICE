@@ -112,3 +112,13 @@ Used for: extracting text from PDF files the user picks (lib/pdfjs/).
 Copyright Mozilla Foundation.
 License: Apache License 2.0. The full text is in lib/pdfjs/LICENSE.
 Changes: none. Only the minified library and worker are bundled; nothing is loaded remotely.
+
+================================================================
+Font Awesome Free 5.15.4 (icons)
+https://fontawesome.com
+Used for: the icons in the extension's screens (icons/fa/*.svg, styled by css/icons.css).
+Copyright Fonticons, Inc.
+License: Icons are under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+The full license text is in icons/fa/LICENSE.txt.
+Changes: only the 13 solid icons in use are bundled, unmodified. They are shown
+through CSS masks and nothing is loaded from the internet.
