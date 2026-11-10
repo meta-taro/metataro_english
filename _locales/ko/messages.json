@@ -543,16 +543,16 @@
 		"message": "이 페이지의 단어 찾기"
 	},
 	"pagePdf": {
-		"message": "PDF 열기"
+		"message": "PDF·이미지 열기"
 	},
 	"pageIntro": {
-		"message": "열려 있는 페이지(또는 PDF)의 영문에서 이 사전에 실린 단어와 숙어를 골라냅니다."
+		"message": "열려 있는 페이지(또는 PDF·이미지)의 영문에서 이 사전에 실린 단어와 숙어를 골라냅니다."
 	},
 	"pagePrivacy": {
 		"message": "페이지의 글자는 버튼을 눌렀을 때만 읽고, 이 기기 안에서 세기만 합니다. 밖으로 보내지 않습니다."
 	},
 	"pageDrop": {
-		"message": "PDF는 이 화면에 끌어다 놓아도 읽을 수 있습니다."
+		"message": "PDF나 이미지는 이 화면에 끌어다 놓아도 읽을 수 있습니다."
 	},
 	"pageFilter": {
 		"message": "에이켄 급수로 거르기"
@@ -626,7 +626,7 @@
 		"message": "AI 해설"
 	},
 	"pageErrPdfTab": {
-		"message": "브라우저에서 열린 PDF는 읽을 수 없습니다. \"PDF 열기\"에서 파일을 고르세요."
+		"message": "브라우저에서 열린 PDF는 읽을 수 없습니다. \"PDF·이미지 열기\"에서 파일을 고르세요."
 	},
 	"pageErrAccess": {
 		"message": "이 페이지는 읽을 수 없습니다. 브라우저 설정 화면 등은 읽을 수 없으며, 다른 페이지로 이동한 뒤에는 도구 모음 버튼이나 오른쪽 클릭 메뉴에서 다시 찾아야 합니다."
@@ -652,7 +652,7 @@
 		"message": "표시를 지웠습니다."
 	},
 	"pageErrNotPdf": {
-		"message": "PDF 파일을 고르세요."
+		"message": "PDF 또는 이미지 파일을 고르세요."
 	},
 	"pagePdfProgress": {
 		"message": "PDF를 읽는 중($PAGE$ / $PAGES$페이지)…",
@@ -666,7 +666,7 @@
 		}
 	},
 	"pagePdfNoText": {
-		"message": "이 PDF에서 영문을 꺼내지 못했습니다(이미지뿐인 PDF는 읽을 수 없습니다)."
+		"message": "이 PDF에서 영문을 꺼내지 못했습니다."
 	},
 	"pagePdfPassword": {
 		"message": "비밀번호가 걸린 PDF는 읽을 수 없습니다."
@@ -675,6 +675,32 @@
 		"message": "PDF를 읽지 못했습니다."
 	},
 	"pagePdfHint": {
-		"message": "PDF 파일을 고르거나 이 화면에 끌어다 놓으세요."
+		"message": "PDF 또는 이미지 파일을 고르거나 이 화면에 끌어다 놓으세요."
+	},
+	"pageOcrProgress": {
+		"message": "이미지의 영문을 읽고 있습니다($PAGE$ / $PAGES$ 페이지)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pageOcrImage": {
+		"message": "이미지의 영문을 읽고 있습니다…"
+	},
+	"pageImageNoText": {
+		"message": "이 이미지에서 영문을 읽지 못했습니다."
+	},
+	"pageOcrError": {
+		"message": "이미지를 읽지 못했습니다."
+	},
+	"pageImageLabel": {
+		"message": "이미지"
+	},
+	"creditTesseract": {
+		"message": "이미지에서 영문을 읽는 부품과 영어 학습 데이터"
 	}
 }

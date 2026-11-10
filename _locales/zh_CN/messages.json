@@ -543,16 +543,16 @@
 		"message": "查找本页的单词"
 	},
 	"pagePdf": {
-		"message": "打开 PDF"
+		"message": "打开 PDF 或图片"
 	},
 	"pageIntro": {
-		"message": "从当前页面（或 PDF）的英文中找出本词典收录的单词和短语。"
+		"message": "从当前页面（或 PDF、图片）的英文中找出本词典收录的单词和短语。"
 	},
 	"pagePrivacy": {
 		"message": "页面文字只在按下按钮时读取，并只在本设备上统计，不会发送到任何地方。"
 	},
 	"pageDrop": {
-		"message": "也可以把 PDF 拖放到这个界面。"
+		"message": "也可以把 PDF 或图片拖放到这个界面。"
 	},
 	"pageFilter": {
 		"message": "按英检级别筛选"
@@ -626,7 +626,7 @@
 		"message": "AI 解说"
 	},
 	"pageErrPdfTab": {
-		"message": "无法读取在浏览器中打开的 PDF。请通过“打开 PDF”选择文件。"
+		"message": "无法读取在浏览器中打开的 PDF。请通过“打开 PDF 或图片”选择文件。"
 	},
 	"pageErrAccess": {
 		"message": "无法读取此页面。浏览器设置等页面无法读取；跳转到其他页面后，需要从工具栏按钮或右键菜单重新开始。"
@@ -652,7 +652,7 @@
 		"message": "已清除标记。"
 	},
 	"pageErrNotPdf": {
-		"message": "请选择 PDF 文件。"
+		"message": "请选择 PDF 或图片文件。"
 	},
 	"pagePdfProgress": {
 		"message": "正在读取 PDF（第 $PAGE$ / $PAGES$ 页）…",
@@ -666,7 +666,7 @@
 		}
 	},
 	"pagePdfNoText": {
-		"message": "无法从此 PDF 中提取英文（仅含图片的 PDF 无法读取）。"
+		"message": "无法从此 PDF 中提取英文。"
 	},
 	"pagePdfPassword": {
 		"message": "无法读取有密码保护的 PDF。"
@@ -675,6 +675,32 @@
 		"message": "无法读取 PDF。"
 	},
 	"pagePdfHint": {
-		"message": "请选择 PDF 文件，或将其拖放到这个界面。"
+		"message": "请选择 PDF 或图片文件，或将其拖放到这个界面。"
+	},
+	"pageOcrProgress": {
+		"message": "正在识别图片中的英文（第 $PAGE$ / $PAGES$ 页）…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pageOcrImage": {
+		"message": "正在识别图片中的英文…"
+	},
+	"pageImageNoText": {
+		"message": "无法从此图片中识别出英文。"
+	},
+	"pageOcrError": {
+		"message": "无法读取图片。"
+	},
+	"pageImageLabel": {
+		"message": "图片"
+	},
+	"creditTesseract": {
+		"message": "从图片中识别英文的组件及英语训练数据"
 	}
 }

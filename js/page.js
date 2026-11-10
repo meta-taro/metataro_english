@@ -1,5 +1,6 @@
-// 「ページ」タブ：開いているページや PDF の英文から、この辞典の収録語・熟語を拾い出す。
+// 「ページ」タブ：開いているページや PDF・画像の英文から、この辞典の収録語・熟語を拾い出す。
 // ページの文字は押したときだけ読み（activeTab）、端末の中で数えるだけで外へは送らない。
+// 画像と、文字データの無い PDF のページは端末の中で文字認識（Tesseract.js）してから数える。
 // 結果の語を押すと辞典（popup.js の lookup）でその項目を開く。サイドパネルでも同じ画面を使う。
 (function () {
 	'use strict';
@@ -28,7 +29,7 @@
 	var PAGE_SIZE = 200;
 	var FRESH_MS = 30000;
 
-	var state = null;      // { source: 'page'|'pdf', title, tabId, words, idioms, tokens, truncated }
+	var state = null;      // { source: 'page'|'pdf'|'image', title, tabId, words, idioms, tokens, truncated }
 	var shown = PAGE_SIZE; // 一覧に出している数
 	var lastSeq = 0;       // 表示済みの読み取り（storage.session の scan.seq）
 	var pending = false;   // この画面から読み取りを頼んで結果待ち
@@ -133,7 +134,8 @@
 		$id('page-intro').hidden = !!state;
 		$id('page-result').hidden = !state;
 		if (!state) return;
-		$id('page-title').textContent = state.source === 'pdf' ? 'PDF: ' + state.title : state.title;
+		$id('page-title').textContent = state.source === 'pdf' ? 'PDF: ' + state.title
+			: state.source === 'image' ? T('pageImageLabel', '画像') + ': ' + state.title : state.title;
 		$id('page-summary').textContent = T('pageSummary', '本文 $1 語のうち、収録語 $2 種類・熟語 $3 種類',
 			[String(state.tokens), String(state.words.length), String(state.idioms.length)])
 			+ (state.truncated ? ' ' + T('pageTruncated', '（長いので先頭だけ読みました）') : '');
@@ -165,7 +167,7 @@
 	// ---------- 開いているページを読む ----------
 	function errorText(e) {
 		var s = String(e || '');
-		if (/pdf/i.test(s)) return T('pageErrPdfTab', 'ブラウザで開いている PDF は読めません。「PDF を読む」からファイルを選んでください。');
+		if (/pdf/i.test(s)) return T('pageErrPdfTab', 'ブラウザで開いている PDF は読めません。「PDF・画像を読む」からファイルを選んでください。');
 		if (/permission|Cannot access|cannot be scripted|chrome:\/\/|extensions gallery/i.test(s)) {
 			return T('pageErrAccess', 'このページは読めません。ブラウザの設定画面などは読めないほか、ページを移動したあとはツールバーのボタンか右クリックから調べ直す必要があります。');
 		}
@@ -269,41 +271,147 @@
 		return pdfjsP;
 	}
 
-	function readPdf(file) {
-		if (!file) return;
-		if (!/\.pdf$/i.test(file.name) && file.type !== 'application/pdf') {
-			setStatus(T('pageErrNotPdf', 'PDF ファイルを選んでください。'), true);
-			return;
+	// ---------- 文字認識（画像・文字データの無い PDF のページ） ----------
+	// 部品と英語の学習データは拡張に同梱してあり、外へは何も取りに行かない
+	var ocrLibP = null;
+	function ocrLib() {
+		if (!ocrLibP) {
+			ocrLibP = new Promise(function (resolve, reject) {
+				if (window.Tesseract) { resolve(window.Tesseract); return; }
+				var s = document.createElement('script');
+				s.src = chrome.runtime.getURL('lib/tesseract/tesseract.min.js');
+				s.onload = function () { window.Tesseract ? resolve(window.Tesseract) : reject(new Error('tesseract')); };
+				s.onerror = reject;
+				document.head.appendChild(s);
+			});
+			ocrLibP.catch(function () { ocrLibP = null; });
 		}
+		return ocrLibP;
+	}
+	function ocrWorker() {
+		var base = chrome.runtime.getURL('lib/tesseract/');
+		return ocrLib().then(function (lib) {
+			return lib.createWorker('eng', 1, {
+				workerPath: base + 'worker.min.js',
+				corePath: base + 'tesseract-core-simd-lstm.wasm.js',
+				langPath: base.replace(/\/$/, ''),
+				workerBlobURL: false,
+				cacheMethod: 'none'
+			});
+		});
+	}
+	var OCR_MAX_PIXELS = 12e6;
+	var OCR_MIN_LETTERS = 20; // これより英字が少ないページは文字データが無いとみなして認識する
+	function letters(items) {
+		var n = 0;
+		items.forEach(function (it) { var m = String(it.str || '').match(/[A-Za-z]/g); if (m) n += m.length; });
+		return n;
+	}
+	function pageCanvas(pg) {
+		var vp = pg.getViewport({ scale: 3 });
+		var k = Math.min(1, Math.sqrt(OCR_MAX_PIXELS / (vp.width * vp.height)));
+		if (k < 1) vp = pg.getViewport({ scale: 3 * k });
+		var c = document.createElement('canvas');
+		c.width = Math.floor(vp.width);
+		c.height = Math.floor(vp.height);
+		var ctx = c.getContext('2d');
+		ctx.fillStyle = '#fff';
+		ctx.fillRect(0, 0, c.width, c.height);
+		return pg.render({ canvas: c, canvasContext: ctx, viewport: vp }).promise.then(function () { return c; });
+	}
+	function ocrText(worker, canvas) {
+		return worker.recognize(canvas).then(function (r) { return (r && r.data && r.data.text) || ''; });
+	}
+
+	function isImage(file) {
+		return /^image\//.test(file.type) || /\.(png|jpe?g|webp|gif|bmp)$/i.test(file.name);
+	}
+	function isPdf(file) {
+		return /\.pdf$/i.test(file.name) || file.type === 'application/pdf';
+	}
+	function readFile(file) {
+		if (!file) return;
+		if (isImage(file)) return readImage(file);
+		if (isPdf(file)) return readPdf(file);
+		setStatus(T('pageErrNotPdf', 'PDF か画像ファイルを選んでください。'), true);
+	}
+
+	function readImage(file) {
+		api.showPane('page');
+		setStatus(T('pageOcrImage', '画像の英文を読み取っています…'));
+		var worker = null;
+		createImageBitmap(file).then(function (bmp) {
+			var k = Math.min(1, Math.sqrt(OCR_MAX_PIXELS / (bmp.width * bmp.height)));
+			var c = document.createElement('canvas');
+			c.width = Math.max(1, Math.floor(bmp.width * k));
+			c.height = Math.max(1, Math.floor(bmp.height * k));
+			var ctx = c.getContext('2d');
+			ctx.fillStyle = '#fff';
+			ctx.fillRect(0, 0, c.width, c.height);
+			ctx.drawImage(bmp, 0, 0, c.width, c.height);
+			if (bmp.close) bmp.close();
+			return ocrWorker().then(function (w) { worker = w; return ocrText(w, c); });
+		}).then(function (raw) {
+			if (worker) worker.terminate();
+			var text = Scan.pdfText([[{ str: raw }]]);
+			if (!/[A-Za-z]/.test(text)) {
+				state = null; render();
+				setStatus(T('pageImageNoText', 'この画像から英文を読み取れませんでした。'), true);
+				return;
+			}
+			return analyze(text, { source: 'image', title: file.name });
+		}).catch(function () {
+			if (worker) worker.terminate();
+			setStatus(T('pageOcrError', '画像を読み取れませんでした。'), true);
+		});
+	}
+
+	function readPdf(file) {
 		api.showPane('page');
 		setStatus(T('pageReading', 'ページを読んでいます…'));
-		var doc = null;
+		var task = null, doc = null, worker = null;
+		function done() {
+			if (task) task.destroy();
+			if (worker) worker.terminate();
+			task = doc = worker = null;
+		}
 		Promise.all([file.arrayBuffer(), pdfjs()]).then(function (r) {
-			return r[1].getDocument({ data: new Uint8Array(r[0]), isEvalSupported: false }).promise;
+			task = r[1].getDocument({ data: new Uint8Array(r[0]), isEvalSupported: false });
+			return task.promise;
 		}).then(function (d) {
 			doc = d;
-			var pages = [], i = 0;
+			var pages = [], i = 0, total = doc.numPages;
+			function ocrPage(pg) {
+				setStatus(T('pageOcrProgress', '画像の英文を読み取っています（$1 / $2 ページ）…', [String(i), String(total)]));
+				return (worker ? Promise.resolve(worker) : ocrWorker().then(function (w) { worker = w; return w; }))
+					.then(function (w) { return pageCanvas(pg).then(function (c) { return ocrText(w, c); }); })
+					.then(function (raw) { return [{ str: raw }]; });
+			}
 			function next() {
 				i++;
-				if (i > doc.numPages) return pages;
-				setStatus(T('pagePdfProgress', 'PDF を読んでいます（$1 / $2 ページ）…', [String(i), String(doc.numPages)]));
-				return doc.getPage(i).then(function (pg) { return pg.getTextContent(); }).then(function (tc) {
-					pages.push(tc.items);
+				if (i > total) return pages;
+				setStatus(T('pagePdfProgress', 'PDF を読んでいます（$1 / $2 ページ）…', [String(i), String(total)]));
+				return doc.getPage(i).then(function (pg) {
+					return pg.getTextContent().then(function (tc) {
+						return letters(tc.items) >= OCR_MIN_LETTERS ? tc.items : ocrPage(pg);
+					});
+				}).then(function (items) {
+					pages.push(items);
 					return next();
 				});
 			}
 			return next();
 		}).then(function (pages) {
 			var text = Scan.pdfText(pages);
-			if (doc) doc.destroy();
+			done();
 			if (!/[A-Za-z]/.test(text)) {
 				state = null; render();
-				setStatus(T('pagePdfNoText', 'この PDF から英文を取り出せませんでした（画像だけの PDF は読めません）。'), true);
+				setStatus(T('pagePdfNoText', 'この PDF から英文を取り出せませんでした。'), true);
 				return;
 			}
 			return analyze(text, { source: 'pdf', title: file.name });
 		}).catch(function (e) {
-			if (doc) doc.destroy();
+			done();
 			var name = e && e.name;
 			setStatus(name === 'PasswordException'
 				? T('pagePdfPassword', 'パスワードの付いた PDF は読めません。')
@@ -322,7 +430,7 @@
 		fileInput.click();
 	});
 	fileInput.addEventListener('change', function () {
-		readPdf(fileInput.files && fileInput.files[0]);
+		readFile(fileInput.files && fileInput.files[0]);
 		fileInput.value = '';
 	});
 	var drop = $id('pane-page');
@@ -338,7 +446,7 @@
 		if (!e.dataTransfer || !e.dataTransfer.files.length) return;
 		e.preventDefault();
 		if (mode === 'popup') return;
-		readPdf(e.dataTransfer.files[0]);
+		readFile(e.dataTransfer.files[0]);
 	});
 
 	// ---------- 受け取り（ページの読み取り結果・ページ上の印から開く語） ----------
@@ -368,7 +476,7 @@
 	}
 	if (mode === 'tab') $id('page-scan').hidden = true;
 	if (params.get('pane') === 'page') api.showPane('page');
-	if (params.get('pdf')) setStatus(T('pagePdfHint', 'PDF ファイルを選ぶか、この画面へドロップしてください。'));
+	if (params.get('pdf')) setStatus(T('pagePdfHint', 'PDF か画像ファイルを選ぶか、この画面へドロップしてください。'));
 	if (chrome.windows) chrome.windows.getCurrent(function (w) { if (w) winId = w.id; start(); });
 	else start();
 })();

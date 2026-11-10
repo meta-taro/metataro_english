@@ -543,16 +543,16 @@
 		"message": "Cari kata di halaman ini"
 	},
 	"pagePdf": {
-		"message": "Buka PDF"
+		"message": "Buka PDF atau gambar"
 	},
 	"pageIntro": {
-		"message": "Mengambil kata dan ungkapan yang ada di kamus ini dari teks bahasa Inggris di halaman yang terbuka (atau PDF)."
+		"message": "Mengambil kata dan ungkapan yang ada di kamus ini dari teks bahasa Inggris di halaman yang terbuka (atau PDF atau gambar)."
 	},
 	"pagePrivacy": {
 		"message": "Teks halaman hanya dibaca saat tombol ditekan dan dihitung di perangkat ini. Tidak ada yang dikirim ke luar."
 	},
 	"pageDrop": {
-		"message": "PDF juga bisa dijatuhkan ke layar ini."
+		"message": "PDF atau gambar juga bisa dijatuhkan ke layar ini."
 	},
 	"pageFilter": {
 		"message": "Saring menurut tingkat Eiken"
@@ -626,7 +626,7 @@
 		"message": "Catatan AI"
 	},
 	"pageErrPdfTab": {
-		"message": "PDF yang terbuka di browser tidak bisa dibaca. Pilih file lewat \"Buka PDF\"."
+		"message": "PDF yang terbuka di browser tidak bisa dibaca. Pilih file lewat \"Buka PDF atau gambar\"."
 	},
 	"pageErrAccess": {
 		"message": "Halaman ini tidak bisa dibaca. Halaman pengaturan browser dan sejenisnya tidak bisa dibaca, dan setelah pindah ke halaman lain Anda perlu memulai lagi dari tombol toolbar atau menu klik kanan."
@@ -652,7 +652,7 @@
 		"message": "Tanda dihapus."
 	},
 	"pageErrNotPdf": {
-		"message": "Pilih file PDF."
+		"message": "Pilih file PDF atau gambar."
 	},
 	"pagePdfProgress": {
 		"message": "Membaca PDF (halaman $PAGE$ dari $PAGES$)…",
@@ -666,7 +666,7 @@
 		}
 	},
 	"pagePdfNoText": {
-		"message": "Teks bahasa Inggris tidak dapat diambil dari PDF ini (PDF yang hanya berisi gambar tidak bisa dibaca)."
+		"message": "Teks bahasa Inggris tidak dapat diambil dari PDF ini."
 	},
 	"pagePdfPassword": {
 		"message": "PDF yang dilindungi kata sandi tidak bisa dibaca."
@@ -675,6 +675,32 @@
 		"message": "PDF tidak dapat dibaca."
 	},
 	"pagePdfHint": {
-		"message": "Pilih file PDF atau jatuhkan ke layar ini."
+		"message": "Pilih file PDF atau gambar, atau jatuhkan ke layar ini."
+	},
+	"pageOcrProgress": {
+		"message": "Membaca teks bahasa Inggris dari gambar (halaman $PAGE$ dari $PAGES$)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pageOcrImage": {
+		"message": "Membaca teks bahasa Inggris dari gambar…"
+	},
+	"pageImageNoText": {
+		"message": "Teks bahasa Inggris tidak dapat dibaca dari gambar ini."
+	},
+	"pageOcrError": {
+		"message": "Gambar tidak dapat dibaca."
+	},
+	"pageImageLabel": {
+		"message": "Gambar"
+	},
+	"creditTesseract": {
+		"message": "Membaca teks bahasa Inggris dari gambar, dengan data latih bahasa Inggris"
 	}
 }

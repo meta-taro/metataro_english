@@ -543,16 +543,16 @@
 		"message": "Caută cuvintele de pe această pagină"
 	},
 	"pagePdf": {
-		"message": "Deschide un PDF"
+		"message": "Deschide un PDF sau o imagine"
 	},
 	"pageIntro": {
-		"message": "Alege din textul în engleză al paginii deschise (sau al unui PDF) cuvintele și expresiile care se află în acest dicționar."
+		"message": "Alege din textul în engleză al paginii deschise (sau al unui PDF ori al unei imagini) cuvintele și expresiile care se află în acest dicționar."
 	},
 	"pagePrivacy": {
 		"message": "Textul paginii este citit doar când apeși butonul și este numărat pe acest dispozitiv. Nu se trimite nimic."
 	},
 	"pageDrop": {
-		"message": "Poți și să tragi un PDF pe acest ecran."
+		"message": "Poți și să tragi un PDF sau o imagine pe acest ecran."
 	},
 	"pageFilter": {
 		"message": "Filtrează după nivelul Eiken"
@@ -626,7 +626,7 @@
 		"message": "Note AI"
 	},
 	"pageErrPdfTab": {
-		"message": "PDF-urile deschise în browser nu pot fi citite. Alege fișierul din „Deschide un PDF”."
+		"message": "PDF-urile deschise în browser nu pot fi citite. Alege fișierul din „Deschide un PDF sau o imagine”."
 	},
 	"pageErrAccess": {
 		"message": "Această pagină nu poate fi citită. Paginile de setări ale browserului și altele asemănătoare nu pot fi citite, iar după ce treci la altă pagină trebuie să începi din nou de la butonul din bară sau din meniul clic dreapta."
@@ -652,7 +652,7 @@
 		"message": "Marcajele au fost șterse."
 	},
 	"pageErrNotPdf": {
-		"message": "Alege un fișier PDF."
+		"message": "Alege un fișier PDF sau o imagine."
 	},
 	"pagePdfProgress": {
 		"message": "Se citește PDF-ul (pagina $PAGE$ din $PAGES$)…",
@@ -666,7 +666,7 @@
 		}
 	},
 	"pagePdfNoText": {
-		"message": "Nu s-a putut extrage text în engleză din acest PDF (PDF-urile doar cu imagini nu pot fi citite)."
+		"message": "Nu s-a putut extrage text în engleză din acest PDF."
 	},
 	"pagePdfPassword": {
 		"message": "PDF-urile protejate cu parolă nu pot fi citite."
@@ -675,6 +675,32 @@
 		"message": "PDF-ul nu a putut fi citit."
 	},
 	"pagePdfHint": {
-		"message": "Alege un fișier PDF sau trage-l pe acest ecran."
+		"message": "Alege un fișier PDF sau o imagine ori trage-l pe acest ecran."
+	},
+	"pageOcrProgress": {
+		"message": "Se citește textul în engleză din imagini (pagina $PAGE$ din $PAGES$)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pageOcrImage": {
+		"message": "Se citește textul în engleză din imagine…"
+	},
+	"pageImageNoText": {
+		"message": "Nu s-a putut citi text în engleză din această imagine."
+	},
+	"pageOcrError": {
+		"message": "Imaginea nu a putut fi citită."
+	},
+	"pageImageLabel": {
+		"message": "Imagine"
+	},
+	"creditTesseract": {
+		"message": "Citește text în engleză din imagini, cu date de antrenare pentru engleză"
 	}
 }

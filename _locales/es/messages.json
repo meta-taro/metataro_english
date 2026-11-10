@@ -543,16 +543,16 @@
 		"message": "Buscar palabras en esta página"
 	},
 	"pagePdf": {
-		"message": "Abrir un PDF"
+		"message": "Abrir un PDF o imagen"
 	},
 	"pageIntro": {
-		"message": "Extrae del texto en inglés de la página abierta (o de un PDF) las palabras y expresiones que están en este diccionario."
+		"message": "Extrae del texto en inglés de la página abierta (o de un PDF o una imagen) las palabras y expresiones que están en este diccionario."
 	},
 	"pagePrivacy": {
 		"message": "El texto de la página solo se lee al pulsar el botón y se cuenta en este dispositivo. No se envía a ningún sitio."
 	},
 	"pageDrop": {
-		"message": "También puedes soltar un PDF en esta pantalla."
+		"message": "También puedes soltar un PDF o una imagen en esta pantalla."
 	},
 	"pageFilter": {
 		"message": "Filtrar por nivel Eiken"
@@ -626,7 +626,7 @@
 		"message": "Notas de IA"
 	},
 	"pageErrPdfTab": {
-		"message": "No se pueden leer los PDF abiertos en el navegador. Elige el archivo con «Abrir un PDF»."
+		"message": "No se pueden leer los PDF abiertos en el navegador. Elige el archivo con «Abrir un PDF o imagen»."
 	},
 	"pageErrAccess": {
 		"message": "No se puede leer esta página. Las páginas de configuración del navegador y similares no se pueden leer, y después de ir a otra página hay que empezar de nuevo desde el botón de la barra o el menú contextual."
@@ -652,7 +652,7 @@
 		"message": "Marcas quitadas."
 	},
 	"pageErrNotPdf": {
-		"message": "Elige un archivo PDF."
+		"message": "Elige un archivo PDF o de imagen."
 	},
 	"pagePdfProgress": {
 		"message": "Leyendo el PDF (página $PAGE$ de $PAGES$)…",
@@ -666,7 +666,7 @@
 		}
 	},
 	"pagePdfNoText": {
-		"message": "No se pudo extraer texto en inglés de este PDF (los PDF que solo contienen imágenes no se pueden leer)."
+		"message": "No se pudo extraer texto en inglés de este PDF."
 	},
 	"pagePdfPassword": {
 		"message": "No se pueden leer los PDF protegidos con contraseña."
@@ -675,6 +675,32 @@
 		"message": "No se pudo leer el PDF."
 	},
 	"pagePdfHint": {
-		"message": "Elige un archivo PDF o suéltalo en esta pantalla."
+		"message": "Elige un archivo PDF o de imagen, o suéltalo en esta pantalla."
+	},
+	"pageOcrProgress": {
+		"message": "Leyendo el texto en inglés de las imágenes (página $PAGE$ de $PAGES$)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pageOcrImage": {
+		"message": "Leyendo el texto en inglés de la imagen…"
+	},
+	"pageImageNoText": {
+		"message": "No se pudo leer texto en inglés en esta imagen."
+	},
+	"pageOcrError": {
+		"message": "No se pudo leer la imagen."
+	},
+	"pageImageLabel": {
+		"message": "Imagen"
+	},
+	"creditTesseract": {
+		"message": "Lee texto en inglés de imágenes, con datos de entrenamiento en inglés"
 	}
 }

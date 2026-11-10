@@ -50,15 +50,15 @@
 	<div class="pane" id="pane-page">
 		<div class="pagebar">
 			<button type="button" class="btn btn-sm btn-outline-primary" id="page-scan"><i class="fas fa-search"></i> <span data-i18n="pageScan">このページの単語を調べる</span></button>
-			<button type="button" class="btn btn-sm btn-outline-secondary" id="page-pdf"><i class="fas fa-file-pdf"></i> <span data-i18n="pagePdf">PDF を読む</span></button>
-			<input type="file" id="page-pdf-file" accept="application/pdf,.pdf" hidden>
+			<button type="button" class="btn btn-sm btn-outline-secondary" id="page-pdf"><i class="fas fa-file-pdf"></i> <span data-i18n="pagePdf">PDF・画像を読む</span></button>
+			<input type="file" id="page-pdf-file" accept="application/pdf,.pdf,image/png,image/jpeg,image/webp,image/gif,image/bmp" hidden>
 		</div>
 		<div class="scroll" id="page-body">
 			<p class="small" id="page-status" hidden></p>
 			<div id="page-intro">
-				<p class="small" data-i18n="pageIntro">開いているページ（または PDF）の英文から、この辞典に載っている単語と熟語を拾い出します。</p>
+				<p class="small" data-i18n="pageIntro">開いているページ（または PDF・画像）の英文から、この辞典に載っている単語と熟語を拾い出します。</p>
 				<p class="muted small" data-i18n="pagePrivacy">ページの文字はボタンを押したときだけ読み、この端末の中で数えるだけです。外へは送りません。</p>
-				<p class="muted small" data-i18n="pageDrop">PDF はこの画面へドロップしても読めます。</p>
+				<p class="muted small" data-i18n="pageDrop">PDF や画像はこの画面へドロップしても読めます。</p>
 			</div>
 			<div id="page-result" hidden>
 				<p class="small page-src"><b id="page-title"></b><br><span class="muted" id="page-summary"></span></p>
@@ -157,6 +157,7 @@
 				<li><b>Tatoeba</b> — <span data-i18n="creditTatoeba">英日の例文</span><br>CC BY 2.0 FR. <span data-i18n="creditTatoebaMod">短い文を選んで収録しています。</span><br><span class="url">https://tatoeba.org/</span></li>
 				<li><b>CEFR-J Wordlist 1.5 / Octanove Vocabulary Profile C1/C2 1.0</b> — <span data-i18n="creditEiken">英検の級の目安はこの語彙表をもとに割り当てています。</span><br>CC BY-SA 4.0<br><span class="url">https://github.com/openlanguageprofiles/olp-en-cefrj</span></li>
 				<li><b>pdf.js</b> — <span data-i18n="creditPdfjs">PDF から文字を取り出す部品</span><br>Copyright Mozilla Foundation. Apache License 2.0<br><span class="url">https://github.com/mozilla/pdf.js</span></li>
+				<li><b>Tesseract.js</b> — <span data-i18n="creditTesseract">画像から英文を読み取る部品と英語の学習データ</span><br>Apache License 2.0<br><span class="url">https://github.com/naptha/tesseract.js</span></li>
 				<li><b>AI</b> — <span data-i18n="creditAi">一部の重要語の解説・例文（AI が作成）</span></li>
 			</ul>
 			<p class="muted small" data-i18n="aboutReverse">日本語からの検索は、英和辞書の訳語から引いた簡易的なもので、和英辞典ではありません。</p>

@@ -543,16 +543,16 @@
 		"message": "Find words on this page"
 	},
 	"pagePdf": {
-		"message": "Open a PDF"
+		"message": "Open a PDF or image"
 	},
 	"pageIntro": {
-		"message": "Picks out the words and idioms in this dictionary from the English text of the open page (or a PDF)."
+		"message": "Picks out the words and idioms in this dictionary from the English text of the open page (or a PDF or image)."
 	},
 	"pagePrivacy": {
 		"message": "The page text is read only when you press the button and is counted on this device. Nothing is sent anywhere."
 	},
 	"pageDrop": {
-		"message": "You can also drop a PDF onto this screen."
+		"message": "You can also drop a PDF or image onto this screen."
 	},
 	"pageFilter": {
 		"message": "Filter by Eiken grade"
@@ -626,7 +626,7 @@
 		"message": "AI notes"
 	},
 	"pageErrPdfTab": {
-		"message": "PDFs open in the browser cannot be read. Choose the file with \"Open a PDF\" instead."
+		"message": "PDFs open in the browser cannot be read. Choose the file with \"Open a PDF or image\" instead."
 	},
 	"pageErrAccess": {
 		"message": "This page cannot be read. Browser settings pages and similar cannot be read, and after moving to another page you need to start again from the toolbar button or the right-click menu."
@@ -652,7 +652,7 @@
 		"message": "Marks removed."
 	},
 	"pageErrNotPdf": {
-		"message": "Please choose a PDF file."
+		"message": "Please choose a PDF or image file."
 	},
 	"pagePdfProgress": {
 		"message": "Reading the PDF (page $PAGE$ of $PAGES$)…",
@@ -666,7 +666,7 @@
 		}
 	},
 	"pagePdfNoText": {
-		"message": "No English text could be extracted from this PDF (image-only PDFs cannot be read)."
+		"message": "No English text could be extracted from this PDF."
 	},
 	"pagePdfPassword": {
 		"message": "Password-protected PDFs cannot be read."
@@ -675,6 +675,32 @@
 		"message": "Could not read the PDF."
 	},
 	"pagePdfHint": {
-		"message": "Choose a PDF file or drop it onto this screen."
+		"message": "Choose a PDF or image file, or drop it onto this screen."
+	},
+	"pageOcrProgress": {
+		"message": "Reading English text from images (page $PAGE$ of $PAGES$)…",
+		"placeholders": {
+			"page": {
+				"content": "$1"
+			},
+			"pages": {
+				"content": "$2"
+			}
+		}
+	},
+	"pageOcrImage": {
+		"message": "Reading English text from the image…"
+	},
+	"pageImageNoText": {
+		"message": "No English text could be read from this image."
+	},
+	"pageOcrError": {
+		"message": "The image could not be read."
+	},
+	"pageImageLabel": {
+		"message": "Image"
+	},
+	"creditTesseract": {
+		"message": "Reads English text from images, with English training data"
 	}
 }

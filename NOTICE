@@ -114,6 +114,14 @@ License: Apache License 2.0. The full text is in lib/pdfjs/LICENSE.
 Changes: none. Only the minified library and worker are bundled; nothing is loaded remotely.
 
 ================================================================
+Tesseract.js (tesseract.js 7.0.0, tesseract.js-core 7.0.0, @tesseract.js-data/eng 1.0.0)
+https://github.com/naptha/tesseract.js
+Used for: reading English text from images and from PDF pages that have no text layer (lib/tesseract/).
+Copyright Project Naptha and contributors.
+License: Apache License 2.0. The full text is in lib/tesseract/LICENSE.md.
+Changes: none. Only the minified library, worker, SIMD-LSTM core and English training data are bundled; nothing is loaded remotely.
+
+================================================================
 Font Awesome Free 5.15.4 (icons)
 https://fontawesome.com
 Used for: the icons in the extension's screens (icons/fa/*.svg, styled by css/icons.css).
