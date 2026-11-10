@@ -1,4 +1,4 @@
-// 不規則動詞表（意味は _locales の v01..v73 で画面の言語に置き換わる）
+// 不規則動詞表（意味は _locales/ja の v01..v73 から引く）
 var VERBS = [
 	{ "text": "～です。である。", "gen": "be, am, is, are", "kako": "was, were", "kakobun": "been" },
 	{ "text": "～になる", "gen": "become", "kako": "became", "kakobun": "become" },

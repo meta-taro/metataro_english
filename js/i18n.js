@@ -4,10 +4,6 @@ function t(key, sub) {
 	return s || key;
 }
 document.addEventListener('DOMContentLoaded', function () {
-	var loc = t('@@ui_locale');
-	if (loc !== '@@ui_locale') document.documentElement.lang = loc.replace('_', '-');
-	// 絵に日本語が焼き込まれているので、日本語以外は文字を消した絵へ差し替えて HTML の文字を重ねる
-	if (loc !== '@@ui_locale' && loc.indexOf('ja') !== 0) document.documentElement.classList.add('plain');
 	document.querySelectorAll('[data-i18n]').forEach(function (el) {
 		var s = t(el.getAttribute("data-i18n"));
 		if (s !== el.getAttribute("data-i18n")) el.textContent = s;
