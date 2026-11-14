@@ -31,6 +31,10 @@
 		<div class="searchbar">
 			<input type="search" id="q" class="form-control form-control-sm" autocomplete="off" spellcheck="false" data-i18n-placeholder="searchPlaceholder" placeholder="英単語・熟語・日本語で検索">
 			<ul id="suggest" class="suggest" role="listbox" hidden></ul>
+			<span class="open-as">
+				<button type="button" class="open-btn" id="open-panel" data-i18n-title="openPanel" title="サイドパネルで開く（ページの文字が隠れません）"><i class="fas fa-panel"></i></button>
+				<button type="button" class="open-btn" id="open-window" data-i18n-title="openWindow" title="別の窓で開く（好きな場所へ動かせます）"><i class="fas fa-window"></i></button>
+			</span>
 		</div>
 		<div class="scroll" id="dict-body">
 			<div id="home">
@@ -137,6 +141,9 @@
 			<div class="form-check"><input class="form-check-input" type="radio" name="accent" id="accent-us" value="us"><label class="form-check-label" for="accent-us" data-i18n="setUS">アメリカ英語</label></div>
 			<div class="form-check"><input class="form-check-input" type="radio" name="accent" id="accent-uk" value="uk"><label class="form-check-label" for="accent-uk" data-i18n="setUK">イギリス英語</label></div>
 			<div class="form-check mt-2"><input class="form-check-input" type="checkbox" id="slow"><label class="form-check-label" for="slow" data-i18n="setSlow">ゆっくり読む</label></div>
+			<h2 class="sec mt-3" data-i18n="setOpen">開き方</h2>
+			<div class="form-check"><input class="form-check-input" type="checkbox" id="action-panel"><label class="form-check-label" for="action-panel" data-i18n="setActionPanel">ツールバーのボタンでサイドパネルを開く</label></div>
+			<p class="muted small" data-i18n="setActionPanelNote">サイドパネルはページの横に並ぶので、英会話の画面や入力欄に重なりません。</p>
 			<button type="button" class="btn btn-sm btn-outline-secondary mt-2" id="voice-test"><i class="fas fa-volume-up"></i> <span data-i18n="setTest">試しに聞く</span></button>
 			<p class="small mt-2" id="voice-status"></p>
 			<p class="muted small" data-i18n="setVoiceNote">声はこの端末に入っている読み上げ機能を使います。通信はしません。</p>
@@ -159,6 +166,7 @@
 				<li><b>pdf.js</b> — <span data-i18n="creditPdfjs">PDF から文字を取り出す部品</span><br>Copyright Mozilla Foundation. Apache License 2.0<br><span class="url">https://github.com/mozilla/pdf.js</span></li>
 				<li><b>Tesseract.js</b> — <span data-i18n="creditTesseract">画像から英文を読み取る部品と英語の学習データ</span><br>Apache License 2.0<br><span class="url">https://github.com/naptha/tesseract.js</span></li>
 				<li><b>AI</b> — <span data-i18n="creditAi">一部の重要語の解説・例文（AI が作成）</span></li>
+				<li><b>AI</b> — <span data-i18n="creditAiIdioms">日常の言い回し・句動詞・オンライン英会話の決まり文句と、その例文（AI が作成）</span></li>
 			</ul>
 			<p class="muted small" data-i18n="aboutReverse">日本語からの検索は、英和辞書の訳語から引いた簡易的なもので、和英辞典ではありません。</p>
 		</div>

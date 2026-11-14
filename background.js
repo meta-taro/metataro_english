@@ -8,7 +8,20 @@ const MENU_LOOKUP = 'lookup';
 const MENU_SCAN = 'scanPage';
 const MAX_CHARS = 1000000; // 本文はこの文字数まで（極端に長いページで固まらないように）
 
+// ツールバーのボタンの動き（設定「ツールバーのボタンでサイドパネルを開く」）。
+// default_popup が残っているとサイドパネルより優先されるので、ポップアップを外してから切り替える
+function applyActionPanel(on) {
+	if (!chrome.sidePanel || !chrome.sidePanel.setPanelBehavior) return;
+	chrome.action.setPopup({ popup: on ? '' : 'popup.html' });
+	chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: !!on }).catch(() => {});
+}
+function restoreActionPanel() {
+	chrome.storage.local.get('settings', (v) => applyActionPanel(!!(v && v.settings && v.settings.panel)));
+}
+chrome.runtime.onStartup.addListener(restoreActionPanel);
+
 chrome.runtime.onInstalled.addListener(() => {
+	restoreActionPanel();
 	chrome.contextMenus.create({
 		id: MENU_LOOKUP,
 		title: chrome.i18n.getMessage('menuLookup') || 'Look up "%s"',
@@ -81,6 +94,12 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 	if (msg.type === 'scan' && !sender.tab) {
 		scanTab(msg.tabId == null ? null : msg.tabId, msg.windowId, msg.target === 'panel' ? 'panel' : 'any').then(() => sendResponse({ ok: true }));
 		return true;
+	}
+
+	// 設定で切り替えた
+	if (msg.type === 'actionPanel' && !sender.tab) {
+		applyActionPanel(!!msg.on);
+		return;
 	}
 
 	// ページに付けた印が押された：その語をサイドパネルで開く（開けなければ新しいタブで）

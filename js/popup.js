@@ -125,9 +125,7 @@
 		if (isJa(v)) {
 			p = Dict.reverse(v, 8).then(function (r) { return r.map(function (x) { return { w: x.w, m: x.term }; }); });
 		} else if (/ /.test(k)) {
-			p = Dict.load('idioms.json').then(function (list) {
-				return (list || []).filter(function (r) { return r[0].toLowerCase().indexOf(k) === 0; }).slice(0, 8).map(function (r) { return { w: r[0], m: short(r[1]) }; });
-			});
+			p = Dict.idiomPrefix(k, 8).then(function (list) { return list.map(function (r) { return { w: r[0], m: short(r[1]) }; }); });
 		} else {
 			p = Dict.prefix(k, 8).then(function (rows) { return rows.map(function (r) { return { w: r[0], m: short(r[1]) }; }); });
 		}
@@ -160,7 +158,8 @@
 	}
 
 	function lookup(raw) {
-		var v = String(raw || '').trim();
+		// 文から写したときの句読点（"take a walk." / "Can you hear me?"）は外して引く
+		var v = String(raw || '').replace(/^[\s"“”'‘’]+|[\s"“”'‘’]+$/g, '').replace(/[?!.,;:。、？！]+$/, '').trim();
 		var k = Dict.norm(v);
 		if (!k) return;
 		closeSuggest();
@@ -168,6 +167,14 @@
 		showPane('dict');
 		var my = ++lookupSeq;
 		if (isJa(v)) return renderReverse(v, my);
+		// 空白を含む入力は熟語として引く
+		if (/ /.test(k)) {
+			return Dict.idiomOf(k).then(function (row) {
+				if (my !== lookupSeq) return;
+				if (row) return renderIdiom(row, my);
+				renderNotFound(v, k, my);
+			});
+		}
 		Promise.all([Dict.rowsOf(k), Dict.bases(k)]).then(function (r) {
 			if (my !== lookupSeq) return;
 			var rows = r[0], bases = r[1];
@@ -177,7 +184,8 @@
 			if (bases.length) {
 				return Dict.rowsOf(bases[0]).then(function (br) {
 					if (my !== lookupSeq) return;
-					renderEntry(bases[0], br, { from: k, others: bases.slice(1) }, my);
+					// 引いた形（risen）の行も渡し、その形の発音を聞けるようにする
+					renderEntry(bases[0], br, { from: k, fromRows: rows, others: bases.slice(1) }, my);
 				});
 			}
 			return renderNotFound(v, k, my);
@@ -262,27 +270,12 @@
 			g.title = T('gradeNote', '英検の級の目安');
 			head.appendChild(g);
 		}
-		var tools = el('span', 'tools');
-		tools.appendChild(speakBtn(hw));
-		var star = el('button', 'star');
-		star.type = 'button';
-		star.appendChild(el('i', 'fas fa-star'));
-		var paintStar = function (on) {
-			star.classList.toggle('on', on);
-			star.title = on ? T('bookRemove', '単語帳から外す') : T('bookAdd', '単語帳に追加');
-			star.setAttribute('aria-label', star.title);
-			star.setAttribute('aria-pressed', on ? 'true' : 'false');
-		};
-		Store.inBook(word).then(paintStar);
-		star.addEventListener('click', function () {
-			Store.toggleBook(word, rows.map(function (r) { return r[1]; }).join(' / ')).then(paintStar);
-		});
-		tools.appendChild(star);
-		head.appendChild(tools);
+		head.appendChild(headTools(hw, word, rows.map(function (r) { return r[1]; }).join(' / ')));
 		entry.appendChild(head);
 
-		// どこから来たか（went → go）
+		// どこから来たか（went → go）。引いた形そのものの発音記号と読み上げも出す
 		if (opt.from) {
+			entry.appendChild(fromForm(opt.from, opt.fromRows || []));
 			var via = el('p', 'via', T('viaForm', '「$1」の原形として表示しています。', opt.from) + ' ');
 			(opt.others || []).forEach(function (b) { via.appendChild(wordLink(b)); });
 			entry.appendChild(via);
@@ -328,8 +321,16 @@
 				infl.forEach(function (x) {
 					var kk = INFL_KEY[x[0]] || [x[0], x[0]];
 					d.appendChild(el('span', 'lab', T(kk[0], kk[1])));
-					d.appendChild(el('span', 'f', x[1]));
-					String(x[1]).split(/,\s*/).forEach(function (f) { if (f && !/ /.test(f)) forms.push(f.toLowerCase()); });
+					// 変化形ごとに読み上げを付ける（risen・written など、原形と音が違うもの）
+					var fs = el('span', 'f');
+					String(x[1]).split(/,\s*/).forEach(function (f, i) {
+						if (!f) return;
+						if (i) fs.appendChild(document.createTextNode(', '));
+						fs.appendChild(document.createTextNode(f));
+						fs.appendChild(speakBtn(f));
+						if (!/ /.test(f)) forms.push(f.toLowerCase());
+					});
+					d.appendChild(fs);
 				});
 				slots.infl.appendChild(d);
 			}
@@ -348,6 +349,85 @@
 		Dict.idioms(word, [word]).then(function (list) {
 			if (my !== lookupSeq || !list.length) return;
 			slots.idioms.appendChild(idiomBlock(list, forms));
+		});
+	}
+
+	// 見出しの右側：読み上げ・ゆっくり・単語帳
+	function headTools(say, key, meaning) {
+		var tools = el('span', 'tools');
+		tools.appendChild(speakBtn(say));
+		var slow = el('button', 'slow-toggle', T('slowShort', 'ゆっくり'));
+		slow.type = 'button';
+		slow.title = T('slowTitle', 'ゆっくり読む（S）');
+		slow.addEventListener('click', function () {
+			$id('slow').checked = !$id('slow').checked;
+			saveSettings();
+			Speech.say(say);
+		});
+		tools.appendChild(slow);
+		setTimeout(paintSlow, 0);
+		var star = el('button', 'star');
+		star.type = 'button';
+		star.appendChild(el('i', 'fas fa-star'));
+		var paintStar = function (on) {
+			star.classList.toggle('on', on);
+			star.title = on ? T('bookRemove', '単語帳から外す') : T('bookAdd', '単語帳に追加');
+			star.setAttribute('aria-label', star.title);
+			star.setAttribute('aria-pressed', on ? 'true' : 'false');
+		};
+		Store.inBook(key).then(paintStar);
+		star.addEventListener('click', function () { Store.toggleBook(key, meaning).then(paintStar); });
+		tools.appendChild(star);
+		return tools;
+	}
+	// 変化形から原形へ移ったとき、引いた形（risen）を 1 行で出す
+	function fromForm(w, rows) {
+		var d = el('div', 'from-form');
+		d.appendChild(el('span', 'fw', w));
+		var ipa = '';
+		rows.forEach(function (r) { if (!ipa && r[2]) ipa = r[2]; });
+		if (ipa) d.appendChild(el('span', 'ipa', '/' + ipa + '/'));
+		d.appendChild(speakBtn(w));
+		if (rows.length) d.appendChild(el('span', 'm', rows.map(function (r) { return r[1]; }).join(' / ')));
+		return d;
+	}
+
+	// 熟語の項目（take a walk など）
+	function renderIdiom(row, my) {
+		startEntry();
+		var phrase = row[0];
+		current = phrase;
+		Store.pushHistory(phrase);
+		var head = el('div', 'entry-head');
+		head.appendChild(el('span', 'hw', phrase));
+		if (row[3]) head.appendChild(el('span', 'ai-badge', T('aiBadge', 'AI 作成')));
+		head.appendChild(headTools(phrase, phrase, row[1]));
+		entry.appendChild(head);
+		var ol = el('ol', 'senses');
+		String(row[1]).split(' / ').map(function (s) { return s.trim(); }).filter(Boolean).forEach(function (s) { ol.appendChild(el('li', null, s)); });
+		entry.appendChild(ol);
+		var toks = Dict.idiomKey(phrase).split(' ');
+		var ex = row[2] || [];
+		if (ex.length) {
+			var b = block('examples', '例文');
+			ex.forEach(function (x) { b.appendChild(exLine(x[0], x[1], toks)); });
+			// 例文が Tatoeba 由来（3 つ目に番号を持つ）ときだけ出典を出す
+			if (ex.some(function (x) { return x[2]; })) b.appendChild(el('div', 'muted tiny', 'Tatoeba (CC BY 2.0 FR)'));
+			entry.appendChild(b);
+		}
+		// 組み立てている語（押すと各語の項目へ）
+		var pb = el('div', 'block');
+		var parts = el('div', 'rel');
+		parts.appendChild(el('span', 'lab', T('idiomParts', '使われている語')));
+		toks.forEach(function (w) { if (/^[a-z][a-z'-]*$/.test(w)) parts.appendChild(wordLink(w)); });
+		pb.appendChild(parts);
+		entry.appendChild(pb);
+		// 同じ語で始まるほかの言い回し
+		Dict.idioms(toks[0], [toks[0]]).then(function (list) {
+			if (my !== lookupSeq) return;
+			var me = Dict.idiomKey(phrase);
+			list = list.filter(function (r) { var kk = Dict.idiomKey(r[0]); return kk !== me && kk.split(' ')[0] === toks[0]; });
+			if (list.length) entry.appendChild(idiomBlock(list, null, T('idiomSame', '「$1」で始まる言い回し', toks[0])));
 		});
 	}
 
@@ -408,14 +488,16 @@
 		return any ? b : el('div');
 	}
 	var IDIOM_TOP = 5;
-	function idiomBlock(list, forms) {
+	function idiomBlock(list, forms, title) {
 		var b = block('idioms', '熟語');
+		if (title) b.firstChild.textContent = title;
 		var box = el('div');
 		b.appendChild(box);
 		function item(r) {
 			var d = el('div', 'idiom');
 			d.appendChild(wordLink(r[0], 'ph'));
 			d.appendChild(speakBtn(r[0]));
+			if (r[3]) d.appendChild(el('span', 'ai-badge', T('aiBadge', 'AI 作成')));
 			d.appendChild(el('div', 'mean', r[1]));
 			(r[2] || []).slice(0, 2).forEach(function (x) { d.appendChild(exLine(x[0], x[1], (forms || []).concat(r[0].toLowerCase().split(' ')))); });
 			return d;
@@ -591,14 +673,45 @@
 		Speech.set(s);
 		$id('accent-' + (s.accent === 'uk' ? 'uk' : 'us')).checked = true;
 		$id('slow').checked = !!s.slow;
+		$id('action-panel').checked = !!s.panel;
+		paintSlow();
+	}
+	function paintSlow() {
+		var on = $id('slow').checked;
+		document.querySelectorAll('.slow-toggle').forEach(function (b) { b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
 	}
 	function saveSettings() {
-		var s = { accent: $id('accent-uk').checked ? 'uk' : 'us', slow: $id('slow').checked };
+		var s = { accent: $id('accent-uk').checked ? 'uk' : 'us', slow: $id('slow').checked, panel: $id('action-panel').checked };
 		Speech.set(s);
 		Store.saveSettings(s);
 		renderVoiceStatus();
+		paintSlow();
 	}
 	['accent-us', 'accent-uk', 'slow'].forEach(function (id) { $id(id).addEventListener('change', saveSettings); });
+	// ツールバーのボタンで、ページに重なる小窓ではなくサイドパネルを開く（ページが横に縮むので下の文字が隠れない）
+	$id('action-panel').addEventListener('change', function () {
+		saveSettings();
+		chrome.runtime.sendMessage({ type: 'actionPanel', on: this.checked });
+	});
+
+	// ---------- 開き方を変える：サイドパネル／別の窓 ----------
+	// サイドパネルは押した操作の中で同期的に開く必要があるので、窓の番号は先に取っておく
+	var myWin = null;
+	if (chrome.windows) chrome.windows.getCurrent(function (w) { if (w) myWin = w.id; });
+	function handOff() { return current || Dict.norm(q.value) || ''; }
+	$id('open-panel').addEventListener('click', function () {
+		if (!chrome.sidePanel || !chrome.sidePanel.open || myWin == null) return;
+		var w = handOff();
+		chrome.sidePanel.open({ windowId: myWin }).then(function () {
+			if (w) chrome.storage.session.set({ panelLookup: { w: w, windowId: myWin, seq: Date.now() } });
+			window.close();
+		}, function () { /* 開けなければポップアップのまま使える */ });
+	});
+	$id('open-window').addEventListener('click', function () {
+		var w = handOff();
+		chrome.windows.create({ url: chrome.runtime.getURL('popup.html?win=1' + (w ? '&q=' + encodeURIComponent(w) : '')), type: 'popup', width: 440, height: 640 });
+		window.close();
+	});
 	$id('voice-test').addEventListener('click', function () { Speech.say('This is how I sound.'); });
 
 	// ---------- キー操作：入力欄の外で Space / P を押すと見出し語を読む ----------
@@ -610,6 +723,10 @@
 			e.preventDefault();
 			var hw = entry.querySelector('.hw');
 			Speech.say(hw ? hw.textContent : current);
+		} else if ((e.key === 's' || e.key === 'S') && current && $id('pane-dict').classList.contains('active')) {
+			// S：ゆっくり読みを切り替えて、もう一度読む
+			var sb = entry.querySelector('.slow-toggle');
+			if (sb) { e.preventDefault(); sb.click(); }
 		} else if (e.key === '/' && $id('pane-dict').classList.contains('active')) {
 			e.preventDefault();
 			q.focus();

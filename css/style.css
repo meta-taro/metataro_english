@@ -25,7 +25,13 @@ button.link, a.link { border: 0; background: none; padding: 0; color: #1f6fb2; c
 button.link:hover, a.link:hover { text-decoration: underline; }
 
 /* 検索 */
-.searchbar { position: relative; padding: 8px 14px 6px; height: 46px; }
+.searchbar { position: relative; padding: 8px 14px 6px; height: 46px; display: flex; gap: 4px; align-items: center; }
+.searchbar #q { flex: 1; min-width: 0; }
+.open-as { display: flex; gap: 2px; }
+.open-btn { border: 0; background: none; padding: 2px 5px; color: #b07a2a; cursor: pointer; border-radius: 3px; }
+.open-btn:hover { background: #fff1d6; color: #e07b00; }
+/* 小窓・サイドパネルの中では開き方を変える必要がない */
+body.window .open-as { display: none; }
 .suggest { position: absolute; left: 14px; right: 14px; top: 40px; z-index: 10; margin: 0; padding: 2px 0; list-style: none; background: #fff; border: 1px solid #d8cbb5; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,.08); max-height: 300px; overflow-y: auto; }
 .suggest li { padding: 3px 10px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
 .suggest li .w { font-weight: bold; margin-right: 8px; }
@@ -52,6 +58,13 @@ button.link:hover, a.link:hover { text-decoration: underline; }
 .infl { font-size: 12.5px; color: #444; margin: 6px 0 2px; }
 .infl span.lab { color: #999; margin-right: 3px; }
 .infl span.f { margin-right: 10px; }
+.infl .speak { font-size: 11px; padding: 0 1px; }
+.from-form { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; margin: 6px 0 0; padding: 4px 8px; background: #fbf5ea; border-radius: 4px; font-size: 13px; }
+.from-form .fw { font-weight: bold; font-size: 15px; }
+.from-form .ipa { color: #666; }
+.from-form .m { color: #666; font-size: 12px; flex-basis: 100%; }
+.slow-toggle { border: 1px solid #e3d3b6; background: #fff; color: #8a6d3b; font-size: 11px; border-radius: 10px; padding: 0 7px; cursor: pointer; }
+.slow-toggle.on { background: #f7ecd5; border-color: #d0a95e; color: #6b4d12; font-weight: bold; }
 .pos { font-size: 11.5px; color: #777; margin: 4px 0; }
 .pos b { display: inline-block; background: #f3ead9; color: #6b5a40; border-radius: 3px; padding: 0 5px; margin-right: 4px; font-weight: normal; }
 ol.senses { margin: 6px 0; padding-left: 1.6em; }

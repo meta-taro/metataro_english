@@ -702,5 +702,40 @@
 	},
 	"creditTesseract": {
 		"message": "画像から英文を読み取る部品と英語の学習データ"
+	},
+	"slowShort": {
+		"message": "ゆっくり"
+	},
+	"slowTitle": {
+		"message": "ゆっくり読む（S）"
+	},
+	"idiomParts": {
+		"message": "使われている語"
+	},
+	"idiomSame": {
+		"message": "「$ARG$」で始まる言い回し",
+		"placeholders": {
+			"arg": {
+				"content": "$1"
+			}
+		}
+	},
+	"openPanel": {
+		"message": "サイドパネルで開く（ページの文字が隠れません）"
+	},
+	"openWindow": {
+		"message": "別の窓で開く（好きな場所へ動かせます）"
+	},
+	"setOpen": {
+		"message": "開き方"
+	},
+	"setActionPanel": {
+		"message": "ツールバーのボタンでサイドパネルを開く"
+	},
+	"setActionPanelNote": {
+		"message": "サイドパネルはページの横に並ぶので、英会話の画面や入力欄に重なりません。"
+	},
+	"creditAiIdioms": {
+		"message": "日常の言い回し・句動詞・オンライン英会話の決まり文句と、その例文（AI が作成）"
 	}
 }

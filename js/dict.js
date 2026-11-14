@@ -78,17 +78,55 @@ var Dict = (function () {
 		});
 	}
 
-	// 熟語：引いた語（または原形）を含む複数語の見出し、または入力で始まる見出し
+	// 熟語：EJDict の複数語の見出し（idioms.json）に、AI が作った会話の言い回し（idioms-ai.json）を足す。
+	// AI の行は 4 番目に 1 を持つ。同じ見出しは EJDict の訳を残し、例文が無ければ AI の例文を借りる
+	var idiomList = null;
+	function idiomKey(s) { return norm(s).replace(/[?!.,;:"“”。、？！]/g, '').replace(/\s+/g, ' ').trim(); }
+	function allIdioms() {
+		if (!idiomList) {
+			idiomList = Promise.all([load('idioms.json'), load('idioms-ai.json')]).then(function (r) {
+				var base = r[0] || [], ai = r[1] || [], at = {}, out = [];
+				base.forEach(function (x) { at[idiomKey(x[0])] = x; });
+				ai.forEach(function (x) {
+					var b = at[idiomKey(x[0])];
+					if (b) { if (!b[2] || !b[2].length) b[2] = x[2]; return; }
+					out.push([x[0], x[1], x[2] || [], 1]);
+				});
+				return out.concat(base);
+			});
+		}
+		return idiomList;
+	}
+	// 熟語：引いた語（または原形）を含む複数語の見出し、または入力で始まる見出し。AI の行（よく使う言い回し）を先に出す
 	function idioms(q, words) {
-		var k = norm(q);
-		return load('idioms.json').then(function (list) {
-			if (!list) return [];
+		var k = idiomKey(q);
+		return allIdioms().then(function (list) {
 			return list.filter(function (r) {
-				var p = r[0].toLowerCase();
-				if (/ /.test(k)) return p.indexOf(k) === 0;
+				var p = idiomKey(r[0]);
+				if (/ /.test(k)) return p.indexOf(k) === 0 && p !== k;
 				var toks = p.split(' ');
 				return words.some(function (w) { return toks.indexOf(w) >= 0; });
 			});
+		});
+	}
+	// 熟語の見出しにぴったり一致する行
+	function idiomOf(q) {
+		var k = idiomKey(q);
+		return allIdioms().then(function (list) {
+			for (var i = 0; i < list.length; i++) if (idiomKey(list[i][0]) === k) return list[i];
+			return null;
+		});
+	}
+	// 入力中の候補：前方一致を先に、足りなければ途中に含むもの
+	function idiomPrefix(q, n) {
+		var k = idiomKey(q);
+		return allIdioms().then(function (list) {
+			var head = [], mid = [];
+			list.forEach(function (r) {
+				var p = idiomKey(r[0]), at = p.indexOf(k);
+				if (at === 0) head.push(r); else if (at > 0 && p.charAt(at - 1) === ' ') mid.push(r);
+			});
+			return head.concat(mid).slice(0, n);
 		});
 	}
 
@@ -155,7 +193,7 @@ var Dict = (function () {
 
 	return {
 		load: load, norm: norm, rowsOf: rowsOf, prefix: prefix, wnOf: wnOf, examplesOf: examplesOf, notesOf: notesOf,
-		morph: morph, bases: bases, idioms: idioms, similar: similar, reverse: reverse, distance: distance
+		morph: morph, bases: bases, idioms: idioms, idiomOf: idiomOf, idiomPrefix: idiomPrefix, idiomKey: idiomKey, similar: similar, reverse: reverse, distance: distance
 	};
 })();
 if (typeof module !== 'undefined' && module.exports) module.exports = Dict;
