@@ -66,6 +66,7 @@
 			</div>
 			<div id="page-result" hidden>
 				<p class="small page-src"><b id="page-title"></b><br><span class="muted" id="page-summary"></span></p>
+				<input type="search" class="form-control form-control-sm page-q" id="page-q" autocomplete="off" spellcheck="false" data-i18n-placeholder="pageQ" placeholder="この一覧から探す（英語・日本語）">
 				<div class="page-tools">
 					<select class="form-select form-select-sm" id="page-grade" data-i18n-title="pageFilter" title="英検の級で絞り込む">
 						<option value="" data-i18n="pageGradeAll">すべての語</option>
@@ -81,6 +82,10 @@
 					<button type="button" class="btn btn-sm btn-outline-secondary" id="page-unmark" data-i18n="pageUnmark">印を外す</button>
 					<span class="small muted" id="page-mark-status"></span>
 					<p class="muted tiny m-0" data-i18n="pageMarkNote">絞り込みに合う語に下線を引きます。下線の語を押すと、その語の項目をここに開きます。</p>
+				</div>
+				<div class="page-marks" id="page-pdfmark" hidden>
+					<button type="button" class="btn btn-sm btn-outline-secondary" id="page-pdf-view"><i class="fas fa-highlighter"></i> <span data-i18n="pagePdfView">印を付けて PDF を開く</span></button>
+					<p class="muted tiny m-0" data-i18n="pagePdfViewNote">絞り込みに合う語に薄い色を付けて PDF を開きます。色の付いた語を押すと、その語の項目をここに開きます。</p>
 				</div>
 				<h2 class="sec"><span data-i18n="pageWords">単語（多い順）</span> <span class="muted small" id="page-wcount"></span></h2>
 				<ul class="pagelist" id="page-words"></ul>
@@ -174,6 +179,7 @@
 
 	<script src="/js/app.js"></script>
 	<script src="/js/popup.js"></script>
+	<script src="/js/stash.js"></script>
 	<script src="/js/page.js"></script>
 </body>
 </html>

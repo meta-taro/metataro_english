@@ -572,6 +572,9 @@
 	"pageGrade1": {
 		"message": "1級"
 	},
+	"pageQ": {
+		"message": "この一覧から探す（英語・日本語）"
+	},
 	"pageAiOnly": {
 		"message": "AI 解説のある語だけ"
 	},
@@ -626,7 +629,34 @@
 		"message": "AI 解説"
 	},
 	"pageErrPdfTab": {
-		"message": "ブラウザで開いている PDF は読めません。「PDF・画像を読む」からファイルを選んでください。"
+		"message": "Chrome の PDF 表示は、拡張機能からは読めません（Chrome の仕様で、どの拡張機能も同じです）。「PDF・画像を読む」でファイルを選ぶか、ここへ PDF をドロップしてください。読んだあと「印を付けて PDF を開く」で、辞典の語に色を付けて読めます。"
+	},
+	"pageErrFile": {
+		"message": "パソコン内のファイル（file://）を読むには、拡張機能の詳細画面で「ファイルの URL へのアクセスを許可する」をオンにしてください。"
+	},
+	"pagePdfView": {
+		"message": "印を付けて PDF を開く"
+	},
+	"pagePdfViewNote": {
+		"message": "絞り込みに合う語に薄い色を付けて PDF を開きます。色の付いた語を押すと、その語の項目をここに開きます。"
+	},
+	"viewerMarks": {
+		"message": "印を出す"
+	},
+	"viewerNote": {
+		"message": "色の付いた語は辞典に載っています。押すと、その語の項目をサイドパネルに開きます。"
+	},
+	"viewerLoading": {
+		"message": "読み込んでいます…"
+	},
+	"viewerReady": {
+		"message": "辞典に載っている語に色を付けています。"
+	},
+	"viewerNone": {
+		"message": "開く PDF がありません。辞典の「ページ」タブで PDF を読んでから開いてください。"
+	},
+	"viewerError": {
+		"message": "PDF を開けませんでした。"
 	},
 	"pageErrAccess": {
 		"message": "このページは読めません。ブラウザの設定画面などは読めないほか、ページを移動したあとはツールバーのボタンか右クリックから調べ直す必要があります。"

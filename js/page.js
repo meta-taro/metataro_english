@@ -46,7 +46,8 @@
 	}
 	function getIndex() {
 		if (!indexP) {
-			indexP = Promise.all([Dict.load('words.json'), Dict.morph(), Dict.load('idioms.json'), loadWnPos()]).then(function (r) {
+			// 熟語は EJDict の見出しに AI 作成の言い回しを足したもの（辞書タブの熟語と同じ範囲）
+			indexP = Promise.all([Dict.load('words.json'), Dict.morph(), Dict.allIdioms(), loadWnPos()]).then(function (r) {
 				var meanings = Object.create(null);
 				(r[2] || []).forEach(function (row) { if (!meanings[row[0]]) meanings[row[0]] = row[1]; });
 				var idx = Scan.buildIndex({ words: r[0] || [], exc: r[1].exc || {}, idioms: r[2] || [], wnPos: r[3] });
@@ -103,10 +104,23 @@
 		});
 	}
 
+	// 一覧の中を探す語。英語は見出し語・変化形の部分一致、日本語は意味の部分一致
+	function matcher() {
+		var v = $id('page-q').value.trim().toLowerCase();
+		if (!v) return null;
+		var ja = /[^\x00-\x7f]/.test(v);
+		return function (w, forms, m) {
+			if (ja) return !!m && m.indexOf(v) >= 0;
+			if (w.toLowerCase().indexOf(v) >= 0) return true;
+			return (forms || []).some(function (f) { return f.toLowerCase().indexOf(v) >= 0; });
+		};
+	}
+
 	function filtered() {
 		if (!state) return [];
-		var min = $id('page-grade').value, aiOnly = $id('page-ai').checked;
+		var min = $id('page-grade').value, aiOnly = $id('page-ai').checked, hit = matcher();
 		return state.words.filter(function (x) {
+			if (hit && !hit(x.w, x.forms, x.m)) return false;
 			if (aiOnly && !x.ai) return false;
 			if (min && !(x.g && RANK[x.g] >= RANK[min])) return false;
 			return true;
@@ -140,6 +154,7 @@
 			[String(state.tokens), String(state.words.length), String(state.idioms.length)])
 			+ (state.truncated ? ' ' + T('pageTruncated', '（長いので先頭だけ読みました）') : '');
 		$id('page-marks').hidden = state.source !== 'page';
+		$id('page-pdfmark').hidden = state.source !== 'pdf' || !lastPdf;
 
 		var list = filtered();
 		$id('page-wcount').textContent = String(list.length);
@@ -152,21 +167,27 @@
 		$id('page-words-empty').hidden = list.length > 0;
 		$id('page-more').hidden = list.length <= shown;
 
-		$id('page-icount').textContent = String(state.idioms.length);
+		var hit = matcher();
+		var idioms = hit ? state.idioms.filter(function (x) { return hit(x.p, null, x.m); }) : state.idioms;
+		$id('page-icount').textContent = String(idioms.length);
 		var ui = $id('page-idioms');
 		clear(ui);
-		state.idioms.forEach(function (x) { ui.appendChild(item(x.p, x.n, x.m, [])); });
-		$id('page-idioms-empty').hidden = state.idioms.length > 0;
+		idioms.forEach(function (x) { ui.appendChild(item(x.p, x.n, x.m, [])); });
+		$id('page-idioms-empty').hidden = idioms.length > 0;
 	}
 
 	['page-grade', 'page-ai'].forEach(function (id) {
 		$id(id).addEventListener('change', function () { shown = PAGE_SIZE; render(); });
 	});
+	$id('page-q').addEventListener('input', function () { shown = PAGE_SIZE; render(); });
+	// 一覧の中の Enter で辞書タブへ移らないよう、ここで止める
+	$id('page-q').addEventListener('keydown', function (e) { if (e.key === 'Enter') e.preventDefault(); e.stopPropagation(); });
 	$id('page-more').addEventListener('click', function () { shown += PAGE_SIZE; render(); });
 
 	// ---------- 開いているページを読む ----------
 	function errorText(e) {
 		var s = String(e || '');
+		if (/\[kind:file\]/.test(s)) return T('pageErrFile', 'パソコン内のファイル（file://）を読むには、拡張機能の詳細画面で「ファイルの URL へのアクセスを許可する」をオンにしてください。');
 		if (/pdf/i.test(s)) return T('pageErrPdfTab', 'ブラウザで開いている PDF は読めません。「PDF・画像を読む」からファイルを選んでください。');
 		if (/permission|Cannot access|cannot be scripted|chrome:\/\/|extensions gallery/i.test(s)) {
 			return T('pageErrAccess', 'このページは読めません。ブラウザの設定画面などは読めないほか、ページを移動したあとはツールバーのボタンか右クリックから調べ直す必要があります。');
@@ -255,6 +276,18 @@
 			return chrome.scripting.removeCSS({ target: target, files: ['css/page-mark.css'] });
 		}).catch(function (e) {
 			setMarkStatus(errorText(e && e.message), true);
+		});
+	});
+
+	// ---------- 印付きの PDF 画面 ----------
+	// Chrome の PDF 表示には印を付けられないので、読んだ PDF を拡張の画面で描き直して印を付ける
+	var lastPdf = null;
+	$id('page-pdf-view').addEventListener('click', function () {
+		if (!state || state.source !== 'pdf' || !lastPdf) return;
+		window.PdfStash.put({ blob: lastPdf, name: lastPdf.name, map: markMap() }).then(function () {
+			return chrome.tabs.create({ url: chrome.runtime.getURL('viewer.html') });
+		}).catch(function () {
+			setStatus(T('viewerError', 'PDF を開けませんでした。'), true);
 		});
 	});
 
@@ -367,6 +400,7 @@
 	}
 
 	function readPdf(file) {
+		lastPdf = file;
 		api.showPane('page');
 		setStatus(T('pageReading', 'ページを読んでいます…'));
 		var task = null, doc = null, worker = null;

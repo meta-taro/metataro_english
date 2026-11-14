@@ -108,10 +108,11 @@ the MIT License.
 ================================================================
 PDF.js (pdfjs-dist 6.5.438)
 https://github.com/mozilla/pdf.js
-Used for: extracting text from PDF files the user picks (lib/pdfjs/).
+Used for: extracting text from PDF files the user picks, and drawing them in the marked PDF viewer (lib/pdfjs/).
 Copyright Mozilla Foundation.
 License: Apache License 2.0. The full text is in lib/pdfjs/LICENSE.
 Changes: none. Only the minified library and worker are bundled; nothing is loaded remotely.
+The text layer rules in css/viewer.css are copied in part from pdf.js web/pdf_viewer.css (Apache License 2.0).
 
 ================================================================
 Tesseract.js (tesseract.js 7.0.0, tesseract.js-core 7.0.0, @tesseract.js-data/eng 1.0.0)

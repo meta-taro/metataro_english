@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>めたたろ英語辞典 PDF</title>
+	<link rel="stylesheet" href="/css/viewer.css">
+</head>
+<body>
+	<header class="bar">
+		<b id="v-title">PDF</b>
+		<span class="muted" id="v-status"></span>
+		<span class="grow"></span>
+		<label><input type="checkbox" id="v-marks" checked> <span data-i18n="viewerMarks">印を出す</span></label>
+		<button type="button" id="v-zoom-out" title="縮小">−</button>
+		<span id="v-zoom">100%</span>
+		<button type="button" id="v-zoom-in" title="拡大">＋</button>
+	</header>
+	<p class="note" data-i18n="viewerNote">色の付いた語は辞典に載っています。押すと、その語の項目をサイドパネルに開きます。</p>
+	<main id="pages"></main>
+	<script src="/js/i18n.js"></script>
+	<script src="/js/stash.js"></script>
+	<script src="/js/viewer.js"></script>
+</body>
+</html>

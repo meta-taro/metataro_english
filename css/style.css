@@ -142,6 +142,7 @@ ol.senses li { margin: 2px 0; line-height: 1.5; }
 #pane-page .scroll { height: calc(100% - 46px); padding: 6px 14px 14px; }
 #pane-page.dragging { outline: 3px dashed #f0a040; outline-offset: -6px; }
 .page-src { margin: 4px 0 8px; word-break: break-word; }
+.page-q { margin: 6px 0 8px; font-size: 13px; }
 .page-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .page-tools .form-select { width: auto; font-size: 12.5px; }
 .page-marks { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 8px; }

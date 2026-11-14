@@ -1,0 +1,39 @@
+/* 印付きの PDF 画面。文字の層の定義は pdf.js の pdf_viewer.css から必要な分だけ写したもの（Apache-2.0） */
+:root { --bg: #e9e9ec; --bar: #fff; --text: #222; --muted: #666; --mark: rgba(255, 214, 0, 0.32); --mark-hover: rgba(255, 170, 0, 0.5); }
+@media (prefers-color-scheme: dark) {
+	:root { --bg: #2a2a2e; --bar: #1d1d20; --text: #eee; --muted: #aaa; }
+}
+html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px system-ui, sans-serif; }
+.bar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 10px; padding: 8px 16px; background: var(--bar); box-shadow: 0 1px 3px rgba(0, 0, 0, .15); }
+.bar .grow { flex: 1; }
+.bar button { min-width: 28px; }
+.muted { color: var(--muted); font-size: 12px; }
+.note { margin: 8px 16px 0; color: var(--muted); font-size: 12px; text-align: center; }
+#pages { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 12px 16px 40px; }
+.page { position: relative; flex: none; background: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, .25); --scale-round-x: 1px; --scale-round-y: 1px; }
+.page canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.textLayer {
+	color-scheme: only light;
+	position: absolute; text-align: initial; inset: 0; overflow: clip; opacity: 1; line-height: 1;
+	text-size-adjust: none; forced-color-adjust: none; transform-origin: 0 0; caret-color: CanvasText; z-index: 0;
+	--min-font-size: 1;
+	--text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size));
+	--min-font-size-inv: calc(1 / var(--min-font-size));
+}
+.textLayer :is(span, br) { color: transparent; position: absolute; white-space: pre; cursor: text; transform-origin: 0% 0%; }
+.textLayer > :not(.markedContent), .textLayer .markedContent span:not(.markedContent) {
+	z-index: 1;
+	--font-height: 0;
+	font-size: calc(var(--text-scale-factor) * var(--font-height));
+	--scale-x: 1;
+	--rotate: 0deg;
+	transform: rotate(var(--rotate)) scaleX(var(--scale-x)) scale(var(--min-font-size-inv));
+}
+.textLayer .markedContent { display: contents; }
+.textLayer ::selection { background: rgba(0, 100, 255, .25); }
+
+/* 辞典に載っている語：薄いマーカー。押すと辞典を開く */
+.textLayer mark { color: transparent; background: var(--mark); border-radius: 2px; padding: 0; cursor: pointer; }
+.textLayer mark:hover { background: var(--mark-hover); }
+body.nomarks .textLayer mark { background: transparent; cursor: text; }

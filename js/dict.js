@@ -193,7 +193,7 @@ var Dict = (function () {
 
 	return {
 		load: load, norm: norm, rowsOf: rowsOf, prefix: prefix, wnOf: wnOf, examplesOf: examplesOf, notesOf: notesOf,
-		morph: morph, bases: bases, idioms: idioms, idiomOf: idiomOf, idiomPrefix: idiomPrefix, idiomKey: idiomKey, similar: similar, reverse: reverse, distance: distance
+		morph: morph, bases: bases, allIdioms: allIdioms, idioms: idioms, idiomOf: idiomOf, idiomPrefix: idiomPrefix, idiomKey: idiomKey, similar: similar, reverse: reverse, distance: distance
 	};
 })();
 if (typeof module !== 'undefined' && module.exports) module.exports = Dict;

@@ -69,7 +69,15 @@ async function scanTab(tabId, windowId, target) {
 		const r = (res && res.result) || {};
 		await chrome.storage.session.set({ scan: { seq, windowId, tabId, target, title: String(r.title || ''), text: String(r.text || ''), truncated: !!r.truncated } });
 	} catch (e) {
-		await chrome.storage.session.set({ scan: { seq, windowId, tabId, target, error: String((e && e.message) || e) } });
+		// Chrome の PDF 表示と file:// は理由が別なので、案内を分けられるよう URL の種類を添える
+		let kind = '';
+		try {
+			const tab = await chrome.tabs.get(tabId);
+			const url = decodeURIComponent(String((tab && tab.url) || ''));
+			if (/\.pdf([?#]|$)/i.test(url)) kind = ' [kind:pdf]';
+			else if (/^file:/i.test(url)) kind = ' [kind:file]';
+		} catch (_) { /* URL が分からなくても元のエラーで案内する */ }
+		await chrome.storage.session.set({ scan: { seq, windowId, tabId, target, error: String((e && e.message) || e) + kind } });
 	}
 }
 
